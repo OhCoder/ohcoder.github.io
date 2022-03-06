@@ -16,6 +16,8 @@
     width: 100%;
     position: relative;
 
+    min-width: 10%; // 左侧导航栏的宽度
+
     --sidebar-avatar-size: 100px;
     --sidebar-element-separation: 20px;
     --emoji-size: 40px;

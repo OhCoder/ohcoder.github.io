@@ -126,6 +126,10 @@
     flex-direction: column;
     color: var(--card-text-color-main);
     overflow: hidden;
+    width: 80%;
+    border-style: solid;
+    border-width: 0 0 0 12px;
+    border-color: #93B5C6; // 增加了四行，更改宽度与左边框
 
     ::-webkit-scrollbar-thumb {
         background-color: var(--card-separator-color);
