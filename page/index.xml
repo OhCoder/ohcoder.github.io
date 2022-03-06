@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on OhCoder</title><link>https://ohcoder.com/page/</link><description>Recent content in Pages on OhCoder</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://ohcoder.com/page/index.xml" rel="self" type="application/rss+xml"/><item><title>Archives</title><link>https://ohcoder.com/page/2019/05/28/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://ohcoder.com/page/2019/05/28/archives/</guid><description/></item><item><title>About</title><link>https://ohcoder.com/page/1/01/01/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ohcoder.com/page/1/01/01/about/</guid><description>&lt;h2 id="关于我">关于我&lt;/h2>
-&lt;p>笔名 &lt;strong>宇称&lt;/strong>，与常山赵子龙是同乡，一个喜欢安静，但内心却不安分的程序员。&lt;/p>
+&lt;p>&lt;strong>宇称&lt;/strong>，与常山赵子龙是同乡，一个喜欢安静，但内心却不安分的程序员。&lt;/p>
 &lt;p>从事软件开发行业十多年。早年基于 C# 做过传统 PC 软件开发。后因年轻气盛，基于 C++ 尝试过计算机图形图像仿真软件方面的开发……&lt;/p>
 &lt;p>紧接着，遇到移动互联网的崛起。为了理想和情怀，辞去工作，尝试过成为独立开发者，开发一款心仪的 app，从此改变世界，过上周游世界，衣食无忧的日子……&lt;/p>
 &lt;p>然而，理想很丰满，现实很骨感。兜里的钱花完，不得不向现实低头，签卖身契，滚回公司上班。但作为一名程序员，为了心中仅存的那点儿好奇心，选择了 Web 开发。&lt;/p>
@@ -17,10 +17,10 @@
 &lt;h3 id="喜欢的书">喜欢的书&lt;/h3>
 &lt;p>很多……&lt;/p>
 &lt;h2 id="关于本站">关于本站&lt;/h2>
-&lt;p>作为一名写了十几年代码的程序员，大概率这已经不是我第一个个人网站。说起来，我是从公元「二零一二年」开始自己建站写 blog 的，期间一直没有间断，一直持续到「二零二二年」。但由于种种原因（现在具体忘记为啥），于公元「二零一八年」下线，之后就一直将文字写在手机上。这应该是我认真建立的第二个个人站点。&lt;/p>
+&lt;p>作为一名写了十几年代码的程序员，大概率这已经不是我第一个个人网站。说起来，从公元「二零一二年」开始自己建站写 blog ，期间一直没有间断，一直持续至今。但由于种种原因（具体忘记了），于公元「二零一八年」下线，之后一直将文字写在手机上。这应该是我认真建立的第二个个人站点。&lt;/p>
 &lt;p>话说回来，作为一名程序员，想搭建一个网站。当然是自己手写一个更有成就感。然而时隔几年（公元二零一八年～公元二零二二年）……&lt;/p>
 &lt;h3 id="技术栈">技术栈&lt;/h3>
-&lt;h4 id="生成器">生成器&lt;/h4>
+&lt;h4 id="框架">框架&lt;/h4>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://gohugo.io" target="_blank" rel="noopener"
 >Hugo&lt;/a>&lt;/li>
