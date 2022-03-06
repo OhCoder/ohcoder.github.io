@@ -420,7 +420,65 @@ $$&lt;/p></description></item><item><title>Emoji Support</title><link>https://oh
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>About</title><link>https://ohcoder.com/page/1/01/01/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ohcoder.com/page/1/01/01/about/</guid><description>&lt;h2 id="关于">关于&lt;/h2>
-&lt;p>我是王老五&lt;/p>
-&lt;h2 id="放飞自我">放飞自我&lt;/h2>
-&lt;p>放飞啊&lt;/p></description></item></channel></rss>
+&lt;/div></description></item><item><title>About</title><link>https://ohcoder.com/page/1/01/01/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ohcoder.com/page/1/01/01/about/</guid><description>&lt;h2 id="关于我">关于我&lt;/h2>
+&lt;p>笔名 &lt;strong>宇称&lt;/strong>，与常山赵子龙是同乡，一个喜欢安静，但内心却不安分的程序员。&lt;/p>
+&lt;p>从事软件开发行业十多年。早年基于 C# 做过传统 PC 软件开发。后因年轻气盛，基于 C++ 尝试过计算机图形图像仿真软件方面的开发……&lt;/p>
+&lt;p>紧接着，遇到移动互联网的崛起。为了理想和情怀，辞去工作，尝试过成为独立开发者，开发一款心仪的 app，从此改变世界，过上周游世界，衣食无忧的日子……&lt;/p>
+&lt;p>然而，理想很丰满，现实很骨感。兜里的钱花完，不得不向现实低头，签卖身契，滚回公司上班。但作为一名程序员，为了心中仅存的那点儿好奇心，选择了 Web 开发。&lt;/p>
+&lt;p>之后遇到了爱情，谈恋爱，结婚。&lt;/p>
+&lt;p>近两年，考虑到父母的年纪，选择离开北京，随媳妇来到西安生活，努力长期定居于此。&lt;/p>
+&lt;h3 id="喜欢的动漫">喜欢的动漫&lt;/h3>
+&lt;p>&lt;a class="link" href="https://movie.douban.com/subject/1756889/" target="_blank" rel="noopener"
+>《棒球英豪》&lt;/a> （注，最近在被媳妇安利&lt;a class="link" href="https://movie.douban.com/subject/1453238/" target="_blank" rel="noopener"
+>《海贼王》&lt;/a>）&lt;/p>
+&lt;h3 id="喜欢的电视剧">喜欢的电视剧&lt;/h3>
+&lt;p>&lt;a class="link" href="https://movie.douban.com/subject/2347485/" target="_blank" rel="noopener"
+>《天道》&lt;/a>（改变自小说&lt;a class="link" href="https://book.douban.com/subject/1322455/" target="_blank" rel="noopener"
+>《遥远的救世主》&lt;/a>）、&lt;a class="link" href="https://movie.douban.com/subject/1393859/" target="_blank" rel="noopener"
+>《老友记》&lt;/a>&lt;/p>
+&lt;h3 id="喜欢的书">喜欢的书&lt;/h3>
+&lt;p>很多……&lt;/p>
+&lt;h2 id="关于本站">关于本站&lt;/h2>
+&lt;p>作为一名写了十几年代码的程序员，大概率这已经不是我第一个个人网站。说起来，我是从公元「二零一二年」开始自己建站写 blog 的，期间一直没有间断，一直持续到「二零二二年」。但由于种种原因（现在具体忘记为啥），于公元「二零一八年」下线，之后就一直将文字写在手机上。这应该是我认真建立的第二个个人站点。&lt;/p>
+&lt;p>话说回来，作为一名程序员，想搭建一个网站。当然是自己手写一个更有成就感。然而时隔几年（公元二零一八年～公元二零二二年）……&lt;/p>
+&lt;h3 id="技术栈">技术栈&lt;/h3>
+&lt;h4 id="生成器">生成器&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://gohugo.io" target="_blank" rel="noopener"
+>Hugo&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h4 id="主题">主题&lt;/h4>
+&lt;ul>
+&lt;li>改变自 &lt;a class="link" href="https://docs.stack.jimmycai.com" target="_blank" rel="noopener"
+>Hugo theme Stack&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="感谢">感谢&lt;/h3>
+&lt;p>在此，感谢 &lt;a class="link" href="https://gohugo.io" target="_blank" rel="noopener"
+>Hugo&lt;/a> 开源项目，感谢 &lt;a class="link" href="https://docs.stack.jimmycai.com" target="_blank" rel="noopener"
+>Hugo theme Stack&lt;/a> 开源主题，感谢每一个为开源社区做过贡献的人。&lt;/p>
+&lt;h2 id="老黄历">老黄历&lt;/h2>
+&lt;p>点击&lt;a class="link" href="https://web.archive.org/web/20181101172413/http://ohcoder.com/" target="_blank" rel="noopener"
+>这里&lt;/a>，可以翻看我的第一个网站，那里有我的老黄历。&lt;/p>
+&lt;h2 id="靓照">靓照&lt;/h2>
+&lt;p>向有缘人说 Hi！&lt;/p>
+&lt;p>&lt;img src="https://ohcoder.com/page/1/01/01/about/avatar.jpg"
+width="250"
+height="334"
+srcset="https://ohcoder.com/page/1/01/01/about/avatar_hu2be6918201697c0821cf20d1a45fe404_107545_480x0_resize_q75_box.jpg 480w, https://ohcoder.com/page/1/01/01/about/avatar_hu2be6918201697c0821cf20d1a45fe404_107545_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Hi"
+class="gallery-image"
+data-flex-grow="74"
+data-flex-basis="179px"
+>&lt;/p>
+&lt;h2 id="联系方式">联系方式&lt;/h2>
+&lt;p>本站不设留言功能，觉得我长的帅，请通过 E-Mail 进行搭讪，恭候有缘人！&lt;/p>
+&lt;p>&lt;img src="https://ohcoder.com/page/1/01/01/about/mail.png"
+width="167"
+height="21"
+srcset="https://ohcoder.com/page/1/01/01/about/mail_hu32a2dfb6c609f93a982d1fec68ebef3f_2913_480x0_resize_box_3.png 480w, https://ohcoder.com/page/1/01/01/about/mail_hu32a2dfb6c609f93a982d1fec68ebef3f_2913_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="795"
+data-flex-basis="1908px"
+>&lt;/p></description></item></channel></rss>
