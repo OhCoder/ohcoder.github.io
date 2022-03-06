@@ -2,7 +2,7 @@
 title: Chinese Test
 description: 这是一个副标题
 date: 2020-09-09
-slug: 2020-09-09/test-chinese
+slug: test-chinese
 image: helena-hertz-wWZzXlDpMog-unsplash.jpg
 categories:
   - Test
@@ -37,4 +37,3 @@ categories:
 ```
 
 相册语法来自 [Typlog](https://typlog.com/)
-
