@@ -47,7 +47,7 @@ menu:
 
 #### 主题
 
-* 改变自 [Hugo theme Stack](https://docs.stack.jimmycai.com)
+* 改编自 [Hugo theme Stack](https://docs.stack.jimmycai.com)
 
 ### 感谢
 
