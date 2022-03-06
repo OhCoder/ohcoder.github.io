@@ -139,7 +139,7 @@ params:
             id:
     widgets:
         homepage:
-            - type: search
+            # - type: search
             - type: categories
               params:
                   limit: 10
