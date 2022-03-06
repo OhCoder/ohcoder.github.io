@@ -143,12 +143,15 @@ params:
             - type: categories
               params:
                   limit: 10
+                  icon: rainbow
             - type: tag-cloud
               params:
                   limit: 30
+                  icon: cloud
             - type: archives
               params:
                   limit: 20
+                  icon: archives
         page:
             - type: toc
 
