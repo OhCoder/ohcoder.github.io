@@ -27,7 +27,7 @@ menu:
 
 ### 喜欢的电视剧
 
-[《天道》](https://movie.douban.com/subject/2347485/)（改变自小说[《遥远的救世主》](https://book.douban.com/subject/1322455/)）、[《老友记》](https://movie.douban.com/subject/1393859/)
+[《天道》](https://movie.douban.com/subject/2347485/)（改编自小说[《遥远的救世主》](https://book.douban.com/subject/1322455/)）、[《老友记》](https://movie.douban.com/subject/1393859/)
 
 ### 喜欢的书
 
