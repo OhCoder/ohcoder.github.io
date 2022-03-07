@@ -152,6 +152,13 @@ params:
                   limit: 20
         page:
             - type: toc
+            - type: categories
+              params:
+                  limit: 10
+                  icon: rainbow
+            - type: tag-cloud
+              params:
+                  limit: 30
 
     opengraph:
         twitter:
