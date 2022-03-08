@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>日记 on OhCoder</title><link>https://ohcoder.com/categories/%E6%97%A5%E8%AE%B0/</link><description>Recent content in 日记 on OhCoder</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 07 Dec 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://ohcoder.com/categories/%E6%97%A5%E8%AE%B0/index.xml" rel="self" type="application/rss+xml"/><item><title>锄头</title><link>https://ohcoder.com/post/2012/12/07/hoe/</link><pubDate>Fri, 07 Dec 2012 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2012/12/07/hoe/</guid><description>&lt;img src="https://ohcoder.com/post/2012/12/07/hoe/title.jpg" alt="Featured image of post 锄头" />&lt;p>近来良心发现，深刻的认识到了自己的差距，自己底子的薄弱，以前总是停留在想，为了不再祸害中国软件业，前两天开始补习系统相关基础知识，开始看《&lt;a class="link" href="http://book.douban.com/subject/5333562/" target="_blank" rel="noopener"
+>深入理解计算机系统&lt;/a>》这本书。&lt;/p>
+&lt;p>身为一名码农，如果对自己用的“锄头”都不了解，想来想去总觉得是一件不太靠谱的事情。要想改变宇宙，也得先从改造自己下手！以前总是找各种理由躲避，其中有一条理由可能印象最深刻，总是觉得“根本用不到嘛”，因为不能有立竿见影的效果，所以总是推三阻四。但是最不可饶恕的是，每每跟人吹牛b的时候，总是说：“某某某，你应该好好学习一下操作系统，很重要哦！”哎，这两天自己想了想，自己都不看，还有脸让别人看，怎么这么无耻啊！自己应该对自己千刀万剐！（说说而已，说说而已！:P）&lt;/p>
+&lt;p>为了悔过自新，重新做码农。在此先承认自己之前犯的错误。俗话说，认识错误是改正错误的第一步嘛。所以这两天下决心怎么说也要好好补习一下相关知识。&lt;/p>
+&lt;p>经过这几天的学习，看到了第五章－“优化程序性能”。这一帆可谓不风顺啊。&lt;/p>
+&lt;p>第一章还好，是“计算机系统漫游”，总体来说没什么难度，大而全的讲了一堆，看不懂也没关系，反正后边还会展开来讲嘛。&lt;/p>
+&lt;p>第二章是“信息的表示和处理”，前面讲编码表示和进制之间的变换，接下来讲整数的二进制表示，以及整数的四则运算是如何进行的，再接下来是浮点数的表示以及运算。哦，还有一点比较重要，C语言中的对于数值类型的强制转换是如何进行的。这些基础知识看似不重要，其实都很重要，很多系统级别的漏洞都和数值溢出有关，属于基本功。&lt;/p>
+&lt;p>第三章是“程序的机器级表示”，说白了就是汇编基础以及汇编与C语言之间是如何互相映射的，看这部分的时候一开始还好，后边的指令跳转有点头晕，也有点儿乱，不过还好吧，这一章的整体思路就是教你用汇编映射C语言。当然了，如果你能把汇编眼瞅着就能还原成C语言，反之也行，那么这一章你就算是基本掌握了。&lt;/p>
+&lt;p>第四章是“处理器体系结构”，这一章对于程序员来说应该是最底层了，主要解释了每条汇编指令在CPU中是如何运行的，通过构造最简单的Y86，带领大家实现一个处理器，以此来了解处理器的基本逻辑。说实话，这一章后半部分看的我是云里雾里，找不着北啊，明显功力不够哇。可能问题出在某一个知识点没有掌握吧，导致跟不上作者的逻辑，迷路了。迷路的孩子伤不起啊～&lt;/p>
+&lt;p>第五章是“优化程序性能”，这一章还没看完，只是起了个头，不过我感觉这章的思路是以前几章为基础，以C语言为例，来说明程序应该怎样写效率比较高。其实我自己感觉如果前两章掌握的比较好的话，既了解CPU的基本构造，又能很快的把C语言还原成汇编的话，这章基本就是经验之谈。当然了，这章我自己还没看完，在此只是胡喷。&lt;/p>
+&lt;p>看过四章多一点之后，感慨不愧为经典啊，跟人吹牛b的时候总算是没有害了人家。书中很多细节还是需要不断揣摩的，现在很多知识点还只是个框架概念，从真正理解到灵活自如的运用还是需要时间不断消化啊。不过好在自己亡羊补牢，总算是迈出了重要的一步了，这本书对于我这种脑子不好使的同学来说，少于五遍，我想我很难全面理解书中的知识点，掌握的遍数另算。呵呵，没办法，脑子不好使，身体就得勤快点儿，这话是我第一个老板说我的，呵呵，比较适合我，我很受用 :)。&lt;/p>
+&lt;p>说两句题外话，这两天有时候心神不定的，有点遥想当年的韵味，时不时会想起中学。有时候我很自恋的在想，是不是有哪位中学女同学想我了，给我发脑电波呢？心灵感应嘛。哎，历史是改变不了的，如果真有哪位女同学怀念我了，我会语重心长的对她说：“同学，好好过日子。地球很危险，还是回火星去吧”。&lt;/p></description></item><item><title>Hello Word Again</title><link>https://ohcoder.com/post/2012/12/03/hello-word-again/</link><pubDate>Mon, 03 Dec 2012 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2012/12/03/hello-word-again/</guid><description>&lt;img src="https://ohcoder.com/post/2012/12/03/hello-word-again/title.jpg" alt="Featured image of post Hello Word Again" />&lt;p>说来惭愧，上个礼拜刚刚用 Wordpress 建立的新博客，还没新鲜几天就给让我弄挂了，身为一个码农，在这里由衷的感到脸红。经过一个礼拜的生死“博”斗，博客在这里又重生了！这是一个值得庆贺的日子……省略 500 个字。&lt;/p>
+&lt;p>废话也不多说了，纯爷们是永远都不会被他人所击倒的，除非他自己选择倒下。所以我选择重新竖起门面，扛起大旗，继续战斗在这片神奇的土地上。&lt;/p>
+&lt;p>说实话，回头冷静想了想，感觉 Wordpress 表面看起来好像很简单，其实真的好难啊，遇到问题了真的都不知道从何处下手，不过说实在的，我在Web这块儿也确实是个白痴，我得承认。不过奇怪的是，即便这样，这次通过 Octopress 重新搭建博客，遇到问题却没有产生像 Wordpress 那样无从下手的感觉，这真是个奇怪的感觉。可能主要原因是因为 Wordpress 太臃肿了，牵连的东西太多了，像我这种小白用户就很难深入使用，相反 Octopress 就很简单，尽管也是搭建在自己的 VPS 上，Octopress 的搭建就简单的不能再简单了。具体怎么个简单，有兴趣的同学可以自己去试试看，比较一下就知道了，在这儿就不啰嗦了。&lt;/p>
+&lt;p>通过这几天折腾这个博客，对于文本这个东西有点儿暧昧了，以前总是理所当然的认为界面才是简单直观的，点点鼠标就OK了，其他不用操心，但是这几天通过折腾这个博客，感悟到一点不一样的想法。也越来越清晰的感到文本的好处，也许之前受 Windows 的毒害太深了，把本来简单的东西想象的很复杂，把披着光鲜外衣，内部构造复杂的事物却理所当然的认为是简单的。好吧，说到这又有想 Windows 的冲动。算了，还是忍忍吧，要不然说不定会有同学出来说“忘本”呢。&lt;/p>
+&lt;p>不管怎么说吧，博客这档子事情总算是安定下来了，打死也不想再折腾了（只要不打死还可能会折腾）。接下来，就要按部就班的回归正轨了。文章该翻译的翻译，生活方面也该多写点儿文字，还是那句话，一段时间以后，总有一种被时间出卖的感觉，不知道自己整天都在瞎忙活啥，记录一点儿，多少能产生点存在感，你说是吧。&lt;/p>
+&lt;p>上次开篇题目为 &amp;ldquo;Hello World&amp;rdquo;，结果没过三天，博客挂了&amp;hellip;&amp;hellip;俗话说从哪里跌倒的就从哪里爬起来，所以这篇博客题为 &amp;ldquo;Hello World Again&amp;rdquo;，如果三天以后博客又让我给弄挂了，我会再建起来，然后开篇题目为 &amp;ldquo;Hello World Again And Again&amp;rdquo;，空口无凭，在这里先立一个字据，向马克斯保证！&lt;/p>
+&lt;p>不小心第一次看我的博客的同学我得解释一下，这篇文章之前的那些文章是我从去年后半年开始写的，当初不是独立博客，这里只是把部分时效性不强的文字搬了过来，有兴趣的同学，可以点击 &lt;a class="link" href="http://ohcoder.diandian.com/" target="_blank" rel="noopener"
+>这里&lt;/a> (注：当年的 点点网 早已消失，有兴趣可以搜一下 &lt;a class="link" href="https://zh.wikipedia.org/zh-hans/%e8%ae%b8%e6%9c%9d%e5%86%9b" target="_blank" rel="noopener"
+>许朝军&lt;/a> 这个人。此处链接没改，算是留个纪念吧）。&lt;/p>
+&lt;p>最后，为了有一个好的开端，这里露个脸，显摆一张酷照，哈哈！&lt;/p>
+&lt;p>&lt;img src="https://ohcoder.com/post/2012/12/03/hello-word-again/cool.jpg"
+width="960"
+height="720"
+srcset="https://ohcoder.com/post/2012/12/03/hello-word-again/cool_hu95f1f7bccce17b31f62e14ec4e1223fe_233244_480x0_resize_q75_box.jpg 480w, https://ohcoder.com/post/2012/12/03/hello-word-again/cool_hu95f1f7bccce17b31f62e14ec4e1223fe_233244_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Cool"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+>&lt;/p></description></item></channel></rss>
