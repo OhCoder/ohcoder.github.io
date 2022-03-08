@@ -5,7 +5,9 @@
         }
     }
     
-    margin: 0 0 50px 0;
+    @include respond(md) {
+        margin: 0 0 50px 0;
+    }
 }
 
 .left-sidebar {
