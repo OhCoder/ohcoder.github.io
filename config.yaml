@@ -1,7 +1,7 @@
 baseurl: https://ohcoder.com
 languageCode: en-us
 theme: coder-stack
-paginate: 5
+paginate: 20
 title: OhCoder
 
 languages:
