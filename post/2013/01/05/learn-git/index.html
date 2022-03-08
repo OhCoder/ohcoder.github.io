@@ -1,7 +1,7 @@
 <!doctype html><html lang=en-us dir=ltr>
 <head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="扫盲了一下 Git，以后想用 Git 作为版本管理工具。 前两天粗略看了两本关于 Git 的书，一本是《Pro Git》(貌似需要翻墙)，另一本是《Git权威指南"><title>扫盲Git</title><link rel=canonical href=https://ohcoder.com/post/2013/01/05/learn-git/>
-<link rel=stylesheet href=/scss/style.min.6c81f9e659e03e720e065b89ab7b28f69fc42db47aabc1f256ccbc8c52471956.css><meta property="og:title" content="扫盲Git">
+<link rel=stylesheet href=/scss/style.min.4106a7b4d25dd419c5774d9ba3a705d0134876711f67a125f7f13a5223c0ba73.css><meta property="og:title" content="扫盲Git">
 <meta property="og:description" content="扫盲了一下 Git，以后想用 Git 作为版本管理工具。 前两天粗略看了两本关于 Git 的书，一本是《Pro Git》(貌似需要翻墙)，另一本是《Git权威指南">
 <meta property="og:url" content="https://ohcoder.com/post/2013/01/05/learn-git/">
 <meta property="og:site_name" content="OhCoder">
@@ -78,6 +78,18 @@
 <h2 class=section-title>Related contents</h2><div class=related-contents>
 <div class="flex article-list--tile">
 <article class=has-image>
+<a href=/post/2013/01/27/2013-01-27/>
+<div class=article-image>
+<img src=/post/2013/01/27/2013-01-27/title.d043ad5a7b1207e1951d57ac48a4fc3f_huf2bd7e56ae94baac39e0ff7f35ff5c57_1987598_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 2013年1月27" data-key=2013-01-27 data-hash="md5-0EOtWnsSB+GVHVesSKT8Pw==">
+</div><div class=article-details>
+<h2 class=article-title>2013年1月27</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2013/01/17/2013-01-17/>
+<div class=article-image>
+<img src=/post/2013/01/17/2013-01-17/title.181d94ee6417742f5be733f95568724d_hud8849398a667f8ba4119f69e99c023f0_852137_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 2013年01月17日" data-key=2013-01-17 data-hash="md5-GB2U7mQXdC9b5zP5VWhyTQ==">
+</div><div class=article-details>
+<h2 class=article-title>2013年01月17日</h2></div></a>
+</article><article class=has-image>
 <a href=/post/2012/12/30/deception/>
 <div class=article-image>
 <img src=/post/2012/12/30/deception/title.0ce4f12a18c2b5517dcae2f30c7f8e62_hua62b8249a7ef23a3a99359bc488bae2a_3424640_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 行骗记" data-key=deception data-hash="md5-DOTxKhjCtVF9yuLzDH+OYg==">
@@ -95,18 +107,6 @@
 <img src=/post/2012/12/14/learning-and-school/title.3e9f6631c914bab339257f96601620eb_hu5f1977041065a069c2c9799511bec3cf_1112366_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 学习与上学" data-key=learning-and-school data-hash="md5-Pp9mMckUurM5JX+WYBYg6w==">
 </div><div class=article-details>
 <h2 class=article-title>学习与上学</h2></div></a>
-</article><article class=has-image>
-<a href=/post/2012/12/07/hoe/>
-<div class=article-image>
-<img src=/post/2012/12/07/hoe/title.4294c60fc365f6df68ff46d5978b0e49_hucce5720e41d5d2b1a09b64ed1fd2b7c3_1684293_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 锄头" data-key=hoe data-hash="md5-QpTGD8Nl9t9o/0bVl4sOSQ==">
-</div><div class=article-details>
-<h2 class=article-title>锄头</h2></div></a>
-</article><article class=has-image>
-<a href=/post/2012/12/03/hello-word-again/>
-<div class=article-image>
-<img src=/post/2012/12/03/hello-word-again/title.050e136dddf10a1abca427d4da83c582_hu85ff6129bc48ef541325decd161d6103_3404825_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post Hello Word Again" data-hash="md5-BQ4Tbd3xChq8pCfU2oPFgg==">
-</div><div class=article-details>
-<h2 class=article-title>Hello Word Again</h2></div></a>
 </article></div></div></aside><footer class=site-footer>
 <section class=copyright>
 &copy;
@@ -135,7 +135,7 @@
 <section class="widget tagCloud">
 <div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rainbow" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 17c0-5.523-4.477-10-10-10S2 11.477 2 17"/><path d="M18 17A6 6 0 106 17"/><path d="M14 17a2 2 0 10-4 0"/></svg>
 </div><h2 class="widget-title section-title">Categories</h2><div class=tagCloud-tags>
-<a href=/categories/%E6%97%A5%E8%AE%B0/ class=font_size_6>
+<a href=/categories/%E6%97%A5%E8%AE%B0/ class=font_size_8>
 日记
 </a>
 <a href=/categories/test/ class=font_size_2>
@@ -156,6 +156,9 @@ themes
 <a href=/categories/%E6%B5%8B%E8%AF%95/ class=font_size_1>
 测试
 </a>
+<a href=/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/ class=font_size_1>
+读书笔记
+</a>
 </div></section><section class="widget tagCloud">
 <div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cloud-storm" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 18a4.6 4.4.0 010-9 5 4.5.0 0111 2h1a3.5 3.5.0 010 7h-1"/><polyline points="13 14 11 18 14 18 12 22"/></svg>
 </div><h2 class="widget-title section-title">Tags</h2><div class=tagCloud-tags>
@@ -164,6 +167,9 @@ css
 </a>
 <a href=/tags/emoji/ class=font_size_1>
 emoji
+</a>
+<a href=/tags/facebook/ class=font_size_1>
+facebook
 </a>
 <a href=/tags/git/ class=font_size_1>
 git

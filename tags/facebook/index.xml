@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>facebook on OhCoder</title><link>https://ohcoder.com/tags/facebook/</link><description>Recent content in facebook on OhCoder</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 20 Jan 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://ohcoder.com/tags/facebook/index.xml" rel="self" type="application/rss+xml"/><item><title>Building Facebook</title><link>https://ohcoder.com/post/2013/01/20/building-facebook/</link><pubDate>Sun, 20 Jan 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/01/20/building-facebook/</guid><description>&lt;img src="https://ohcoder.com/post/2013/01/20/building-facebook/title.jpg" alt="Featured image of post Building Facebook" />&lt;p>本来没打算读这本书，碰巧今天上午在&lt;!-- raw HTML omitted -->多看阅读&lt;!-- raw HTML omitted -->上看到有卖电子版，而且比纸质书便宜一半多(12元，纸质书网购要27.5元)，所以就买了下来，然后花了多半天的时间读完了。&lt;/p>
+&lt;p>不能免俗，跟看其他牛b公司的传奇故事类似，从老扎的聪明才智说起。&lt;/p>
+&lt;p>紧接着作者就不小心闯入facebook，开始了近5年的工作经历。从facebook的“新兵训练营”到黑客文化，此期间无不透露着facebook的工程师文化，给我这个土鳖冲击比较大的几点是：&lt;/p>
+&lt;ol>
+&lt;li>工程师在facebook非常受尊重。&lt;/li>
+&lt;li>管理和技术没有严格的上下级等级观念，只是分工不同，职能不同。&lt;/li>
+&lt;li>用生动例子描述了facebook紧张刺激但又很真实的工作生活。&lt;/li>
+&lt;li>小团队作战。&lt;/li>
+&lt;li>管理方面扁平化，把沟通成本降到最低。&lt;/li>
+&lt;li>工程师一般都是超级码农。&lt;/li>
+&lt;li>facebook的工作是高度紧张，工作密度很大，当然这也就意味着工程师要有非常强的能力，其中除了技术以外，还要有很好的自我时间管理的能力。&lt;/li>
+&lt;li>任何人都可以修改facebook网站，作者还把facebook的网站弄挂了长达半个小时，竟然没有遭受处罚，可见facebook除了内部竞争激烈以外还有包容的一面。&lt;/li>
+&lt;li>大团队文化。各个项目组之间不是竞争关系，而是合作关系，此文化避免了很多各个小团队各自为战的心态。&lt;/li>
+&lt;/ol>
+&lt;p>就列这些吧，列多了就无味了。其实还有很多细节，思想上整体还是蛮受冲击的。&lt;/p>
+&lt;p>书的后面主要是作者自己经历的一些事情，包括自己的成长经历，facebook的招聘流程，产品的发布。关于内部工具这块，facebook非常注重工具的使用，不管是自己开发还是使用开源，亦或是购买第三方，以此来提高工作效率，避免不必要的重复劳动。另外，facebook在产品开始阶段，一般只有几个人，小团队。我比较喜欢这种方式，一来可以降低沟通成本，避免不必要的沟通上产生的误会，二来更加灵活多变。&lt;/p>
+&lt;p>另外，纠正一个认识上的误区，现在网上经常有人说“代码胜于雄辩”，给人的感觉好像在说，“别废话，写个代码看看。”其实，在facebook，这句话的意思是相对产品来说的，比如你有一个想法总觉得多么的靠谱，不要讲很多漂亮话，上线看看用户反应再说。所以抛开产品这个前提，“代码胜于雄辩”就有让人误解为“只要实现不求质量”的理解偏差。&lt;/p>
+&lt;p>另外一点就是facebook的产品发布一套自有方法，叫做灰度发布(Gated Launch)。基本逻辑就是先让小部分用户使用刚上线的功能作为试水，如果符合预期，然后再逐步放开。&lt;/p>
+&lt;p>关于facebook的小团队，我觉得还是蛮牛b的。7、8个人的团队就可以完成非常大的产品。作者说facebook每个工程师都可以抗几百万的用户，太牛b了。&lt;/p>
+&lt;p>书的最后部分作者借助此书也谈论了一下自己在国内开始做天使投资的看法和投资方向。其中包括了对中国国内创业公司氛围面临的问题做了概括。&lt;/p>
+&lt;p>书的最后，我很佩服作者关于破坏性创新在中国推行的勇气。比如他谈到自己投资的“宝宝拍拍”这样一个产品，他说如果做成了这个也是比较小的公司，但是却会改变很多年轻父母与孩子的成长方式。这种所谓的破坏性创新，不用改变每个人的生活，只让某一类人的生活变得更加顺畅，能做成这样的事情不就非常开心吗？&lt;/p>
+&lt;p>这让我明白一个道理，一个事物的存在价值不在于他的受众有多少，而在于其的独特性，你认为呢？&lt;/p>
+&lt;p>最后我也不能免俗，称赞一句，在facebook有一群牛b的人，做了一件牛b的事情，过程还是蛮刺激的。&lt;/p></description></item></channel></rss>
