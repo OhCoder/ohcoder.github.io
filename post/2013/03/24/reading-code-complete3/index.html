@@ -1,0 +1,257 @@
+<!doctype html><html lang=en-us dir=ltr>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="继续上一周的阅读，本周读了第三部分－变量。 整个第三部分，包括第10章到第13章，一共有四章都是围绕变量展开。可见变量在程序设计当中有多重要。"><title>读《代码大全（第二版）》笔记（三）</title><link rel=canonical href=https://ohcoder.com/post/2013/03/24/reading-code-complete3/>
+<link rel=stylesheet href=/scss/style.min.4106a7b4d25dd419c5774d9ba3a705d0134876711f67a125f7f13a5223c0ba73.css><meta property="og:title" content="读《代码大全（第二版）》笔记（三）">
+<meta property="og:description" content="继续上一周的阅读，本周读了第三部分－变量。 整个第三部分，包括第10章到第13章，一共有四章都是围绕变量展开。可见变量在程序设计当中有多重要。">
+<meta property="og:url" content="https://ohcoder.com/post/2013/03/24/reading-code-complete3/">
+<meta property="og:site_name" content="OhCoder">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="programming"><meta property="article:published_time" content="2013-03-24T00:00:00+00:00"><meta property="article:modified_time" content="2013-03-24T00:00:00+00:00"><meta property="og:image" content="https://ohcoder.com/post/2013/03/24/reading-code-complete3/title.jpg">
+<meta name=twitter:title content="读《代码大全（第二版）》笔记（三）">
+<meta name=twitter:description content="继续上一周的阅读，本周读了第三部分－变量。 整个第三部分，包括第10章到第13章，一共有四章都是围绕变量展开。可见变量在程序设计当中有多重要。"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://ohcoder.com/post/2013/03/24/reading-code-complete3/title.jpg">
+</head><body class=article-page>
+<script>(function(){const e="StackColorScheme";localStorage.setItem(e,"dark")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky">
+<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box>
+<span class=hamburger-inner></span>
+</span>
+</button>
+<header>
+<figure class=site-avatar>
+<a href=/>
+<img src=/img/avatar_hu55511690b51ceae960c0ffab8deedb37_101683_300x0_resize_q75_box.jpg width=300 height=299 class=site-logo loading=lazy alt=Avatar>
+</a>
+<span class=emoji>💭</span>
+</figure><div class=site-meta>
+<h1 class=site-name><a href=/>OhCoder</a></h1><h2 class=site-description>宇称的神秘日记</h2></div></header><ol class=social-menu>
+<li>
+<a href=https://github.com/OhCoder target=_blank title=GitHub><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+</a>
+</li><li>
+<a href=https://twitter.com/ohcoder target=_blank title=Twitter><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
+</a>
+</li></ol><ol class=menu id=main-menu>
+<li>
+<a href=/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span>
+</a>
+</li><li>
+<a href=/page/2019/05/28/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span>
+</a>
+</li><li>
+<a href=/page/2022/03/06/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>About</span>
+</a>
+</li><div class=menu-bottom-section>
+</div></ol></aside><main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/post/2013/03/24/reading-code-complete3/>
+<img src=/post/2013/03/24/reading-code-complete3/title_hu6f8835bfb4d550680a97dd841449a3e2_1953517_800x0_resize_q75_box.jpg srcset="/post/2013/03/24/reading-code-complete3/title_hu6f8835bfb4d550680a97dd841449a3e2_1953517_800x0_resize_q75_box.jpg 800w, /post/2013/03/24/reading-code-complete3/title_hu6f8835bfb4d550680a97dd841449a3e2_1953517_1600x0_resize_q75_box.jpg 1600w" width=800 height=450 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（三）">
+</a>
+</div><div class=article-details>
+<header class=article-category>
+<a href=/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/>
+读书笔记
+</a>
+</header><div class=article-title-wrapper>
+<h2 class=article-title>
+<a href=/post/2013/03/24/reading-code-complete3/>读《代码大全（第二版）》笔记（三）</a>
+</h2></div><footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Mar 24, 2013</time>
+</div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+7 minute read
+</time>
+</div></footer></div></header><section class=article-content>
+<p>继续上一周的阅读，本周读了第三部分－变量。</p><p>整个第三部分，包括第10章到第13章，一共有四章都是围绕变量展开。可见变量在程序设计当中有多重要。</p><h2 id=第十章使用变量的一般事项>第十章－使用变量的一般事项</h2><p>从本章标题中也可以看出，本章主要就是在讲变量的使用。</p><p>本章一开始，作者就提到关于隐式变量声明的观点。例如：</p><blockquote>
+<p>(Page.240)隐式变量声明对于任何一种语言来说都是最具危险性的特性之一</p></blockquote><p>作者给出的解决办法是：</p><ul>
+<li>关闭隐式声明</li><li>声明全部的变量</li><li>遵循某种命名规则</li><li>检查变量名</li></ul><p>其实，关于这一点，现代解释型脚本语言貌似很多都支持隐式声明，例如Javascript。但是作者说的并不无道理，我用脚本语言用的还不是很多，没有太多经验来总结其中的利弊，暂且采用作者说的方法。</p><p>在作用域一节中，作者提出了两个概念，一个是</p><blockquote>
+<p>(Page.245)跨度*”，另一个是“*(Page.246)存活时间(live time)。</p></blockquote><p>所谓跨度，作者引出了其定义</p><blockquote>
+<p>(Page.245)衡量又一个变量的不同引用点的靠近程度的一种方法是计算该变量的“跨度(span)。</p></blockquote><p>所谓存活时间，</p><blockquote>
+<p>(Page.246)即一个变量存在期间所跨越的语句总数。</p></blockquote><p>也由此可见，对于变量来说保持跨度值和存活时间尽可能的短是主要目标。</p><p>对于减小变量作用域，作者给出了一些建议。</p><blockquote>
+<p>(Page.249)在循环开始之前再去初始化该循环里使用的变量，而不是在该循环所属的子程序的开始处初始化这些变量</p></blockquote><p>对于这一条建议，作者的目的是能够在循环里正确的使用外部初始化的变量。比如你把一个变量的声明和使用这个变量的循环之间隔离的很远的话，当需要修改循环的时候比较不容易看到循环中使用的这个变量。</p><blockquote>
+<p>(Page.249)直到变量即将被使用时再为其赋值</p></blockquote><p>这一条建议，我觉得很容易理解，主要就是为了让代码的初始化更醒目。</p><blockquote>
+<p>(Page.250)当对变量的作用域犹豫不决的时候，你应该倾向于选择该变量所能具有的最小作用域</p></blockquote><p>这条建议，其实目的也是为了尽可能的降低变量的生存时间。</p><blockquote>
+<p>(Page.252)采用越晚的绑定时间会越有利</p></blockquote><p>关于绑定时间书中给出了三种情况：</p><div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=c1>// Java示例：在编写代码时绑定其值的变量
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=n>titleBar</span><span class=o>.</span><span class=na>color</span> <span class=o>=</span> <span class=n>0xFF</span><span class=o>;</span> <span class=c1>//0xFF is hex value for color blue
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// Java示例：在编译时绑定其值的变量
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>private</span> <span class=kd>static</span> <span class=kd>final</span> <span class=kt>int</span> <span class=n>COLOR_BLUE</span> <span class=o>=</span> <span class=n>0xFF</span><span class=o>;</span>
+</span></span><span class=line><span class=cl><span class=kd>private</span> <span class=kd>static</span> <span class=kd>final</span> <span class=kt>int</span> <span class=n>TITLE_BAR_COLOR</span> <span class=o>=</span> <span class=n>COLOR_BLUE</span><span class=o>;</span>
+</span></span><span class=line><span class=cl><span class=o>...</span>
+</span></span><span class=line><span class=cl><span class=n>titleBar</span><span class=o>.</span><span class=na>color</span> <span class=o>=</span> <span class=n>TITLE_BAR_COLOR</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Java示例：在运行时绑定其值的变量 titleBar.color =
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=n>ReadTitleBarColor</span><span class=o>();</span>
+</span></span></code></pre></td></tr></table></div></div><p>关于这一点就不多做解释了。示例已经说明问题了。</p><h2 id=第十一章变量名的力量>第十一章－变量名的力量</h2><p>全章讲述的是变量命名，对于大的项目而言，好的变量名不但使程序更容易读懂和编写，而且还利于以后的bug调试。</p><p>对于如何命名，书中提到了一点建议，我觉得之前可能做的也不太好。</p><blockquote>
+<p>(Page.261)一个好记的名字反映的通常都是问题，而不是解决方案。一个好名字通常表达的是“什么”(what)，而不是“如何”(how)。</p></blockquote><p>作者说，</p><blockquote>
+<p>(Page.261)一般而言，如果一个名字反映了计算的某些方面而不是问题本身，那么它反映的就是“how”而非“what”了。</p></blockquote><p>关于名字的长度，文中提到</p><blockquote>
+<p>(Page.262)当变量名的平均长度在10到16个字符的时候，调试程序所需花费的力气是最小的(1990)。</p></blockquote><p>其实，我觉得， Objective
+C 这门语言天生就挺符合这个要求的，不用你刻意去注意，哈哈。</p><p>对于变量中使用计算限定词，文中也给出了很好的建议。</p><blockquote>
+<p>(Page.263)如果你要用类似与Total、Sum、Average、Max、Min、Record、String、Pointer这样的限定词来修改某个名字，那么请记住把限定词加到限定词名字的最后。</p></blockquote><p>对于文中所说何时采用命名规则，我觉得，平时就养成这个习惯吧，不论怎样，这个习惯都不是一个坏习惯。</p><p>与语言无关的命名规则的指导原则，书中也给出了几种方案(Page.272)。</p><p><strong>方案1</strong>: 通过大写字母开头区分类型和变量，例如： Widget 与 widget; LongerWidget 与 longerWidget;</p><p><strong>方案2</strong>: 通过全部大写区分类型和变量，例如： WIDGET 与 widget; LONGERWIDGET 与 longerWidget;</p><p><strong>方案3</strong>: 通过给类型“t_”前缀区分类型和变量，例如： t_Widget 与 widget; t_LongerWidget 与 LongerWidger;</p><p><strong>方案4</strong>: 通过给变量“a”前缀区分类型和变量，例如： Widget 与 aWidget; LongerWidget 与 aLongWidget;</p><p><strong>方案5</strong>: 通过对变量采用更明确的名字区分类型和变量，例如： Widget 与 employeeWidget; LongerWidget  与fullEmployeeWidget;</p><p>书中对每一种方案的优缺点做了描述(Page.272~Page.273)：</p><ul>
+<li>
+<p>第一种方案是在大小写敏感语言如 C++ 和 Java 里常用的规则，但是有些程序员对仅依靠大小写区分名字感到不大舒服。</p></li><li>
+<p>第二种方案使类型名和变量名之间的差异更加鲜明。然而，由于历史原因，在 C++ 和 Java 里面全部字母大写只用于表示常量，同时这种方案也会与第一种方案一样面临混合语言环境的问题。</p></li><li>
+<p>第三种方案可用于所有语言，但是很多程序员从审美的角度出发并不喜欢增加前缀。</p></li><li>
+<p>第四种方案有时会用作第三种方案的备选项，但是它存在的问题是需要改变类的每个实例的名字，而不是仅仅修改类名。</p></li><li>
+<p>第五种方案要求基于每个变量的实际情况作出更多的考虑。</p></li></ul><p>本章后面说了下应该避免的命名指导原则，原则有很多，我觉得都是非常常见的命名错误，在这里就不罗列了。</p><h2 id=第十二章基本数据类型>第十二章－基本数据类型</h2><p>本章对每一种基本数据类型的使用进行了详细讲解。首先从全局上给出了一些建议(Page.292~Page.293)。</p><ul>
+<li>避免使用“神秘数值(magic number)” 。如果需要，可以使用硬编码的 0 和 1</li><li>预防除零(devide-by-zero)错误，使类型转换变得明显。</li><li>避免混合类型的比较，注意编译器的警告。</li></ul><p>本章后面的基本类型差不多都是围绕着上面这几点根据具体的类型特点展开来讲的。其中印象比较深刻的是关于浮点数的一条建议：</p><blockquote>
+<p>(Page.295)避免等量判断</p></blockquote><p>很早之前掉进过这个坑。记得当时用了两个浮点数值进行等值判断，结果相等的概率非常的低，后来打印了一下数值，才发现掉到坑去里了，后来就长记性了，呵呵。</p><p>对于C语言的字符串的使用，有几个建议印象比较深刻。</p><blockquote>
+<p>(Page.299)把C-Style字符串的长度声明为CONSTANT + 1</p></blockquote><p>这一条建议可以避免循环数组时越界，当然这种写法在很多算法书中也很常见。</p><blockquote>
+<p>(Page.300)用null初始化字符串以避免无结束符的字符串</p></blockquote><p>这条在平时初始化的时候也很受用。下面这条是关于分配内存并初始化的建议。</p><blockquote>
+<p>(Page.300)其次，在你动态分配字符串的时候，使用calloc()而不是malloc()来把它初始化为0。calloc()会负责分配内存，并把它初始化为0。malloc()只分配内存，并不执行初始化。……</p></blockquote><p>对于定义枚举类型，文中给出了两条之前没有注意的点。</p><blockquote>
+<p>(Page.305)定义出枚举的第一项和最后一项，以便用于循环边界</p></blockquote><p>这一点以前还真没注意过，以后要注意了。还有下一点，我觉得也是蛮有道理的，虽然表面上感觉有点小聪明的意思，呵呵。</p><blockquote>
+<p>(Page.305)把枚举类型的第一个元素留作非法值</p></blockquote><p>本章后面谈论了一下使用typedef进行自定义类型，感觉没有太多要说的。</p><h2 id=第十三章不常见的数据类型>第十三章－不常见的数据类型</h2><p>本章主要是在讲非基本数据类型。主要包括结构、指针、全局数据。其实，关于这一章里，结构没有什么好说的，很多常见的语法书中该说的基本都说到了，包括结构化数据的优点等。关于 C/C++ 语言指针部分，其实很多基本概念在一些权威的书中基本也都提到过，没什么感觉。最后的讲了全局数据，当然主要就是全局数据的弊端占用了很多篇幅，以及如何避免使用全局数据等。避免的方式，感觉还是通过重构，尽量使程序模块化，降低变量的生存时间，也避免在内存堆中分配空间，达到节省内存的目的等等。</p><p>总体来说，这部分的内容不少，但是有些知识已经在一些权威的语法书中能够找到，读起来相对来说没有前两部分难懂，可能有些问题是平时写程序的时候经常会碰到的原因吧，见的多了，神经就有点麻木了，呵呵。</p></section><footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/programming/>programming</a>
+</section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css integrity=sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js integrity=sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js integrity=sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+</article><aside class=related-contents--wrapper>
+<h2 class=section-title>Related contents</h2><div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/post/2013/03/17/reading-code-complete2/>
+<div class=article-image>
+<img src=/post/2013/03/17/reading-code-complete2/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（二）" data-key=reading-code-complete2 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（二）</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2013/03/08/reading-code-complete1/>
+<div class=article-image>
+<img src=/post/2013/03/08/reading-code-complete1/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（一）" data-key=reading-code-complete1 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（一）</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2013/01/20/building-facebook/>
+<div class=article-image>
+<img src=/post/2013/01/20/building-facebook/title.f66cab7f8c2b0861778700a16dbd1d57_hu781b8f13410d620ed59aa59108167aac_2804141_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 打造 Facebook" data-key=building-facebook data-hash="md5-9myrf4wrCGF3hwChbb0dVw==">
+</div><div class=article-details>
+<h2 class=article-title>打造 Facebook</h2></div></a>
+</article></div></div></aside><footer class=site-footer>
+<section class=copyright>
+&copy;
+2012 -
+2022 OhCoder
+</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div><div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main><aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-license" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 21H6a3 3 0 01-3-3v-1h10v2a2 2 0 004 0V5a2 2 0 112 2h-2m2-4H8A3 3 0 005 6v11"/><line x1="9" y1="7" x2="13" y2="7"/><line x1="9" y1="11" x2="13" y2="11"/></svg>
+</div><h2 class="widget-title section-title">Table of contents</h2><div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#第十章使用变量的一般事项>第十章－使用变量的一般事项</a></li><li><a href=#第十一章变量名的力量>第十一章－变量名的力量</a></li><li><a href=#第十二章基本数据类型>第十二章－基本数据类型</a></li><li><a href=#第十三章不常见的数据类型>第十三章－不常见的数据类型</a></li></ol></nav></div></section><section class="widget tagCloud">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rainbow" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 17c0-5.523-4.477-10-10-10S2 11.477 2 17"/><path d="M18 17A6 6 0 106 17"/><path d="M14 17a2 2 0 10-4 0"/></svg>
+</div><h2 class="widget-title section-title">Categories</h2><div class=tagCloud-tags>
+<a href=/categories/%E6%97%A5%E8%AE%B0/ class=font_size_15>
+日记
+</a>
+<a href=/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/ class=font_size_4>
+读书笔记
+</a>
+<a href=/categories/test/ class=font_size_2>
+Test
+</a>
+<a href=/categories/syntax/ class=font_size_1>
+syntax
+</a>
+<a href=/categories/themes/ class=font_size_1>
+themes
+</a>
+<a href=/categories/%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9/ class=font_size_1>
+تجربة
+</a>
+<a href=/categories/%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9-%D9%85%D8%B9-%D9%81%D8%B1%D8%A7%D8%BA%D8%A7%D8%AA/ class=font_size_1>
+تجربة مع فراغات
+</a>
+<a href=/categories/%E6%B5%8B%E8%AF%95/ class=font_size_1>
+测试
+</a>
+</div></section><section class="widget tagCloud">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cloud-storm" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 18a4.6 4.4.0 010-9 5 4.5.0 0111 2h1a3.5 3.5.0 010 7h-1"/><polyline points="13 14 11 18 14 18 12 22"/></svg>
+</div><h2 class="widget-title section-title">Tags</h2><div class=tagCloud-tags>
+<a href=/tags/programming/ class=font_size_3>
+programming
+</a>
+<a href=/tags/css/ class=font_size_1>
+css
+</a>
+<a href=/tags/emoji/ class=font_size_1>
+emoji
+</a>
+<a href=/tags/facebook/ class=font_size_1>
+facebook
+</a>
+<a href=/tags/git/ class=font_size_1>
+git
+</a>
+<a href=/tags/html/ class=font_size_1>
+html
+</a>
+<a href=/tags/markdown/ class=font_size_1>
+markdown
+</a>
+<a href=/tags/privacy/ class=font_size_1>
+privacy
+</a>
+<a href=/tags/ruby/ class=font_size_1>
+ruby
+</a>
+<a href=/tags/shortcodes/ class=font_size_1>
+shortcodes
+</a>
+<a href=/tags/themes/ class=font_size_1>
+themes
+</a>
+<a href=/tags/vim/ class=font_size_1>
+vim
+</a>
+<a href=/tags/%D9%85%D8%A7%D8%B1%D9%83%D8%AF%D8%A7%D9%88%D9%86/ class=font_size_1>
+ماركداون
+</a>
+<a href=/tags/%D9%86%D8%B5/ class=font_size_1>
+نص
+</a>
+<a href=/tags/%D9%88%D8%B3%D9%85-%D9%85%D8%B9-%D9%81%D8%B1%D8%A7%D8%BA%D8%A7%D8%AA/ class=font_size_1>
+وسم مع فراغات
+</a>
+</div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script>
+</body></html>
