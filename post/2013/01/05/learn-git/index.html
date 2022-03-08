@@ -1,14 +1,14 @@
 <!doctype html><html lang=en-us dir=ltr>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="近来良心发现，深刻的认识到了自己的差距，自己底子的薄弱，以前总是停留在想，为了不再祸害中国软件业，前两天开始补习系统相关基础知识，开始看《深"><title>锄头</title><link rel=canonical href=https://ohcoder.com/post/2012/12/07/hoe/>
-<link rel=stylesheet href=/scss/style.min.6c81f9e659e03e720e065b89ab7b28f69fc42db47aabc1f256ccbc8c52471956.css><meta property="og:title" content="锄头">
-<meta property="og:description" content="近来良心发现，深刻的认识到了自己的差距，自己底子的薄弱，以前总是停留在想，为了不再祸害中国软件业，前两天开始补习系统相关基础知识，开始看《深">
-<meta property="og:url" content="https://ohcoder.com/post/2012/12/07/hoe/">
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="扫盲了一下 Git，以后想用 Git 作为版本管理工具。 前两天粗略看了两本关于 Git 的书，一本是《Pro Git》(貌似需要翻墙)，另一本是《Git权威指南"><title>扫盲Git</title><link rel=canonical href=https://ohcoder.com/post/2013/01/05/learn-git/>
+<link rel=stylesheet href=/scss/style.min.6c81f9e659e03e720e065b89ab7b28f69fc42db47aabc1f256ccbc8c52471956.css><meta property="og:title" content="扫盲Git">
+<meta property="og:description" content="扫盲了一下 Git，以后想用 Git 作为版本管理工具。 前两天粗略看了两本关于 Git 的书，一本是《Pro Git》(貌似需要翻墙)，另一本是《Git权威指南">
+<meta property="og:url" content="https://ohcoder.com/post/2013/01/05/learn-git/">
 <meta property="og:site_name" content="OhCoder">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2012-12-07T00:00:00+00:00"><meta property="article:modified_time" content="2012-12-07T00:00:00+00:00"><meta property="og:image" content="https://ohcoder.com/post/2012/12/07/hoe/title.jpg">
-<meta name=twitter:title content="锄头">
-<meta name=twitter:description content="近来良心发现，深刻的认识到了自己的差距，自己底子的薄弱，以前总是停留在想，为了不再祸害中国软件业，前两天开始补习系统相关基础知识，开始看《深"><meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://ohcoder.com/post/2012/12/07/hoe/title.jpg">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="git"><meta property="article:published_time" content="2013-01-05T00:00:00+00:00"><meta property="article:modified_time" content="2013-01-05T00:00:00+00:00"><meta property="og:image" content="https://ohcoder.com/post/2013/01/05/learn-git/title.jpg">
+<meta name=twitter:title content="扫盲Git">
+<meta name=twitter:description content="扫盲了一下 Git，以后想用 Git 作为版本管理工具。 前两天粗略看了两本关于 Git 的书，一本是《Pro Git》(貌似需要翻墙)，另一本是《Git权威指南"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://ohcoder.com/post/2013/01/05/learn-git/title.jpg">
 </head><body class=article-page>
 <script>(function(){const e="StackColorScheme";localStorage.setItem(e,"dark")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky">
@@ -49,8 +49,8 @@
 <article class="has-image main-article">
 <header class=article-header>
 <div class=article-image>
-<a href=/post/2012/12/07/hoe/>
-<img src=/post/2012/12/07/hoe/title_hucce5720e41d5d2b1a09b64ed1fd2b7c3_1684293_800x0_resize_q75_box.jpg srcset="/post/2012/12/07/hoe/title_hucce5720e41d5d2b1a09b64ed1fd2b7c3_1684293_800x0_resize_q75_box.jpg 800w, /post/2012/12/07/hoe/title_hucce5720e41d5d2b1a09b64ed1fd2b7c3_1684293_1600x0_resize_q75_box.jpg 1600w" width=800 height=533 loading=lazy alt="Featured image of post 锄头">
+<a href=/post/2013/01/05/learn-git/>
+<img src=/post/2013/01/05/learn-git/title_hu309c37d50846c7b045ac9cfd5834baf8_2283649_800x0_resize_q75_box.jpg srcset="/post/2013/01/05/learn-git/title_hu309c37d50846c7b045ac9cfd5834baf8_2283649_800x0_resize_q75_box.jpg 800w, /post/2013/01/05/learn-git/title_hu309c37d50846c7b045ac9cfd5834baf8_2283649_1600x0_resize_q75_box.jpg 1600w" width=800 height=530 loading=lazy alt="Featured image of post 扫盲Git">
 </a>
 </div><div class=article-details>
 <header class=article-category>
@@ -59,29 +59,25 @@
 </a>
 </header><div class=article-title-wrapper>
 <h2 class=article-title>
-<a href=/post/2012/12/07/hoe/>锄头</a>
+<a href=/post/2013/01/05/learn-git/>扫盲Git</a>
 </h2></div><footer class=article-time>
 <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Dec 07, 2012</time>
+<time class=article-time--published>Jan 05, 2013</time>
 </div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <time class=article-time--reading>
-3 minute read
+2 minute read
 </time>
 </div></footer></div></header><section class=article-content>
-<p>近来良心发现，深刻的认识到了自己的差距，自己底子的薄弱，以前总是停留在想，为了不再祸害中国软件业，前两天开始补习系统相关基础知识，开始看《<a class=link href=http://book.douban.com/subject/5333562/ target=_blank rel=noopener>深入理解计算机系统</a>》这本书。</p><p>身为一名码农，如果对自己用的“锄头”都不了解，想来想去总觉得是一件不太靠谱的事情。要想改变宇宙，也得先从改造自己下手！以前总是找各种理由躲避，其中有一条理由可能印象最深刻，总是觉得“根本用不到嘛”，因为不能有立竿见影的效果，所以总是推三阻四。但是最不可饶恕的是，每每跟人吹牛b的时候，总是说：“某某某，你应该好好学习一下操作系统，很重要哦！”哎，这两天自己想了想，自己都不看，还有脸让别人看，怎么这么无耻啊！自己应该对自己千刀万剐！（说说而已，说说而已！:P）</p><p>为了悔过自新，重新做码农。在此先承认自己之前犯的错误。俗话说，认识错误是改正错误的第一步嘛。所以这两天下决心怎么说也要好好补习一下相关知识。</p><p>经过这几天的学习，看到了第五章－“优化程序性能”。这一帆可谓不风顺啊。</p><p>第一章还好，是“计算机系统漫游”，总体来说没什么难度，大而全的讲了一堆，看不懂也没关系，反正后边还会展开来讲嘛。</p><p>第二章是“信息的表示和处理”，前面讲编码表示和进制之间的变换，接下来讲整数的二进制表示，以及整数的四则运算是如何进行的，再接下来是浮点数的表示以及运算。哦，还有一点比较重要，C语言中的对于数值类型的强制转换是如何进行的。这些基础知识看似不重要，其实都很重要，很多系统级别的漏洞都和数值溢出有关，属于基本功。</p><p>第三章是“程序的机器级表示”，说白了就是汇编基础以及汇编与C语言之间是如何互相映射的，看这部分的时候一开始还好，后边的指令跳转有点头晕，也有点儿乱，不过还好吧，这一章的整体思路就是教你用汇编映射C语言。当然了，如果你能把汇编眼瞅着就能还原成C语言，反之也行，那么这一章你就算是基本掌握了。</p><p>第四章是“处理器体系结构”，这一章对于程序员来说应该是最底层了，主要解释了每条汇编指令在CPU中是如何运行的，通过构造最简单的Y86，带领大家实现一个处理器，以此来了解处理器的基本逻辑。说实话，这一章后半部分看的我是云里雾里，找不着北啊，明显功力不够哇。可能问题出在某一个知识点没有掌握吧，导致跟不上作者的逻辑，迷路了。迷路的孩子伤不起啊～</p><p>第五章是“优化程序性能”，这一章还没看完，只是起了个头，不过我感觉这章的思路是以前几章为基础，以C语言为例，来说明程序应该怎样写效率比较高。其实我自己感觉如果前两章掌握的比较好的话，既了解CPU的基本构造，又能很快的把C语言还原成汇编的话，这章基本就是经验之谈。当然了，这章我自己还没看完，在此只是胡喷。</p><p>看过四章多一点之后，感慨不愧为经典啊，跟人吹牛b的时候总算是没有害了人家。书中很多细节还是需要不断揣摩的，现在很多知识点还只是个框架概念，从真正理解到灵活自如的运用还是需要时间不断消化啊。不过好在自己亡羊补牢，总算是迈出了重要的一步了，这本书对于我这种脑子不好使的同学来说，少于五遍，我想我很难全面理解书中的知识点，掌握的遍数另算。呵呵，没办法，脑子不好使，身体就得勤快点儿，这话是我第一个老板说我的，呵呵，比较适合我，我很受用 :)。</p><p>说两句题外话，这两天有时候心神不定的，有点遥想当年的韵味，时不时会想起中学。有时候我很自恋的在想，是不是有哪位中学女同学想我了，给我发脑电波呢？心灵感应嘛。哎，历史是改变不了的，如果真有哪位女同学怀念我了，我会语重心长的对她说：“同学，好好过日子。地球很危险，还是回火星去吧”。</p></section><footer class=article-footer>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<p>扫盲了一下 Git，以后想用 Git 作为版本管理工具。</p><p>前两天粗略看了两本关于 Git 的书，一本是《<a class=link href=http://git-scm.com/book/zh target=_blank rel=noopener>Pro Git</a>》(貌似需要翻墙)，另一本是《<a class=link href=http://book.douban.com/subject/6526452/ target=_blank rel=noopener>Git权威指南</a>》。第一本书讲的比较基础，主要是对于 Git 的基本使用，其中包括基本的命令行操作，Git 服务器常见的搭建方式，以及使用 Git 的常见工作流。第二本讲的就比较深入了，较深入和详细的剖析了 Git。以前没怎么用过版本管理工具的同学可以先看下第一本，然后再看第二本，直接看第二本让人有点儿晕。</p><p>大概翻完这两本书后，琢磨了一下，要是不想把自己的私人代码开源，又不想给 <a class=link href=https://github.com/ target=_blank rel=noopener>Github</a> 送 Money，还想多学习一点技术，怎么办呢？想了想最划算的办法就是自己在 VPS 上用 Git 建立一个私人的代码库，以后想玩开源了再移到 Github 上。反正 VPS 闲着也是闲着嘛，要充分发挥其作用。</p><p>在 VPS 上搭建简陋的 Git 代码库非常容易，只要安装上 Git 就满足最低要求了，PUSH/PULL 代码就直接用 SSH 连接就好了。而且 XCode 正好原生支持 Git，用 XCode 作为开发工具，上手就更容易了。粗看了下，基本上点点鼠标就 OK 了。工具嘛，最重要的还是使用。从最简单的点入手，边使用边学习，要比干巴巴的抱本书看感觉效果要好。再者 Git 的命令繁多，关键还得不断的使用才能熟练掌握。对于 Git 的命令行什么的这里就不啰嗦了，网上一搜一大堆。</p><p>至于为什么非要折腾个版本管理，其实还有一个想法，就是想把自己平时玩的东西做一个规范的管理，以前自己瞎折腾的东西要么最后都删除了，要么就是遗忘了，最后也找不到了，干脆有的根本就想不起来是什么了，想想挺可惜的，不管怎么说，都是自己曾经的见证啊，跟写日记有相同的感觉。有时候看到几年前写的代码觉得也蛮好玩的，尤其是发现当时带有个人情绪写的注释。呵呵，现在看来会有不一样的感觉，也许当时并不这么看。</p><p>另外，本博客的文章我也用 Git 备份到 VPS 上了，以后如果 Mac 系统出现什么问题，博客什么的也不会受到影响。呵呵，有点像是有了一个锤子，把什么都当成钉子的影子。无所谓啦，工具就是拿来用的，再者说谁规定 Git 只能用来管理代码呢？有了好的工具就应该多利用嘛，对硬盘上有价值的文件或代码我要统统管理一下，哈哈！</p></section><footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/git/>git</a>
+</section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
 <span>Licensed under CC BY-NC-SA 4.0</span>
 </section></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css integrity=sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js integrity=sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js integrity=sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
 </article><aside class=related-contents--wrapper>
 <h2 class=section-title>Related contents</h2><div class=related-contents>
 <div class="flex article-list--tile">
 <article class=has-image>
-<a href=/post/2013/01/05/learn-git/>
-<div class=article-image>
-<img src=/post/2013/01/05/learn-git/title.7cb1b45abcd853e66e024a802aa4fffc_hu309c37d50846c7b045ac9cfd5834baf8_2283649_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 扫盲Git" data-key=learn-git data-hash="md5-fLG0WrzYU+ZuAkqAKqT//A==">
-</div><div class=article-details>
-<h2 class=article-title>扫盲Git</h2></div></a>
-</article><article class=has-image>
 <a href=/post/2012/12/30/deception/>
 <div class=article-image>
 <img src=/post/2012/12/30/deception/title.0ce4f12a18c2b5517dcae2f30c7f8e62_hua62b8249a7ef23a3a99359bc488bae2a_3424640_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 行骗记" data-key=deception data-hash="md5-DOTxKhjCtVF9yuLzDH+OYg==">
@@ -99,6 +95,12 @@
 <img src=/post/2012/12/14/learning-and-school/title.3e9f6631c914bab339257f96601620eb_hu5f1977041065a069c2c9799511bec3cf_1112366_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 学习与上学" data-key=learning-and-school data-hash="md5-Pp9mMckUurM5JX+WYBYg6w==">
 </div><div class=article-details>
 <h2 class=article-title>学习与上学</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2012/12/07/hoe/>
+<div class=article-image>
+<img src=/post/2012/12/07/hoe/title.4294c60fc365f6df68ff46d5978b0e49_hucce5720e41d5d2b1a09b64ed1fd2b7c3_1684293_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 锄头" data-key=hoe data-hash="md5-QpTGD8Nl9t9o/0bVl4sOSQ==">
+</div><div class=article-details>
+<h2 class=article-title>锄头</h2></div></a>
 </article><article class=has-image>
 <a href=/post/2012/12/03/hello-word-again/>
 <div class=article-image>

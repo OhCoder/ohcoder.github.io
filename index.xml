@@ -481,7 +481,15 @@ $$&lt;/p></description></item><item><title>Emoji Support</title><link>https://oh
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>行骗记</title><link>https://ohcoder.com/post/2012/12/30/deception/</link><pubDate>Sun, 30 Dec 2012 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2012/12/30/deception/</guid><description>&lt;img src="https://ohcoder.com/post/2012/12/30/deception/title.jpg" alt="Featured image of post 行骗记" />&lt;p>今天天色已晚，本来想洗洗睡了。关电脑前在 Google Plus 上看到一则临近年底公交车上 &lt;a class="link" href="https://plus.google.com/u/0/116618331988393616192/posts/ZoeaaTmyDLw" target="_blank" rel="noopener"
+&lt;/div></description></item><item><title>扫盲Git</title><link>https://ohcoder.com/post/2013/01/05/learn-git/</link><pubDate>Sat, 05 Jan 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/01/05/learn-git/</guid><description>&lt;img src="https://ohcoder.com/post/2013/01/05/learn-git/title.jpg" alt="Featured image of post 扫盲Git" />&lt;p>扫盲了一下 Git，以后想用 Git 作为版本管理工具。&lt;/p>
+&lt;p>前两天粗略看了两本关于 Git 的书，一本是《&lt;a class="link" href="http://git-scm.com/book/zh" target="_blank" rel="noopener"
+>Pro Git&lt;/a>》(貌似需要翻墙)，另一本是《&lt;a class="link" href="http://book.douban.com/subject/6526452/" target="_blank" rel="noopener"
+>Git权威指南&lt;/a>》。第一本书讲的比较基础，主要是对于 Git 的基本使用，其中包括基本的命令行操作，Git 服务器常见的搭建方式，以及使用 Git 的常见工作流。第二本讲的就比较深入了，较深入和详细的剖析了 Git。以前没怎么用过版本管理工具的同学可以先看下第一本，然后再看第二本，直接看第二本让人有点儿晕。&lt;/p>
+&lt;p>大概翻完这两本书后，琢磨了一下，要是不想把自己的私人代码开源，又不想给 &lt;a class="link" href="https://github.com/" target="_blank" rel="noopener"
+>Github&lt;/a> 送 Money，还想多学习一点技术，怎么办呢？想了想最划算的办法就是自己在 VPS 上用 Git 建立一个私人的代码库，以后想玩开源了再移到 Github 上。反正 VPS 闲着也是闲着嘛，要充分发挥其作用。&lt;/p>
+&lt;p>在 VPS 上搭建简陋的 Git 代码库非常容易，只要安装上 Git 就满足最低要求了，PUSH/PULL 代码就直接用 SSH 连接就好了。而且 XCode 正好原生支持 Git，用 XCode 作为开发工具，上手就更容易了。粗看了下，基本上点点鼠标就 OK 了。工具嘛，最重要的还是使用。从最简单的点入手，边使用边学习，要比干巴巴的抱本书看感觉效果要好。再者 Git 的命令繁多，关键还得不断的使用才能熟练掌握。对于 Git 的命令行什么的这里就不啰嗦了，网上一搜一大堆。&lt;/p>
+&lt;p>至于为什么非要折腾个版本管理，其实还有一个想法，就是想把自己平时玩的东西做一个规范的管理，以前自己瞎折腾的东西要么最后都删除了，要么就是遗忘了，最后也找不到了，干脆有的根本就想不起来是什么了，想想挺可惜的，不管怎么说，都是自己曾经的见证啊，跟写日记有相同的感觉。有时候看到几年前写的代码觉得也蛮好玩的，尤其是发现当时带有个人情绪写的注释。呵呵，现在看来会有不一样的感觉，也许当时并不这么看。&lt;/p>
+&lt;p>另外，本博客的文章我也用 Git 备份到 VPS 上了，以后如果 Mac 系统出现什么问题，博客什么的也不会受到影响。呵呵，有点像是有了一个锤子，把什么都当成钉子的影子。无所谓啦，工具就是拿来用的，再者说谁规定 Git 只能用来管理代码呢？有了好的工具就应该多利用嘛，对硬盘上有价值的文件或代码我要统统管理一下，哈哈！&lt;/p></description></item><item><title>行骗记</title><link>https://ohcoder.com/post/2012/12/30/deception/</link><pubDate>Sun, 30 Dec 2012 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2012/12/30/deception/</guid><description>&lt;img src="https://ohcoder.com/post/2012/12/30/deception/title.jpg" alt="Featured image of post 行骗记" />&lt;p>今天天色已晚，本来想洗洗睡了。关电脑前在 Google Plus 上看到一则临近年底公交车上 &lt;a class="link" href="https://plus.google.com/u/0/116618331988393616192/posts/ZoeaaTmyDLw" target="_blank" rel="noopener"
 >行骗的消息&lt;/a>（注：原链接已失效），又勾起我想聊一下昨天(确切的说应该是前天)我遇到骗子的故事。&lt;/p>
 &lt;p>故事发生在昨天下午 4 点多，咳咳……&lt;/p>
 &lt;p>月底了，这个月也该交下个季度的房租了。昨天下午 4 点多，二房东(注：她自己也是租房的)用她的手机给我发了条飞信说该交下个季度的房租了，其中还包括水电费什么的。当时想吃完晚饭回来的路上顺便取回来，晚上给她(注: 一共有三户合租，其中有一位同学是二房东，平时大家相亲相爱谈不上，可以算是和睦的住在一起)。&lt;/p>
