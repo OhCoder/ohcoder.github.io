@@ -6,6 +6,7 @@ image: title.jpg
 categories:
   - 日记
 tags:
+  - git
 ---
 
 扫盲了一下 Git，以后想用 Git 作为版本管理工具。
