@@ -1,6 +1,6 @@
 ---
 title: "2013年2月10日"
-date: 2022-03-08T20:20:55+08:00
+date: 2013-02-10
 slug: "2013-02-10"
 image: title.jpg
 categories:
