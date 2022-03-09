@@ -1,17 +1,17 @@
 ---
-title: "扫盲Git"
+title: 扫盲Git
 date: 2013-01-05
-slug: "learn-git"
+slug: learn-git
 image: title.jpg
 categories:
-  - 日记
+  - diary
 tags:
   - git
 ---
 
 扫盲了一下 Git，以后想用 Git 作为版本管理工具。
 
-前两天粗略看了两本关于 Git 的书，一本是《[Pro Git](http://git-scm.com/book/zh)》(貌似需要翻墙)，另一本是《[Git权威指南](http://book.douban.com/subject/6526452/)》。第一本书讲的比较基础，主要是对于 Git 的基本使用，其中包括基本的命令行操作，Git 服务器常见的搭建方式，以及使用 Git 的常见工作流。第二本讲的就比较深入了，较深入和详细的剖析了 Git。以前没怎么用过版本管理工具的同学可以先看下第一本，然后再看第二本，直接看第二本让人有点儿晕。
+前两天粗略看了两本关于 Git 的书，一本是《[Pro Git](http://git-scm.com/book/zh)》(貌似需要翻墙)，另一本是《[Git 权威指南](http://book.douban.com/subject/6526452/)》。第一本书讲的比较基础，主要是对于 Git 的基本使用，其中包括基本的命令行操作，Git 服务器常见的搭建方式，以及使用 Git 的常见工作流。第二本讲的就比较深入了，较深入和详细的剖析了 Git。以前没怎么用过版本管理工具的同学可以先看下第一本，然后再看第二本，直接看第二本让人有点儿晕。
 
 大概翻完这两本书后，琢磨了一下，要是不想把自己的私人代码开源，又不想给 [Github](https://github.com/) 送 Money，还想多学习一点技术，怎么办呢？想了想最划算的办法就是自己在 VPS 上用 Git 建立一个私人的代码库，以后想玩开源了再移到 Github 上。反正 VPS 闲着也是闲着嘛，要充分发挥其作用。
 
