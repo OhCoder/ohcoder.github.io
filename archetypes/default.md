@@ -4,6 +4,6 @@ date: {{ .Date }}
 slug: "{{ replace .Name "-" " " | title }}"
 image: 
 categories:
-  - 日记
+  - diary
 tags:
 ---
