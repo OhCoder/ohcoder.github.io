@@ -1,0 +1,322 @@
+<!doctype html><html lang=en-us dir=ltr>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="本周读了第四部分——语句。 这一部分包括的章节比较多，首先分别用 三 个章节讲述了三种常见的语句结构，随后用一章的内容谈论了一下不常见的控制结构。"><title>读《代码大全（第二版）》笔记（四）</title><link rel=canonical href=https://ohcoder.com/post/2013/03/31/reading-code-complete4/>
+<link rel=stylesheet href=/scss/style.min.4106a7b4d25dd419c5774d9ba3a705d0134876711f67a125f7f13a5223c0ba73.css><meta property="og:title" content="读《代码大全（第二版）》笔记（四）">
+<meta property="og:description" content="本周读了第四部分——语句。 这一部分包括的章节比较多，首先分别用 三 个章节讲述了三种常见的语句结构，随后用一章的内容谈论了一下不常见的控制结构。">
+<meta property="og:url" content="https://ohcoder.com/post/2013/03/31/reading-code-complete4/">
+<meta property="og:site_name" content="OhCoder">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="programming"><meta property="article:published_time" content="2013-03-31T00:00:00+00:00"><meta property="article:modified_time" content="2013-03-31T00:00:00+00:00"><meta property="og:image" content="https://ohcoder.com/post/2013/03/31/reading-code-complete4/title.jpg">
+<meta name=twitter:title content="读《代码大全（第二版）》笔记（四）">
+<meta name=twitter:description content="本周读了第四部分——语句。 这一部分包括的章节比较多，首先分别用 三 个章节讲述了三种常见的语句结构，随后用一章的内容谈论了一下不常见的控制结构。"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://ohcoder.com/post/2013/03/31/reading-code-complete4/title.jpg">
+</head><body class=article-page>
+<script>(function(){const e="StackColorScheme";localStorage.setItem(e,"dark")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky">
+<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box>
+<span class=hamburger-inner></span>
+</span>
+</button>
+<header>
+<figure class=site-avatar>
+<a href=/>
+<img src=/img/avatar_hu55511690b51ceae960c0ffab8deedb37_101683_300x0_resize_q75_box.jpg width=300 height=299 class=site-logo loading=lazy alt=Avatar>
+</a>
+<span class=emoji>💭</span>
+</figure><div class=site-meta>
+<h1 class=site-name><a href=/>OhCoder</a></h1><h2 class=site-description>宇称的神秘日记</h2></div></header><ol class=social-menu>
+<li>
+<a href=https://github.com/OhCoder target=_blank title=GitHub><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+</a>
+</li><li>
+<a href=https://twitter.com/ohcoder target=_blank title=Twitter><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
+</a>
+</li></ol><ol class=menu id=main-menu>
+<li>
+<a href=/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span>
+</a>
+</li><li>
+<a href=/page/2019/05/28/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span>
+</a>
+</li><li>
+<a href=/page/2022/03/06/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>About</span>
+</a>
+</li><div class=menu-bottom-section>
+</div></ol></aside><main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/post/2013/03/31/reading-code-complete4/>
+<img src=/post/2013/03/31/reading-code-complete4/title_hu6f8835bfb4d550680a97dd841449a3e2_1953517_800x0_resize_q75_box.jpg srcset="/post/2013/03/31/reading-code-complete4/title_hu6f8835bfb4d550680a97dd841449a3e2_1953517_800x0_resize_q75_box.jpg 800w, /post/2013/03/31/reading-code-complete4/title_hu6f8835bfb4d550680a97dd841449a3e2_1953517_1600x0_resize_q75_box.jpg 1600w" width=800 height=450 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（四）">
+</a>
+</div><div class=article-details>
+<header class=article-category>
+<a href=/categories/reading/ style=background-color:#2a9d8f;color:#fff>
+读书笔记
+</a>
+</header><div class=article-title-wrapper>
+<h2 class=article-title>
+<a href=/post/2013/03/31/reading-code-complete4/>读《代码大全（第二版）》笔记（四）</a>
+</h2></div><footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Mar 31, 2013</time>
+</div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+11 minute read
+</time>
+</div></footer></div></header><section class=article-content>
+<p>本周读了第四部分——<strong>语句</strong>。</p><p>这一部分包括的章节比较多，首先分别用 三 个章节讲述了三种常见的语句结构，随后用一章的内容谈论了一下不常见的控制结构。在使用控制结构方面，为了降低复杂度，本部分专门用一章讲述了一种方法，最后用一章内容描述了一下常见的控制问题，本部分总共包括 六 章内容。</p><h2 id=第十四章组织直线型代码>第十四章——组织直线型代码</h2><p>本章篇幅比较短，主要讲述了一些如何让用户从外部调用对象方法的时候能够清楚的遵循一定的顺序。换句话说，就是让别人调用你的方法的时候能够简单明了的知道这些方法的调用顺序。书中给出了一些指导原则。</p><blockquote>
+<p>(Page.348)设法组织代码，使依赖关系变得非常明显</p></blockquote><p>我自己的理解是，在封装类的时候，从内部尽量使方法之间的依赖降到最低。在方法功能的实现上尽可能的做到功能单一，我觉得可以比较好的解决这个问题。应该尽可能的满足 KISS 原则吧。</p><blockquote>
+<p>(Page.348)使子程序名能凸显依赖关系</p></blockquote><p>这条原则的意思很明显，就是对所定义的方法要取个清晰的名字。</p><blockquote>
+<p>(Page.349)利用子程序参数明确显示依赖关系</p></blockquote><p>这个原则也不用解释过多，书中提到了一种情况，就是把几个方法的参数定义成同一个类型，以此暗示这些方法在调用参数的时候需要留心它们之间的调用关系。我自己倒是觉得，或许还可以有一种情况，那就是规定调用的 A 方法能够产生调用 B 方法所需要的参数类型，这样 A、B 方法的调用也可以从外部有一个依赖关系。</p><blockquote>
+<p>(Page.350)用注释对不清晰的依赖关系进行说明</p></blockquote><p>这种方法我认为属于下策，我觉得，任何通过注释进行说明的方式都是下策，我觉得好的代码应该尽量不依赖于注释，也许我的想法有些偏激，因为我觉得代码本身就是给人读的，如果通过代码仍让人琢磨不清，可能这段代码的设计偏离了 KISS 原则。当然，注释能够更好的辅助我们快速了解代码，我的意思并不是说写了注释的代码就是烂代码，不要走极端。</p><blockquote>
+<p>(Page.350)用断言或者错误处理代码来检查依赖关系</p></blockquote><p>对于重要的代码，尽量在方法内部加上断言。其实，可以看出来，这属于防御式设计了，为了避免系统的崩溃，所采取的必要措施。</p><p>本章后面简单说了一下，对于顺序无关的语句应该如何书写。提到了两个大的要点，一个是</p><blockquote>
+<p>(Page.351)使代码易于自上而下地阅读。</p></blockquote><p>另一个是</p><blockquote>
+<p>(Page.352)把相关地语句组织在一起。</p></blockquote><p>这两个观点都很明显，为的就是使代码阅读起来更有条理。</p><h2 id=第十五章使用条件语句>第十五章——使用条件语句</h2><p>本章主要是对条件语句的书写进行了讲解。条件语句分为两大类，一类是 if 语句，另一类为 case 语句。</p><p>对于 if 语句，书中给出了一些指导原则（Page.355~Page.358）。</p><ul>
+<li>首先写正常代码路径；再处理不常见情况。</li><li>确保对于等量的分支是正确的。请不要用 > 代替 >= 或用 &#171;/code> 代替 &lt;= ，这类似于在访问数组或者计算循环下标的时候犯下 off-by-one (偏差一)错误。</li><li>把正常情况的处理放在 if 后面而不要放在 else 后面</li><li>让 if 子句后面跟随一个有意义的语句</li><li>考虑 else 子句。如果你认为自己只需要一个简单的 if 语句，那么请考虑你是否真的不需要一个 if-then-else 语句。</li><li>测试 else 子句的正确性</li><li>检查 if 和 else 子句是不是弄反了</li></ul><p>上面只是简单罗列了书中的一些条款，其实具体的细节，需要不断的在书写代码的时候进行调整。</p><p>在这里，我想说两句自己偶然想到的一些认识。平时很多大牛在介绍经验的时候会经常说，“代码要多写，没有其他捷径”。针对这句话的理解，我想说两句自己的想法，之前听了这些话，听起来觉得挺有道理，但是却不知道为什么，总是用熟能生巧来简单的搪塞自己。书看到这部分的时候，我突然意识到，写代码这项运动，其实不是简单的提高打字速度，也不单单是熟练使用语言中的关键字。其实，更多的涉及到的部分是习惯和思维方式的培养问题，通过不断在代码上的调整，来调整我们的思维方式，之后通过不断的重复，让这种调整后的行为逐渐的成为我们的习惯，以此来逐渐的规范我们的代码编写方式。久而久之，即便在你无意识的情况下也可以反射性的写出高质量的代码。这个时候我想就达到了代码要多写的目的。</p><p>恩，经过这样的简单分析，我就基本上理解了大牛们说的代码要多写的真正含义。好吧吧，也许有朋友看到这里觉得我有点死较真儿，或者说这么明显的道理都看不出来，如果屏幕前的您早就想到了，对着屏幕呵呵呵就行了，见谅！:)。坦白说，之前确实没有想太多，或者说，总感觉多写代码为的只是增加对某种语言的关键字使用的熟练程度，真的没有意识到其实最终为的是改变你的思维方式和行为习惯。</p><p>好吧，说了两句突发奇想的感悟，下面还回到正题上来。接下来说的是 case 语句。对于 case 语句的有效排列顺序而言，书中给出了三种建议。</p><ul>
+<li>按字母排序或按数字排序排列各种情况</li><li>把正常的情况放在前面</li><li>按执行频率排列 case 子句</li></ul><p>上面提到的三种排列建议都比较好理解。接下来作者给出了几个使用 case 语句的小提示。</p><blockquote>
+<p>(Page.361)简化每种情况对应的操作</p></blockquote><p>其实，就是尽可能让每个 case 里的功能单一。</p><blockquote>
+<p>(Page.361)不要为了使用 case 语句而刻意制造一个变量</p></blockquote><p>这句话也很好理解，不要为了 case 而 case ，凡事都有个度。</p><blockquote>
+<p>(Page.363)把 default 子句只用于检查真正的默认情况</p></blockquote><p>这句比较好理解，不要滥用 default。</p><h2 id=第十六章控制循环>第十六章——控制循环</h2><p>本章主要讲循环语句。对于 for 循环的使用，书中做了说明。</p><blockquote>
+<p>(Page.372)如果你需要一个执行次数固定的循环，那么 for 循环就是一个很好的选择。</p></blockquote><p>除此之外，书中对于何时用 while 循环代替 for 循环也做了说明。</p><blockquote>
+<p>(Page.372) for 循环的关键之处在于，你在循环头处把它写好后就可以忘掉它了，无需在循环的内部做任何事情去控制它。如果存在一个必须使执行从循环中跳出的条件，那么就应该改用 while 循环。</p></blockquote><p>其实，对于 while 循环，说实话，我在代码中很少使用，一般情况下用 for 或者使用foreach循环就够用了。在 Golang 语言中也确实去掉了 while 循环，我想这也说明了 while 语句的使用确实可以被替代。</p><p>对于循环控制，书中给出了一些建议。</p><blockquote>
+<p>(Page.374)用 while(true) 表示无限循环</p></blockquote><p>对于无限循环的使用，就用上面的建议就行了。不过，如果不涉及网络或动画，一般也用不到无限循环。</p><blockquote>
+<p>(Page.374)在适当的情况下多使用 for 循环</p></blockquote><p>其实从 Golang 语法中去掉 while 关键字已经很说明问题了。</p><p>对于处理循环体，书中也给出了几条建议。</p><blockquote>
+<p>(Page.375)用 { 和 } 把循环中的语句括起来。任何时候都要在代码中使用括号。</p></blockquote><p>这一习惯可以让别人更清晰的阅读代码。</p><blockquote>
+<p>(Page.375)避免空循环</p></blockquote><p>我倒是没有这种习惯，一来觉得影响美观，二来会让代码看起来不是很清晰。</p><blockquote>
+<p>(Page.376)把循环内务操作要么放在循环的开始，要么放在循环的末尾。</p></blockquote><p>这条建议目的觉得就是为了让书写代码更有规律可循，避免胡乱摆放代码。</p><blockquote>
+<p>(Page.376)一个循环只做一件事</p></blockquote><p>这条建议很直观，遵守 KISS 原则。</p><p>对于循环的退出，书中也给出了一些建议。</p><blockquote>
+<p>(Page.377)不要为了终止循环而胡乱改动 for 循环的下标</p></blockquote><p>这个错误我好像从来没干过。还有下一条建议从来没尝试过，从来没想过这么用，看了书中的例子才知道，原来还可以酱紫犯错误，也算是开眼了。</p><blockquote>
+<p>(Page.377)避免出现依赖于循环下标最终取值的代码</p></blockquote><p>以上两点除了让代码更紧凑以外，还主要是为了尽可能的不要让 bug 蔓延。书中还提到一个方法，老实说我之前没想到过，长姿势了。</p><blockquote>
+<p>(Page.378)考虑使用安全计数器</p></blockquote><div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=c1>//C++示例：本应使用安全计数器的代码
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=k>do</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>node</span> <span class=o>=</span> <span class=n>node</span><span class=o>-&gt;</span><span class=n>Next</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>...</span>
+</span></span><span class=line><span class=cl><span class=p>}</span> <span class=k>while</span> <span class=p>(</span><span class=n>node</span><span class=o>-&gt;</span><span class=n>Next</span> <span class=o>!=</span> <span class=nb>NULL</span> <span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 下面是使用了安全计数器的同一代码段：
+</span></span></span><span class=line><span class=cl><span class=c1>//C++示例：使用了安全计数器的代码
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=n>safetyCounter</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>do</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>node</span> <span class=o>=</span> <span class=n>node</span><span class=o>-&gt;</span><span class=n>Next</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>...</span>
+</span></span><span class=line><span class=cl>    <span class=n>safetyCounter</span><span class=o>++</span><span class=p>;</span>    <span class=c1>//安全计数器代码
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=k>if</span> <span class=p>(</span><span class=n>safetyCounter</span> <span class=o>&gt;=</span> <span class=n>SAFETY_LIMIT</span><span class=p>)</span> <span class=p>{</span>        <span class=c1>//安全计数器代码段
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=n>Assert</span><span class=p>(</span><span class=nb>false</span><span class=p>,</span> <span class=s>&#34;Internal Error: Safety-Counter Violation.&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>...</span>
+</span></span><span class=line><span class=cl><span class=p>}</span> <span class=k>while</span> <span class=p>(</span><span class=n>nod</span><span class=o>-&gt;</span><span class=n>Next</span> <span class=o>!=</span> <span class=nb>NULL</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><p>关于安全计数器，有利就有弊。书中说出了其中的利弊，</p><blockquote>
+<p>(Page.379)每次都在代码里使用一个安全计数器，也会增加复杂度，并且可能引发其他的错误。&mldr;然而，如果把安全计数器作为整个项目的一种标准应用于关键的循环，那么含有安全计数器的代码不会比其他的代码更容易出错。</p></blockquote><blockquote>
+<p>(Page.383)把循环下标变量的作用域限制在本循环内</p></blockquote><p>关于这一点，书中后面也说了，不同的 C++ 编译器会对此语法做出不同的反映。所以如果想用 C++ 做跨平台开发，个人建议还是把循环变量放到循环体外进行声明。例如，</p><div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=c1>//C++示例
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kt>int</span> <span class=n>num</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=p>(</span><span class=n>num</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>num</span> <span class=o>&lt;</span> <span class=n>MAX</span><span class=p>;</span> <span class=n>num</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>    <span class=p>...</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>关于循环代码的长度，书中给出了一些建议 (Page.385)。</p><ul>
+<li>循环要尽可能的短，以便能够一目了然。如果你开始接受编写简单代码这一原则，那就很少会写出超过 15 或者 20 行的循环。</li><li>把嵌套限制在 3 层以内</li><li>把长循环的内容移到子程序里</li><li>要让长循环格外清晰</li></ul><p>都是一些书写规则，很醒目，就不多做解释了。</p><h2 id=第十七章不常见的控制结构>第十七章——不常见的控制结构</h2><p>本章的主要内容有两方面，一方面是递归。另一方面是容易引起纠纷的 goto 语句。</p><p>关于递归的使用，书中有一段话做了概要性的说明。</p><blockquote>
+<p>(Page.394)对于大多数问题，它所带来的解将会是及其复杂的——在那些情况下，使用简单的迭代通常会比较容易理解。因此要有选择地使用递归。</p></blockquote><p>使用递归技巧方面，有几点还是需要注意的。</p><blockquote>
+<p>(Page.396)把递归限制在一个子程序内。循环递归( A 调用 B，B 调用 C，C 调用 A )非常危险，因为它很难检查。</p></blockquote><p>对于这一点，我想我还真没遇到过，不过也可能是我遇到了没查出来&mldr;</p><blockquote>
+<p>(Page.397)留心栈空间</p></blockquote><p>对于这一点书中做了解释，</p><blockquote>
+<p>(Page.397)应注意观察递归函数中局部变量的分配情况，特别要刘毅那些内存消耗大的对象。换句话说，要用new在堆(heap)上创建对象，而不要让编译器在栈上自动创建对象。</p></blockquote><p>下面要说到 goto 语句，对于 goto 我不想多说，免得引火烧身。我发表两点看法，第一点是在合适的地方使用 goto，所谓合适的地方是，明显能降低复杂度而又不让代码的可读性变的混乱的情况下。第二点是在 Golang中依然保留了goto  的位置。</p><h2 id=第十八章表驱动法>第十八章——表驱动法</h2><p>本章的第一句话概括的很好，</p><blockquote>
+<p>(Page.411)表驱动法是一种编程模式(scheme)——从表里面查找信息而不使用逻辑语句(if和case)。</p></blockquote><p>其实，看完整个章节，我的感受只有一条，就是用空间换时间，降低控制的复杂度。</p><p>关于从表里面查找信息的方法。书中描述了三种方法：</p><ul>
+<li>直接访问(Direct access)</li><li>索引访问(Indexed access)</li><li>阶梯访问(Stair-step access)</li></ul><p>关于这三种方法的使用方式，我觉得结合书中的例子看更容易理解。当然了，对于访问表数据，核心问题无非就是查询。具体的方法就不说了，因为书中的方法都是针对了具体的例子而言。只是干巴巴的说，看起来会有很多逻辑漏洞。</p><h2 id=第十九章一般控制问题>第十九章——一般控制问题</h2><p>本章主要是对前面几章所说的控制方式中常见的问题进行了描述。</p><p>首先说的是布尔表达式。</p><blockquote>
+<p>(Page.431)除了最简单的、要求语句按顺序执行的控制结构外，所有的控制结构都依赖于布尔表达式的求值(evaluation)。</p></blockquote><p>随后，书中主要在讲使用布尔表达式时候的注意事项。这里就不多说了，都是一些常见的问题，点很多。但主导思想还是 KISS 原则。</p><p>接下来对复合语句或语句块做了简单的描述，并建议尽量用括号把条件表达清楚等等。</p><p>对于如何减少深层嵌套，书中做了技术总结。</p><ul>
+<li>重复判断一部分条件</li><li>转换成 if-then-else</li><li>转换成 else 语句</li><li>把深层嵌套的代码提取诚单独的子程序</li><li>使用对象和多态派分( polymorphic dispatch )</li><li>用状态变量重写代码</li><li>用防卫子句来退出子程序，从而使代码的主要路径更为清晰</li><li>使用异常</li><li>完全重新设计深层嵌套的代码</li></ul><p>关于结构化编程，讲到了结构化编程的核心思想，</p><blockquote>
+<p>(Page.454)&mldr;那就是一个应用程序应该只采用一些单入单出的控制结构(也称为单一入口、单一出口的控制结构)。</p></blockquote><p>结构化编程由三个部分组成(Page.454~Page.456)：</p><ul>
+<li>顺序(Sequence)</li><li>选择(Selection)</li><li>迭代(Iteration)</li></ul><p>结构化编程的中心论点，书中也做了说明。</p><blockquote>
+<p>(Page.456)&mldr;任何一种控制流都可以由顺序、选择和迭代这三种结构生成。</p></blockquote><p>关于如何度量复杂度，书中给出了一种计算方法。</p><ol>
+<li>从 1 开始，一直往下通过程序</li><li>一旦遇到以下关键字，或者其同类的词，就加 1:
+if、while、repeat、for、and、or</li><li>给 case 语句中的每一种情况都加1</li></ol><p>下面举书中的例子(Page.458)：</p><div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span> <span class=p>(</span> <span class=p>(</span><span class=n>status</span> <span class=o>=</span> <span class=n>Success</span><span class=p>)</span> <span class=n>and</span> <span class=n>done</span> <span class=p>)</span> <span class=n>or</span>
+</span></span><span class=line><span class=cl><span class=p>(</span> <span class=n>not</span> <span class=n>done</span> <span class=n>and</span> <span class=p>(</span> <span class=n>numLines</span> <span class=o>&gt;=</span> <span class=n>maxLines</span> <span class=p>)</span> <span class=p>)</span> <span class=p>)</span> <span class=n>then</span> <span class=p>...</span>
+</span></span></code></pre></td></tr></table></div></div><p>在这段代码中，从 1 算起，遇到 if 得 2，and  得 3，or  得 4，and 得 5。加起来这段代码里总共包含了 5 个决策点。</p><p>关于决策结果的评判，书中也给出了评判标准(Page.458)：</p><div class=table-wrapper><table>
+<thead>
+<tr>
+<th>数值范围</th><th style=text-align:left>结果描述</th></tr></thead><tbody>
+<tr>
+<td>0 —— 5</td><td style=text-align:left>子程序可能还不错</td></tr><tr>
+<td>6 —— 10</td><td style=text-align:left>得想办法简化子程序了</td></tr><tr>
+<td>10+</td><td style=text-align:left>把子程序的某一部分拆成另一个子程序并调用它</td></tr></tbody></table></div><p>整体上来说，这部分的主要内容就是控制结构，这几章都紧扣主题，而且我发现所有实施的办法都是为了控制复杂度，到目前为止，和之前的猜测还一直比较吻合。总体策略上，我发现主线就是遵守KISS原则。</p></section><footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/programming/>programming</a>
+</section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css integrity=sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js integrity=sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js integrity=sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+</article><aside class=related-contents--wrapper>
+<h2 class=section-title>Related contents</h2><div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/post/2013/04/07/reading-code-complete5/>
+<div class=article-image>
+<img src=/post/2013/04/07/reading-code-complete5/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（五）" data-key=reading-code-complete5 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（五）</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2013/03/24/reading-code-complete3/>
+<div class=article-image>
+<img src=/post/2013/03/24/reading-code-complete3/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（三）" data-key=reading-code-complete3 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（三）</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2013/03/17/reading-code-complete2/>
+<div class=article-image>
+<img src=/post/2013/03/17/reading-code-complete2/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（二）" data-key=reading-code-complete2 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（二）</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2013/03/08/reading-code-complete1/>
+<div class=article-image>
+<img src=/post/2013/03/08/reading-code-complete1/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（一）" data-key=reading-code-complete1 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（一）</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2013/01/20/building-facebook/>
+<div class=article-image>
+<img src=/post/2013/01/20/building-facebook/title.f66cab7f8c2b0861778700a16dbd1d57_hu781b8f13410d620ed59aa59108167aac_2804141_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 打造 Facebook" data-key=building-facebook data-hash="md5-9myrf4wrCGF3hwChbb0dVw==">
+</div><div class=article-details>
+<h2 class=article-title>打造 Facebook</h2></div></a>
+</article></div></div></aside><footer class=site-footer>
+<section class=copyright>
+&copy;
+2012 -
+2022 OhCoder
+</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div><div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main><aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-license" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 21H6a3 3 0 01-3-3v-1h10v2a2 2 0 004 0V5a2 2 0 112 2h-2m2-4H8A3 3 0 005 6v11"/><line x1="9" y1="7" x2="13" y2="7"/><line x1="9" y1="11" x2="13" y2="11"/></svg>
+</div><h2 class="widget-title section-title">Table of contents</h2><div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#第十四章组织直线型代码>第十四章——组织直线型代码</a></li><li><a href=#第十五章使用条件语句>第十五章——使用条件语句</a></li><li><a href=#第十六章控制循环>第十六章——控制循环</a></li><li><a href=#第十七章不常见的控制结构>第十七章——不常见的控制结构</a></li><li><a href=#第十八章表驱动法>第十八章——表驱动法</a></li><li><a href=#第十九章一般控制问题>第十九章——一般控制问题</a></li></ol></nav></div></section><section class="widget tagCloud">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rainbow" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 17c0-5.523-4.477-10-10-10S2 11.477 2 17"/><path d="M18 17A6 6 0 106 17"/><path d="M14 17a2 2 0 10-4 0"/></svg>
+</div><h2 class="widget-title section-title">Categories</h2><div class=tagCloud-tags>
+<a href=/categories/diary/ class=font_size_15>
+日记
+</a>
+<a href=/categories/reading/ class=font_size_6>
+读书笔记
+</a>
+<a href=/categories/test/ class=font_size_2>
+Test
+</a>
+<a href=/categories/syntax/ class=font_size_1>
+syntax
+</a>
+<a href=/categories/themes/ class=font_size_1>
+themes
+</a>
+<a href=/categories/%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9/ class=font_size_1>
+تجربة
+</a>
+<a href=/categories/%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9-%D9%85%D8%B9-%D9%81%D8%B1%D8%A7%D8%BA%D8%A7%D8%AA/ class=font_size_1>
+تجربة مع فراغات
+</a>
+<a href=/categories/%E6%B5%8B%E8%AF%95/ class=font_size_1>
+测试
+</a>
+</div></section><section class="widget tagCloud">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cloud-storm" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 18a4.6 4.4.0 010-9 5 4.5.0 0111 2h1a3.5 3.5.0 010 7h-1"/><polyline points="13 14 11 18 14 18 12 22"/></svg>
+</div><h2 class="widget-title section-title">Tags</h2><div class=tagCloud-tags>
+<a href=/tags/programming/ class=font_size_5>
+programming
+</a>
+<a href=/tags/css/ class=font_size_1>
+css
+</a>
+<a href=/tags/emoji/ class=font_size_1>
+emoji
+</a>
+<a href=/tags/facebook/ class=font_size_1>
+facebook
+</a>
+<a href=/tags/git/ class=font_size_1>
+git
+</a>
+<a href=/tags/html/ class=font_size_1>
+html
+</a>
+<a href=/tags/markdown/ class=font_size_1>
+markdown
+</a>
+<a href=/tags/privacy/ class=font_size_1>
+privacy
+</a>
+<a href=/tags/ruby/ class=font_size_1>
+ruby
+</a>
+<a href=/tags/shortcodes/ class=font_size_1>
+shortcodes
+</a>
+<a href=/tags/themes/ class=font_size_1>
+themes
+</a>
+<a href=/tags/vim/ class=font_size_1>
+vim
+</a>
+<a href=/tags/%D9%85%D8%A7%D8%B1%D9%83%D8%AF%D8%A7%D9%88%D9%86/ class=font_size_1>
+ماركداون
+</a>
+<a href=/tags/%D9%86%D8%B5/ class=font_size_1>
+نص
+</a>
+<a href=/tags/%D9%88%D8%B3%D9%85-%D9%85%D8%B9-%D9%81%D8%B1%D8%A7%D8%BA%D8%A7%D8%AA/ class=font_size_1>
+وسم مع فراغات
+</a>
+</div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script>
+</body></html>

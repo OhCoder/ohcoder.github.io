@@ -1,13 +1,13 @@
 <!doctype html><html lang=en-us dir=ltr>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="继续上一周的阅读，本周读了第三部分－变量。 整个第三部分，包括第10章到第13章，一共有四章都是围绕变量展开。可见变量在程序设计当中有多重要。"><title>读《代码大全（第二版）》笔记（三）</title><link rel=canonical href=https://ohcoder.com/post/2013/03/24/reading-code-complete3/>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="继续上一周的阅读，本周读了第三部分－变量。 整个第三部分，包括第 10 章到第 13 章，一共有四章都是围绕变量展开。可见变量在程序设计当中有多重要。 第十"><title>读《代码大全（第二版）》笔记（三）</title><link rel=canonical href=https://ohcoder.com/post/2013/03/24/reading-code-complete3/>
 <link rel=stylesheet href=/scss/style.min.4106a7b4d25dd419c5774d9ba3a705d0134876711f67a125f7f13a5223c0ba73.css><meta property="og:title" content="读《代码大全（第二版）》笔记（三）">
-<meta property="og:description" content="继续上一周的阅读，本周读了第三部分－变量。 整个第三部分，包括第10章到第13章，一共有四章都是围绕变量展开。可见变量在程序设计当中有多重要。">
+<meta property="og:description" content="继续上一周的阅读，本周读了第三部分－变量。 整个第三部分，包括第 10 章到第 13 章，一共有四章都是围绕变量展开。可见变量在程序设计当中有多重要。 第十">
 <meta property="og:url" content="https://ohcoder.com/post/2013/03/24/reading-code-complete3/">
 <meta property="og:site_name" content="OhCoder">
 <meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="programming"><meta property="article:published_time" content="2013-03-24T00:00:00+00:00"><meta property="article:modified_time" content="2013-03-24T00:00:00+00:00"><meta property="og:image" content="https://ohcoder.com/post/2013/03/24/reading-code-complete3/title.jpg">
 <meta name=twitter:title content="读《代码大全（第二版）》笔记（三）">
-<meta name=twitter:description content="继续上一周的阅读，本周读了第三部分－变量。 整个第三部分，包括第10章到第13章，一共有四章都是围绕变量展开。可见变量在程序设计当中有多重要。"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:description content="继续上一周的阅读，本周读了第三部分－变量。 整个第三部分，包括第 10 章到第 13 章，一共有四章都是围绕变量展开。可见变量在程序设计当中有多重要。 第十"><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://ohcoder.com/post/2013/03/24/reading-code-complete3/title.jpg">
 </head><body class=article-page>
 <script>(function(){const e="StackColorScheme";localStorage.setItem(e,"dark")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script>
@@ -54,7 +54,7 @@
 </a>
 </div><div class=article-details>
 <header class=article-category>
-<a href=/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/>
+<a href=/categories/reading/ style=background-color:#2a9d8f;color:#fff>
 读书笔记
 </a>
 </header><div class=article-title-wrapper>
@@ -68,7 +68,7 @@
 7 minute read
 </time>
 </div></footer></div></header><section class=article-content>
-<p>继续上一周的阅读，本周读了第三部分－变量。</p><p>整个第三部分，包括第10章到第13章，一共有四章都是围绕变量展开。可见变量在程序设计当中有多重要。</p><h2 id=第十章使用变量的一般事项>第十章－使用变量的一般事项</h2><p>从本章标题中也可以看出，本章主要就是在讲变量的使用。</p><p>本章一开始，作者就提到关于隐式变量声明的观点。例如：</p><blockquote>
+<p>继续上一周的阅读，本周读了第三部分－变量。</p><p>整个第三部分，包括第 10 章到第 13 章，一共有四章都是围绕变量展开。可见变量在程序设计当中有多重要。</p><h2 id=第十章使用变量的一般事项>第十章－使用变量的一般事项</h2><p>从本章标题中也可以看出，本章主要就是在讲变量的使用。</p><p>本章一开始，作者就提到关于隐式变量声明的观点。例如：</p><blockquote>
 <p>(Page.240)隐式变量声明对于任何一种语言来说都是最具危险性的特性之一</p></blockquote><p>作者给出的解决办法是：</p><ul>
 <li>关闭隐式声明</li><li>声明全部的变量</li><li>遵循某种命名规则</li><li>检查变量名</li></ul><p>其实，关于这一点，现代解释型脚本语言貌似很多都支持隐式声明，例如Javascript。但是作者说的并不无道理，我用脚本语言用的还不是很多，没有太多经验来总结其中的利弊，暂且采用作者说的方法。</p><p>在作用域一节中，作者提出了两个概念，一个是</p><blockquote>
 <p>(Page.245)跨度*”，另一个是“*(Page.246)存活时间(live time)。</p></blockquote><p>所谓跨度，作者引出了其定义</p><blockquote>
@@ -102,12 +102,12 @@
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1>// Java示例：在运行时绑定其值的变量 titleBar.color =
 </span></span></span><span class=line><span class=cl><span class=c1></span><span class=n>ReadTitleBarColor</span><span class=o>();</span>
-</span></span></code></pre></td></tr></table></div></div><p>关于这一点就不多做解释了。示例已经说明问题了。</p><h2 id=第十一章变量名的力量>第十一章－变量名的力量</h2><p>全章讲述的是变量命名，对于大的项目而言，好的变量名不但使程序更容易读懂和编写，而且还利于以后的bug调试。</p><p>对于如何命名，书中提到了一点建议，我觉得之前可能做的也不太好。</p><blockquote>
+</span></span></code></pre></td></tr></table></div></div><p>关于这一点就不多做解释了。示例已经说明问题了。</p><h2 id=第十一章变量名的力量>第十一章－变量名的力量</h2><p>全章讲述的是变量命名，对于大的项目而言，好的变量名不但使程序更容易读懂和编写，而且还利于以后的 bug 调试。</p><p>对于如何命名，书中提到了一点建议，我觉得之前可能做的也不太好。</p><blockquote>
 <p>(Page.261)一个好记的名字反映的通常都是问题，而不是解决方案。一个好名字通常表达的是“什么”(what)，而不是“如何”(how)。</p></blockquote><p>作者说，</p><blockquote>
 <p>(Page.261)一般而言，如果一个名字反映了计算的某些方面而不是问题本身，那么它反映的就是“how”而非“what”了。</p></blockquote><p>关于名字的长度，文中提到</p><blockquote>
-<p>(Page.262)当变量名的平均长度在10到16个字符的时候，调试程序所需花费的力气是最小的(1990)。</p></blockquote><p>其实，我觉得， Objective
+<p>(Page.262)当变量名的平均长度在 10 到 16 个字符的时候，调试程序所需花费的力气是最小的(1990)。</p></blockquote><p>其实，我觉得， Objective
 C 这门语言天生就挺符合这个要求的，不用你刻意去注意，哈哈。</p><p>对于变量中使用计算限定词，文中也给出了很好的建议。</p><blockquote>
-<p>(Page.263)如果你要用类似与Total、Sum、Average、Max、Min、Record、String、Pointer这样的限定词来修改某个名字，那么请记住把限定词加到限定词名字的最后。</p></blockquote><p>对于文中所说何时采用命名规则，我觉得，平时就养成这个习惯吧，不论怎样，这个习惯都不是一个坏习惯。</p><p>与语言无关的命名规则的指导原则，书中也给出了几种方案(Page.272)。</p><p><strong>方案1</strong>: 通过大写字母开头区分类型和变量，例如： Widget 与 widget; LongerWidget 与 longerWidget;</p><p><strong>方案2</strong>: 通过全部大写区分类型和变量，例如： WIDGET 与 widget; LONGERWIDGET 与 longerWidget;</p><p><strong>方案3</strong>: 通过给类型“t_”前缀区分类型和变量，例如： t_Widget 与 widget; t_LongerWidget 与 LongerWidger;</p><p><strong>方案4</strong>: 通过给变量“a”前缀区分类型和变量，例如： Widget 与 aWidget; LongerWidget 与 aLongWidget;</p><p><strong>方案5</strong>: 通过对变量采用更明确的名字区分类型和变量，例如： Widget 与 employeeWidget; LongerWidget  与fullEmployeeWidget;</p><p>书中对每一种方案的优缺点做了描述(Page.272~Page.273)：</p><ul>
+<p>(Page.263)如果你要用类似与 Total、Sum、Average、Max、Min、Record、String、Pointer 这样的限定词来修改某个名字，那么请记住把限定词加到限定词名字的最后。</p></blockquote><p>对于文中所说何时采用命名规则，我觉得，平时就养成这个习惯吧，不论怎样，这个习惯都不是一个坏习惯。</p><p>与语言无关的命名规则的指导原则，书中也给出了几种方案(Page.272)。</p><p><strong>方案 1</strong>: 通过大写字母开头区分类型和变量，例如： Widget 与 widget; LongerWidget 与 longerWidget;</p><p><strong>方案 2</strong>: 通过全部大写区分类型和变量，例如： WIDGET 与 widget; LONGERWIDGET 与 longerWidget;</p><p><strong>方案 3</strong>: 通过给类型“t_”前缀区分类型和变量，例如： t_Widget 与 widget; t_LongerWidget 与 LongerWidger;</p><p><strong>方案 4</strong>: 通过给变量“a”前缀区分类型和变量，例如： Widget 与 aWidget; LongerWidget 与 aLongWidget;</p><p><strong>方案 5</strong>: 通过对变量采用更明确的名字区分类型和变量，例如： Widget 与  employeeWidget; LongerWidget   与 fullEmployeeWidget;</p><p>书中对每一种方案的优缺点做了描述(Page.272~Page.273)：</p><ul>
 <li>
 <p>第一种方案是在大小写敏感语言如 C++ 和 Java 里常用的规则，但是有些程序员对仅依靠大小写区分名字感到不大舒服。</p></li><li>
 <p>第二种方案使类型名和变量名之间的差异更加鲜明。然而，由于历史原因，在 C++ 和 Java 里面全部字母大写只用于表示常量，同时这种方案也会与第一种方案一样面临混合语言环境的问题。</p></li><li>
@@ -116,9 +116,9 @@ C 这门语言天生就挺符合这个要求的，不用你刻意去注意，哈
 <p>第五种方案要求基于每个变量的实际情况作出更多的考虑。</p></li></ul><p>本章后面说了下应该避免的命名指导原则，原则有很多，我觉得都是非常常见的命名错误，在这里就不罗列了。</p><h2 id=第十二章基本数据类型>第十二章－基本数据类型</h2><p>本章对每一种基本数据类型的使用进行了详细讲解。首先从全局上给出了一些建议(Page.292~Page.293)。</p><ul>
 <li>避免使用“神秘数值(magic number)” 。如果需要，可以使用硬编码的 0 和 1</li><li>预防除零(devide-by-zero)错误，使类型转换变得明显。</li><li>避免混合类型的比较，注意编译器的警告。</li></ul><p>本章后面的基本类型差不多都是围绕着上面这几点根据具体的类型特点展开来讲的。其中印象比较深刻的是关于浮点数的一条建议：</p><blockquote>
 <p>(Page.295)避免等量判断</p></blockquote><p>很早之前掉进过这个坑。记得当时用了两个浮点数值进行等值判断，结果相等的概率非常的低，后来打印了一下数值，才发现掉到坑去里了，后来就长记性了，呵呵。</p><p>对于C语言的字符串的使用，有几个建议印象比较深刻。</p><blockquote>
-<p>(Page.299)把C-Style字符串的长度声明为CONSTANT + 1</p></blockquote><p>这一条建议可以避免循环数组时越界，当然这种写法在很多算法书中也很常见。</p><blockquote>
-<p>(Page.300)用null初始化字符串以避免无结束符的字符串</p></blockquote><p>这条在平时初始化的时候也很受用。下面这条是关于分配内存并初始化的建议。</p><blockquote>
-<p>(Page.300)其次，在你动态分配字符串的时候，使用calloc()而不是malloc()来把它初始化为0。calloc()会负责分配内存，并把它初始化为0。malloc()只分配内存，并不执行初始化。……</p></blockquote><p>对于定义枚举类型，文中给出了两条之前没有注意的点。</p><blockquote>
+<p>(Page.299)把 C-Style 字符串的长度声明为 CONSTANT + 1</p></blockquote><p>这一条建议可以避免循环数组时越界，当然这种写法在很多算法书中也很常见。</p><blockquote>
+<p>(Page.300)用 null 初始化字符串以避免无结束符的字符串</p></blockquote><p>这条在平时初始化的时候也很受用。下面这条是关于分配内存并初始化的建议。</p><blockquote>
+<p>(Page.300)其次，在你动态分配字符串的时候，使用 calloc()而不是 malloc()来把它初始化为 0。calloc()会负责分配内存，并把它初始化为 0。malloc()只分配内存，并不执行初始化。……</p></blockquote><p>对于定义枚举类型，文中给出了两条之前没有注意的点。</p><blockquote>
 <p>(Page.305)定义出枚举的第一项和最后一项，以便用于循环边界</p></blockquote><p>这一点以前还真没注意过，以后要注意了。还有下一点，我觉得也是蛮有道理的，虽然表面上感觉有点小聪明的意思，呵呵。</p><blockquote>
 <p>(Page.305)把枚举类型的第一个元素留作非法值</p></blockquote><p>本章后面谈论了一下使用typedef进行自定义类型，感觉没有太多要说的。</p><h2 id=第十三章不常见的数据类型>第十三章－不常见的数据类型</h2><p>本章主要是在讲非基本数据类型。主要包括结构、指针、全局数据。其实，关于这一章里，结构没有什么好说的，很多常见的语法书中该说的基本都说到了，包括结构化数据的优点等。关于 C/C++ 语言指针部分，其实很多基本概念在一些权威的书中基本也都提到过，没什么感觉。最后的讲了全局数据，当然主要就是全局数据的弊端占用了很多篇幅，以及如何避免使用全局数据等。避免的方式，感觉还是通过重构，尽量使程序模块化，降低变量的生存时间，也避免在内存堆中分配空间，达到节省内存的目的等等。</p><p>总体来说，这部分的内容不少，但是有些知识已经在一些权威的语法书中能够找到，读起来相对来说没有前两部分难懂，可能有些问题是平时写程序的时候经常会碰到的原因吧，见的多了，神经就有点麻木了，呵呵。</p></section><footer class=article-footer>
 <section class=article-tags>
@@ -130,6 +130,18 @@ C 这门语言天生就挺符合这个要求的，不用你刻意去注意，哈
 <h2 class=section-title>Related contents</h2><div class=related-contents>
 <div class="flex article-list--tile">
 <article class=has-image>
+<a href=/post/2013/04/07/reading-code-complete5/>
+<div class=article-image>
+<img src=/post/2013/04/07/reading-code-complete5/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（五）" data-key=reading-code-complete5 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（五）</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2013/03/31/reading-code-complete4/>
+<div class=article-image>
+<img src=/post/2013/03/31/reading-code-complete4/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（四）" data-key=reading-code-complete4 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（四）</h2></div></a>
+</article><article class=has-image>
 <a href=/post/2013/03/17/reading-code-complete2/>
 <div class=article-image>
 <img src=/post/2013/03/17/reading-code-complete2/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（二）" data-key=reading-code-complete2 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
@@ -180,10 +192,10 @@ C 这门语言天生就挺符合这个要求的，不用你刻意去注意，哈
 <li><a href=#第十章使用变量的一般事项>第十章－使用变量的一般事项</a></li><li><a href=#第十一章变量名的力量>第十一章－变量名的力量</a></li><li><a href=#第十二章基本数据类型>第十二章－基本数据类型</a></li><li><a href=#第十三章不常见的数据类型>第十三章－不常见的数据类型</a></li></ol></nav></div></section><section class="widget tagCloud">
 <div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rainbow" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 17c0-5.523-4.477-10-10-10S2 11.477 2 17"/><path d="M18 17A6 6 0 106 17"/><path d="M14 17a2 2 0 10-4 0"/></svg>
 </div><h2 class="widget-title section-title">Categories</h2><div class=tagCloud-tags>
-<a href=/categories/%E6%97%A5%E8%AE%B0/ class=font_size_15>
+<a href=/categories/diary/ class=font_size_15>
 日记
 </a>
-<a href=/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/ class=font_size_4>
+<a href=/categories/reading/ class=font_size_6>
 读书笔记
 </a>
 <a href=/categories/test/ class=font_size_2>
@@ -207,7 +219,7 @@ themes
 </div></section><section class="widget tagCloud">
 <div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cloud-storm" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 18a4.6 4.4.0 010-9 5 4.5.0 0111 2h1a3.5 3.5.0 010 7h-1"/><polyline points="13 14 11 18 14 18 12 22"/></svg>
 </div><h2 class="widget-title section-title">Tags</h2><div class=tagCloud-tags>
-<a href=/tags/programming/ class=font_size_3>
+<a href=/tags/programming/ class=font_size_5>
 programming
 </a>
 <a href=/tags/css/ class=font_size_1>

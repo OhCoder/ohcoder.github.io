@@ -1,13 +1,13 @@
 <!doctype html><html lang=en-us dir=ltr>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="扫盲了一下 Git，以后想用 Git 作为版本管理工具。 前两天粗略看了两本关于 Git 的书，一本是《Pro Git》(貌似需要翻墙)，另一本是《Git权威指南"><title>扫盲Git</title><link rel=canonical href=https://ohcoder.com/post/2013/01/05/learn-git/>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="扫盲了一下 Git，以后想用 Git 作为版本管理工具。 前两天粗略看了两本关于 Git 的书，一本是《Pro Git》(貌似需要翻墙)，另一本是《Git 权威指南"><title>扫盲Git</title><link rel=canonical href=https://ohcoder.com/post/2013/01/05/learn-git/>
 <link rel=stylesheet href=/scss/style.min.4106a7b4d25dd419c5774d9ba3a705d0134876711f67a125f7f13a5223c0ba73.css><meta property="og:title" content="扫盲Git">
-<meta property="og:description" content="扫盲了一下 Git，以后想用 Git 作为版本管理工具。 前两天粗略看了两本关于 Git 的书，一本是《Pro Git》(貌似需要翻墙)，另一本是《Git权威指南">
+<meta property="og:description" content="扫盲了一下 Git，以后想用 Git 作为版本管理工具。 前两天粗略看了两本关于 Git 的书，一本是《Pro Git》(貌似需要翻墙)，另一本是《Git 权威指南">
 <meta property="og:url" content="https://ohcoder.com/post/2013/01/05/learn-git/">
 <meta property="og:site_name" content="OhCoder">
 <meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="git"><meta property="article:published_time" content="2013-01-05T00:00:00+00:00"><meta property="article:modified_time" content="2013-01-05T00:00:00+00:00"><meta property="og:image" content="https://ohcoder.com/post/2013/01/05/learn-git/title.jpg">
 <meta name=twitter:title content="扫盲Git">
-<meta name=twitter:description content="扫盲了一下 Git，以后想用 Git 作为版本管理工具。 前两天粗略看了两本关于 Git 的书，一本是《Pro Git》(貌似需要翻墙)，另一本是《Git权威指南"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:description content="扫盲了一下 Git，以后想用 Git 作为版本管理工具。 前两天粗略看了两本关于 Git 的书，一本是《Pro Git》(貌似需要翻墙)，另一本是《Git 权威指南"><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://ohcoder.com/post/2013/01/05/learn-git/title.jpg">
 </head><body class=article-page>
 <script>(function(){const e="StackColorScheme";localStorage.setItem(e,"dark")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script>
@@ -54,7 +54,7 @@
 </a>
 </div><div class=article-details>
 <header class=article-category>
-<a href=/categories/%E6%97%A5%E8%AE%B0/>
+<a href=/categories/diary/ style=background-color:#2a9d8f;color:#fff>
 日记
 </a>
 </header><div class=article-title-wrapper>
@@ -68,7 +68,7 @@
 2 minute read
 </time>
 </div></footer></div></header><section class=article-content>
-<p>扫盲了一下 Git，以后想用 Git 作为版本管理工具。</p><p>前两天粗略看了两本关于 Git 的书，一本是《<a class=link href=http://git-scm.com/book/zh target=_blank rel=noopener>Pro Git</a>》(貌似需要翻墙)，另一本是《<a class=link href=http://book.douban.com/subject/6526452/ target=_blank rel=noopener>Git权威指南</a>》。第一本书讲的比较基础，主要是对于 Git 的基本使用，其中包括基本的命令行操作，Git 服务器常见的搭建方式，以及使用 Git 的常见工作流。第二本讲的就比较深入了，较深入和详细的剖析了 Git。以前没怎么用过版本管理工具的同学可以先看下第一本，然后再看第二本，直接看第二本让人有点儿晕。</p><p>大概翻完这两本书后，琢磨了一下，要是不想把自己的私人代码开源，又不想给 <a class=link href=https://github.com/ target=_blank rel=noopener>Github</a> 送 Money，还想多学习一点技术，怎么办呢？想了想最划算的办法就是自己在 VPS 上用 Git 建立一个私人的代码库，以后想玩开源了再移到 Github 上。反正 VPS 闲着也是闲着嘛，要充分发挥其作用。</p><p>在 VPS 上搭建简陋的 Git 代码库非常容易，只要安装上 Git 就满足最低要求了，PUSH/PULL 代码就直接用 SSH 连接就好了。而且 XCode 正好原生支持 Git，用 XCode 作为开发工具，上手就更容易了。粗看了下，基本上点点鼠标就 OK 了。工具嘛，最重要的还是使用。从最简单的点入手，边使用边学习，要比干巴巴的抱本书看感觉效果要好。再者 Git 的命令繁多，关键还得不断的使用才能熟练掌握。对于 Git 的命令行什么的这里就不啰嗦了，网上一搜一大堆。</p><p>至于为什么非要折腾个版本管理，其实还有一个想法，就是想把自己平时玩的东西做一个规范的管理，以前自己瞎折腾的东西要么最后都删除了，要么就是遗忘了，最后也找不到了，干脆有的根本就想不起来是什么了，想想挺可惜的，不管怎么说，都是自己曾经的见证啊，跟写日记有相同的感觉。有时候看到几年前写的代码觉得也蛮好玩的，尤其是发现当时带有个人情绪写的注释。呵呵，现在看来会有不一样的感觉，也许当时并不这么看。</p><p>另外，本博客的文章我也用 Git 备份到 VPS 上了，以后如果 Mac 系统出现什么问题，博客什么的也不会受到影响。呵呵，有点像是有了一个锤子，把什么都当成钉子的影子。无所谓啦，工具就是拿来用的，再者说谁规定 Git 只能用来管理代码呢？有了好的工具就应该多利用嘛，对硬盘上有价值的文件或代码我要统统管理一下，哈哈！</p></section><footer class=article-footer>
+<p>扫盲了一下 Git，以后想用 Git 作为版本管理工具。</p><p>前两天粗略看了两本关于 Git 的书，一本是《<a class=link href=http://git-scm.com/book/zh target=_blank rel=noopener>Pro Git</a>》(貌似需要翻墙)，另一本是《<a class=link href=http://book.douban.com/subject/6526452/ target=_blank rel=noopener>Git 权威指南</a>》。第一本书讲的比较基础，主要是对于 Git 的基本使用，其中包括基本的命令行操作，Git 服务器常见的搭建方式，以及使用 Git 的常见工作流。第二本讲的就比较深入了，较深入和详细的剖析了 Git。以前没怎么用过版本管理工具的同学可以先看下第一本，然后再看第二本，直接看第二本让人有点儿晕。</p><p>大概翻完这两本书后，琢磨了一下，要是不想把自己的私人代码开源，又不想给 <a class=link href=https://github.com/ target=_blank rel=noopener>Github</a> 送 Money，还想多学习一点技术，怎么办呢？想了想最划算的办法就是自己在 VPS 上用 Git 建立一个私人的代码库，以后想玩开源了再移到 Github 上。反正 VPS 闲着也是闲着嘛，要充分发挥其作用。</p><p>在 VPS 上搭建简陋的 Git 代码库非常容易，只要安装上 Git 就满足最低要求了，PUSH/PULL 代码就直接用 SSH 连接就好了。而且 XCode 正好原生支持 Git，用 XCode 作为开发工具，上手就更容易了。粗看了下，基本上点点鼠标就 OK 了。工具嘛，最重要的还是使用。从最简单的点入手，边使用边学习，要比干巴巴的抱本书看感觉效果要好。再者 Git 的命令繁多，关键还得不断的使用才能熟练掌握。对于 Git 的命令行什么的这里就不啰嗦了，网上一搜一大堆。</p><p>至于为什么非要折腾个版本管理，其实还有一个想法，就是想把自己平时玩的东西做一个规范的管理，以前自己瞎折腾的东西要么最后都删除了，要么就是遗忘了，最后也找不到了，干脆有的根本就想不起来是什么了，想想挺可惜的，不管怎么说，都是自己曾经的见证啊，跟写日记有相同的感觉。有时候看到几年前写的代码觉得也蛮好玩的，尤其是发现当时带有个人情绪写的注释。呵呵，现在看来会有不一样的感觉，也许当时并不这么看。</p><p>另外，本博客的文章我也用 Git 备份到 VPS 上了，以后如果 Mac 系统出现什么问题，博客什么的也不会受到影响。呵呵，有点像是有了一个锤子，把什么都当成钉子的影子。无所谓啦，工具就是拿来用的，再者说谁规定 Git 只能用来管理代码呢？有了好的工具就应该多利用嘛，对硬盘上有价值的文件或代码我要统统管理一下，哈哈！</p></section><footer class=article-footer>
 <section class=article-tags>
 <a href=/tags/git/>git</a>
 </section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
@@ -135,10 +135,10 @@
 <section class="widget tagCloud">
 <div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rainbow" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 17c0-5.523-4.477-10-10-10S2 11.477 2 17"/><path d="M18 17A6 6 0 106 17"/><path d="M14 17a2 2 0 10-4 0"/></svg>
 </div><h2 class="widget-title section-title">Categories</h2><div class=tagCloud-tags>
-<a href=/categories/%E6%97%A5%E8%AE%B0/ class=font_size_15>
+<a href=/categories/diary/ class=font_size_15>
 日记
 </a>
-<a href=/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/ class=font_size_4>
+<a href=/categories/reading/ class=font_size_6>
 读书笔记
 </a>
 <a href=/categories/test/ class=font_size_2>
@@ -162,7 +162,7 @@ themes
 </div></section><section class="widget tagCloud">
 <div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cloud-storm" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 18a4.6 4.4.0 010-9 5 4.5.0 0111 2h1a3.5 3.5.0 010 7h-1"/><polyline points="13 14 11 18 14 18 12 22"/></svg>
 </div><h2 class="widget-title section-title">Tags</h2><div class=tagCloud-tags>
-<a href=/tags/programming/ class=font_size_3>
+<a href=/tags/programming/ class=font_size_5>
 programming
 </a>
 <a href=/tags/css/ class=font_size_1>

@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vim on OhCoder</title><link>https://ohcoder.com/tags/vim/</link><description>Recent content in vim on OhCoder</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 17 Mar 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://ohcoder.com/tags/vim/index.xml" rel="self" type="application/rss+xml"/><item><title>Vim 关于 Ruby 的简单配置，日子前松后紧</title><link>https://ohcoder.com/post/2013/03/17/vim-ruby-config/</link><pubDate>Sun, 17 Mar 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/03/17/vim-ruby-config/</guid><description>&lt;img src="https://ohcoder.com/post/2013/03/17/vim-ruby-config/title.jpg" alt="Featured image of post Vim 关于 Ruby 的简单配置，日子前松后紧" />&lt;p>本周过的有点前松后紧。除了读书，写了一篇简要的&lt;!-- raw HTML omitted -->摘录&lt;!-- raw HTML omitted -->外，关于&lt;!-- raw HTML omitted -->Ruby&lt;!-- raw HTML omitted -->，也做了初步的学习。&lt;/p>
 &lt;p>至于&lt;!-- raw HTML omitted -->Ruby&lt;!-- raw HTML omitted -->的入门学习，大体完成了两件事情。&lt;/p>
-&lt;p>第一件事情跟着一个&lt;!-- raw HTML omitted -->Ruby&lt;!-- raw HTML omitted -->的&lt;!-- raw HTML omitted -->入门教程&lt;!-- raw HTML omitted -->看了一遍，基本上把教程里的代码都敲了一遍。教程的译作者很牛b，是台湾著名的 &lt;!-- raw HTML omitted -->XDite&lt;!-- raw HTML omitted -->，在&lt;!-- raw HTML omitted -->Ruby&lt;!-- raw HTML omitted -->圈子很有名气，据说去年(2012年9月)还获得了 Facebook World Hack 第一名。&lt;/p>
+&lt;p>第一件事情跟着一个&lt;!-- raw HTML omitted -->Ruby&lt;!-- raw HTML omitted -->的&lt;!-- raw HTML omitted -->入门教程&lt;!-- raw HTML omitted -->看了一遍，基本上把教程里的代码都敲了一遍。教程的译作者很牛 b，是台湾著名的 &lt;!-- raw HTML omitted -->XDite&lt;!-- raw HTML omitted -->，在&lt;!-- raw HTML omitted -->Ruby&lt;!-- raw HTML omitted -->圈子很有名气，据说去年(2012 年 9 月)还获得了 Facebook World Hack 第一名。&lt;/p>
 &lt;p>第二件事情是了解一下 &lt;!-- raw HTML omitted -->ruby-china&lt;!-- raw HTML omitted --> 论坛。大概了解下其中主要的四位发起人。通过论坛了解下国内&lt;!-- raw HTML omitted -->Ruby&lt;!-- raw HTML omitted -->的大致的现状。并在&lt;!-- raw HTML omitted -->Podcast&lt;!-- raw HTML omitted -->上订阅了他们制作的 &lt;!-- raw HTML omitted -->Teahour&lt;!-- raw HTML omitted -->，并听了所有内容，不管是扯淡的，还是谈论学习经验的。总体感觉大家都很热情，积极的做了很多关于&lt;!-- raw HTML omitted -->Ruby&lt;!-- raw HTML omitted -->在中国推广的工作。还利用业余时间做了很多&lt;!-- raw HTML omitted -->Ruby&lt;!-- raw HTML omitted -->的&lt;!-- raw HTML omitted -->教学视频&lt;!-- raw HTML omitted -->。对于学习&lt;!-- raw HTML omitted -->Ruby&lt;!-- raw HTML omitted -->和了解&lt;!-- raw HTML omitted -->Rails&lt;!-- raw HTML omitted -->的新手来说，我想帮助还是很大的。&lt;/p>
-&lt;p>一路了解下来，我觉得还是蛮喜欢&lt;!-- raw HTML omitted -->Ruby&lt;!-- raw HTML omitted -->的。至少想把&lt;!-- raw HTML omitted -->Ruby&lt;!-- raw HTML omitted -->作为学习iOS之外的业余爱好吧。想在&lt;!-- raw HTML omitted -->Web&lt;!-- raw HTML omitted -->上实现一点小玩意儿什么的，就用&lt;!-- raw HTML omitted -->Ruby&lt;!-- raw HTML omitted -->试着实现下。对于持续了解&lt;!-- raw HTML omitted -->Web&lt;!-- raw HTML omitted -->技术算是一个纽带吧，毕竟互联网是一个不能忽视的方向，保持技术上的不断更新也是为了不让自己轻易掉队。&lt;/p>
+&lt;p>一路了解下来，我觉得还是蛮喜欢&lt;!-- raw HTML omitted -->Ruby&lt;!-- raw HTML omitted -->的。至少想把&lt;!-- raw HTML omitted -->Ruby&lt;!-- raw HTML omitted -->作为学习 iOS 之外的业余爱好吧。想在&lt;!-- raw HTML omitted -->Web&lt;!-- raw HTML omitted -->上实现一点小玩意儿什么的，就用&lt;!-- raw HTML omitted -->Ruby&lt;!-- raw HTML omitted -->试着实现下。对于持续了解&lt;!-- raw HTML omitted -->Web&lt;!-- raw HTML omitted -->技术算是一个纽带吧，毕竟互联网是一个不能忽视的方向，保持技术上的不断更新也是为了不让自己轻易掉队。&lt;/p>
 &lt;p>学习了几天，发现对&lt;!-- raw HTML omitted -->Vim&lt;!-- raw HTML omitted -->的熟练使用是一个不可回避的问题。其中包括常见的快捷键，还有一些开发过程中常用的插件。关于这些插件，我大致安装了下面几个：&lt;/p>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://github.com/tpope/vim-pathogen" target="_blank" rel="noopener"
 >pathogen&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>简述：&lt;!-- raw HTML omitted -->Runtimepath&lt;!-- raw HTML omitted -->管理插件&lt;/p>
-&lt;p>Mac安装方法：见插件主页&lt;/p>
+&lt;p>Mac 安装方法：见插件主页&lt;/p>
 &lt;ul>
 &lt;li>&lt;a class="link" href="http://www.vim.org/scripts/script.php?script_id=1658" target="_blank" rel="noopener"
 >NERD tree&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>简述：&lt;!-- raw HTML omitted -->Vim&lt;!-- raw HTML omitted -->文件查看目录树插件&lt;/p>
-&lt;p>Mac安装方法：见插件主页&lt;/p>
+&lt;p>Mac 安装方法：见插件主页&lt;/p>
 &lt;ul>
 &lt;li>&lt;a class="link" href="http://kien.github.com/ctrlp.vim/" target="_blank" rel="noopener"
 >ctrlp&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>简述：文件匹配，实现目录跳转插件&lt;/p>
-&lt;p>Mac安装方法：见插件主页&lt;/p>
+&lt;p>Mac 安装方法：见插件主页&lt;/p>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://github.com/tpope/vim-rails" target="_blank" rel="noopener"
 >vim-rails&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>简述：转向类型定义，目录文件输入自动补全插件&lt;/p>
-&lt;p>Mac安装：见插件主页&lt;/p>
+&lt;p>Mac 安装：见插件主页&lt;/p>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://github.com/garbas/vim-snipmate" target="_blank" rel="noopener"
 >snipmate&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>简述：编写代码自动补全插件&lt;/p>
-&lt;p>Mac安装：见&lt;!-- raw HTML omitted -->网页&lt;!-- raw HTML omitted -->(视频在YouTube上，需要翻墙)&lt;/p>
+&lt;p>Mac 安装：见&lt;!-- raw HTML omitted -->网页&lt;!-- raw HTML omitted -->(视频在 YouTube 上，需要翻墙)&lt;/p>
 &lt;ul>
 &lt;li>&lt;a class="link" href="http://betterthangrep.com/" target="_blank" rel="noopener"
 >ack&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>简述：搜索插件&lt;/p>
-&lt;p>Mac安装：打开终端，输入命令&lt;!-- raw HTML omitted -->brew install ack&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;p>Mac 安装：打开终端，输入命令&lt;!-- raw HTML omitted -->brew install ack&lt;!-- raw HTML omitted -->&lt;/p>
 &lt;ul>
 &lt;li>&lt;a class="link" href="http://sourceforge.net/projects/ctags/" target="_blank" rel="noopener"
 >ctags&lt;/a>&lt;/li>

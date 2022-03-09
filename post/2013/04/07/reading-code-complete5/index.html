@@ -1,0 +1,253 @@
+<!doctype html><html lang=en-us dir=ltr>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="本书的第五部分讲的主题为 代码改善。 这一部分总共包括七章，从软件开发的不同阶段以及不同角度进行了描述，当然了，中心就是 代码改善 代码的构建、开发"><title>读《代码大全（第二版）》笔记（五）</title><link rel=canonical href=https://ohcoder.com/post/2013/04/07/reading-code-complete5/>
+<link rel=stylesheet href=/scss/style.min.4106a7b4d25dd419c5774d9ba3a705d0134876711f67a125f7f13a5223c0ba73.css><meta property="og:title" content="读《代码大全（第二版）》笔记（五）">
+<meta property="og:description" content="本书的第五部分讲的主题为 代码改善。 这一部分总共包括七章，从软件开发的不同阶段以及不同角度进行了描述，当然了，中心就是 代码改善 代码的构建、开发">
+<meta property="og:url" content="https://ohcoder.com/post/2013/04/07/reading-code-complete5/">
+<meta property="og:site_name" content="OhCoder">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="programming"><meta property="article:published_time" content="2013-04-07T00:00:00+00:00"><meta property="article:modified_time" content="2013-04-07T00:00:00+00:00"><meta property="og:image" content="https://ohcoder.com/post/2013/04/07/reading-code-complete5/title.jpg">
+<meta name=twitter:title content="读《代码大全（第二版）》笔记（五）">
+<meta name=twitter:description content="本书的第五部分讲的主题为 代码改善。 这一部分总共包括七章，从软件开发的不同阶段以及不同角度进行了描述，当然了，中心就是 代码改善 代码的构建、开发"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://ohcoder.com/post/2013/04/07/reading-code-complete5/title.jpg">
+</head><body class=article-page>
+<script>(function(){const e="StackColorScheme";localStorage.setItem(e,"dark")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky">
+<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box>
+<span class=hamburger-inner></span>
+</span>
+</button>
+<header>
+<figure class=site-avatar>
+<a href=/>
+<img src=/img/avatar_hu55511690b51ceae960c0ffab8deedb37_101683_300x0_resize_q75_box.jpg width=300 height=299 class=site-logo loading=lazy alt=Avatar>
+</a>
+<span class=emoji>💭</span>
+</figure><div class=site-meta>
+<h1 class=site-name><a href=/>OhCoder</a></h1><h2 class=site-description>宇称的神秘日记</h2></div></header><ol class=social-menu>
+<li>
+<a href=https://github.com/OhCoder target=_blank title=GitHub><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+</a>
+</li><li>
+<a href=https://twitter.com/ohcoder target=_blank title=Twitter><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
+</a>
+</li></ol><ol class=menu id=main-menu>
+<li>
+<a href=/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span>
+</a>
+</li><li>
+<a href=/page/2019/05/28/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span>
+</a>
+</li><li>
+<a href=/page/2022/03/06/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>About</span>
+</a>
+</li><div class=menu-bottom-section>
+</div></ol></aside><main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/post/2013/04/07/reading-code-complete5/>
+<img src=/post/2013/04/07/reading-code-complete5/title_hu6f8835bfb4d550680a97dd841449a3e2_1953517_800x0_resize_q75_box.jpg srcset="/post/2013/04/07/reading-code-complete5/title_hu6f8835bfb4d550680a97dd841449a3e2_1953517_800x0_resize_q75_box.jpg 800w, /post/2013/04/07/reading-code-complete5/title_hu6f8835bfb4d550680a97dd841449a3e2_1953517_1600x0_resize_q75_box.jpg 1600w" width=800 height=450 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（五）">
+</a>
+</div><div class=article-details>
+<header class=article-category>
+<a href=/categories/reading/ style=background-color:#2a9d8f;color:#fff>
+读书笔记
+</a>
+</header><div class=article-title-wrapper>
+<h2 class=article-title>
+<a href=/post/2013/04/07/reading-code-complete5/>读《代码大全（第二版）》笔记（五）</a>
+</h2></div><footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Apr 07, 2013</time>
+</div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+15 minute read
+</time>
+</div></footer></div></header><section class=article-content>
+<p>本书的第五部分讲的主题为 <strong>代码改善</strong>。</p><p>这一部分总共包括七章，从软件开发的不同阶段以及不同角度进行了描述，当然了，中心就是 <strong>代码改善</strong> 代码的构建、开发者测试、调试、重构以及代码的调整等不同方面进行了讲述。</p><p>下面还是对每一章内容做一个简要的总结。</p><h2 id=第二十章软件质量概述>第二十章——软件质量概述</h2><p>顾名思义，从本章的题目中也可以看出，本章主要是对软件质量做了一个概括，大概描述了一下软件质量都包括哪些方面。</p><p>关于软件质量的特性，书中描述说，软件同时拥有外在的和内在的质量特性。软件的外在特性包括(Page.463~Page.464)，</p><ul>
+<li>正确性(Correctness)</li><li>可用性(Usability)</li><li>效率(Efficiency)</li><li>可靠性(Reliability)</li><li>完整性(Integrity)</li><li>适应性(Adaptability)</li><li>精确性(Accuracy)</li><li>健壮性(Robustness)</li></ul><p>软件的内在特性包括(Page.464~Page.465)</p><ul>
+<li>可维护性(Maintainability)</li><li>灵活性(Flexibility)</li><li>可移植性(Portability)</li><li>可重用性(Reusability)</li><li>可读性(Readability)</li><li>可测试性(Testability)</li><li>可理解性(Understandability)</li></ul><p>对于外在特性，一部分特性有互相重叠，但有不同的含义，在不同场合侧重点也不一样。相应的，内在特性也是如此。而且内在特性和外在特性之间也不能完全割裂开。关于这一点，我觉得也是很显然的事情，内在的状态会对外在形成影响，外在的表现又会对内在提出要求。</p><p>随后，书中说到在哪些方面可以改善软件质量(Page.466~Page.467)。</p><ul>
+<li>软件质量目标</li><li>明确定义质量保证工作</li><li>测试策略</li><li>软件工程指南</li><li>非正式计数复查</li><li>正式计数复查</li><li>外部审查</li></ul><p>接下来，书中列举了一些数据，用来表明不同质量保障技术的效能。我觉得吧，这些数据看看就可以了，因为作者那个年代的移动互联网基本上还没成型，所以这些数据我觉得对于移动互联网并不一定适用，反而对于传统的大型桌面应用可能更适用一些，不过不管怎么说，对于移动互联网这个新型行业而言，去其糟粕，取其精华就好，死搬硬套要不得。</p><p>下面说到什么时候应该进行质量保证工作，书中的观点是说，从软件开始构建这个工作就开始了，我觉得这个观点很好，因为构建软件是一项工程，分为不同的阶段，哪一个阶段都应该保证质量，而且越早引入缺陷越晚发现，成本就越高，所以说质量保证工作从前期准备阶段就开始了。随后书中有这样一句话，我产生了一点感想，</p><blockquote>
+<p>(Page.475)&mldr;，因此把时间投入到前期工作中，能让程序员在后期工作中节省更多的时间。这一方法的最终效果是软件的缺陷更少，开发时间更短，成本也更低。</p></blockquote><p>看到这段话之后，我觉得对于做移动互联网开发来说，或许不太合适，因为目前很多移动互联网开发方面的应用属于试探性的开发方式，基本上测试、设计以及开发是交织在一起的。但是抛开这一点不谈，我觉得这句话从侧面也说明了一点，对于传统桌面应用来说，这种方法是在尽可能的压缩编码时间，说句大白话就是把所有设计都做好，编码只是个体力活。很明显，这种方式可以降低编写代码的出错率，保证了软件的质量，从另一方面，我也意识到，软件开发的设计阶段真的很重要。当然了，对于移动互联网的开发来说，这种方式实施起来未免会觉得有些教条。</p><h2 id=第二十一章协同构建>第二十一章——协同构建</h2><p>本章对结对编程做了介绍，及其好处。随后对代码审查的方法进行了描述，并对如何做审查做了说明，最后还介绍了几种其他类型的协同开发方法。</p><p>关于结对编程，说实话，我没有实践过，也不知道是什么样的一种感受，不过倒是可以想象一下，呵呵。对于成功运用结对编程的关键点，书中提到了几点(Page.483~Page.484)，</p><ul>
+<li>用编码规范来支持结对编程</li><li>不要让结对编程编程旁观</li><li>不要强迫在简单的问题上使用结对编程</li><li>有规律地对结对人员和分配地工作任务进行轮换</li><li>鼓励双方跟上对方的步伐</li><li>确认两个人都能够看到显示器</li><li>不要强迫程序员与自己关系紧张的人组对</li><li>避免新手组合</li><li>指定一个组长</li></ul><p>其实对于这些关键点，我想联想一下都能理解其中的意思，无非都是以人为中心提出的一些建议，让两个结对编程的人能够默契，避免沟通上的一些不畅快。其实我觉得上面这些都不是问题，你想啊，如果一个是MM一个是GG，那么我觉得这些都不是问题鸟，哈哈。开个玩笑，轻松一下。</p><p>对于详查(正式审查)，书中提出了一些方法。比如说，详查人员需要哪些角色。说白了，其实就是代码的 review，然后大家坐在一起开会探讨。对于其中的角色，文中列出了五种(Page.486)，</p><ul>
+<li>主持人</li><li>作者</li><li>评论员(reviewer)</li><li>记录员</li><li>经理</li></ul><p>主持人其实就是管理详查这个事儿的，保证一定的进度。作者就是码农本人。评论员就是审查代码的人，记录员就是记录问题的人。经理就不用多说了，就是软件项目的负责人。文中有一条建议我觉得是保证顺利实施的关键一点，</p><blockquote>
+<p>(Page.487)类似的，无论在任何情况下，详查的结果都不应当作为员工表现的评估标准，这种杀鸡取卵的行为不可取。在详查中被检验的代码仍处于开发阶段。对员工表现的评价应当基于最终产品，而不是尚未完成的工作。</p></blockquote><p>关于参与这种审查的人数，作者建议一般不少于三人。随后对具体实施审查的方法进行了描述，这里就不多说了，感觉操作性很强，干巴巴的口头描述实在是有点枯燥。</p><p>最后在其他类型的协同开发实践中，作者提到走查。对于走查，引用书中的一段话描述，</p><blockquote>
+<p>(Page.492)走查是一种很流行的复查方式，这个词的定义很随意，其流行在于某种程度上，人们把任何形式的复查都称为“走查”。</p></blockquote><h2 id=第二十二章开发者测试>第二十二章——开发者测试</h2><p>本章的一开始，介绍常见的测试方式，并给出了简要的解释(Page.499~Page.500)。</p><ul>
+<li>单元测试(Unit testing)是将一个程序员或者一个开发团队所编写的，一个完整的类、子程序或者小程序，从完整的系统中隔离出来进行测试。</li><li>组件测试(Component testing)是将一个类、包、小程序或者其他程序元素，从一个更加完成的系统中隔离出来进行测试，这些被测试代码涉及到多个程序员或者多个团队。</li><li>集成测试(Integration testing)是对两个或更多的类、包、组件或者子系统进行的联合测试，这些组件由多个程序员或者开发团队所创建。这种测试通常在有了两个可以进行测试的类的时候就应该尽快开始，并且一直持续到整个系统开发完成。</li><li>回归测试(Regression testing)是指重复执行以前的测试用例，以便在原先通过了相同测试集合的软件中查找缺陷。</li><li>系统测试(System testing)是在最终的配置下(包括同其他软硬件系统的集成)运行整个软件。以便测试安全、性能、资源消耗、时序方面的问题，以及其他无法在低级集成上测试的问题。</li></ul><p>关于测试的类型，通常分为两大类：黑盒测试(black-box testing)和白盒测试(white-box,或者玻璃盒glass-box)测试。</p><p>对于开发者测试来说，书中提到了几种推荐的方法(Page.503)。</p><ul>
+<li>对每一项相关的需求进行测试，以确保需求都已经被实现。</li><li>对每一个相关的设计关注点进行测试，以确保设计已经被实现。</li><li>用基础测试(basis testing)来扩充针对需求和设计的详细测试用例。</li><li>使用一个检查表，其中记录着你在本项目迄今为止所犯的，以及在过去的项目中所犯的错误类型。</li></ul><p>这些测试方法，我觉得还是需要根据实际情况去掌握吧，因为我觉得这些方法主要还是针对于大型桌面软件来说的，对于如今的移动互联网来说，我觉得仅能起参考价值。</p><p>对于先写测试还是后写测试，作者推荐还是先写测试。文中说，</p><blockquote>
+<p>(Page.503)首先写测试用例可以将从引入缺陷到发现并排除缺陷之间的时间缩减至最短。</p></blockquote><p>对于开发者测试，文中提到了一些局限性，这些局限性对于我来说，我觉得还是蛮准的(Page.504)。</p><ul>
+<li>开发者测试倾向于“干净测试”</li><li>开发者测试对于覆盖率有过于乐观的估计</li><li>开发者测试往往回忽略一些更复杂的测试覆盖率类型</li></ul><p>在测试技巧这一节，文中提到几种测试类型。例如，</p><ul>
+<li>(Page.505)结构化基础测试。</li><li>(Page.509)数据流测试。</li></ul><p>本章后面提到了几种测试支持工具。</p><ul>
+<li>(Page.524)Diff工具</li><li>(Page.524)测试数据生成器</li><li>(Page.526)覆盖率监视器</li><li>(Page.526)数据记录器/日志记录器</li><li>(Page.526)符号调试器</li><li>(Page.527)系统干扰器</li><li>(Page.527)错误数据库</li></ul><p>说实在的，好多测试工具都木有接触过。算是长姿势，开眼界了。</p><h2 id=第二十三章调试>第二十三章——调试</h2><p>首先，对于调试在软件质量中扮演的角色，引用文中的一句话说是，</p><blockquote>
+<p>(Page.536)同测试一样，调试本身并不是改进代码质量的方法，而是诊断代码缺陷的一种方法。</p></blockquote><p>在效率低下的调试方法中，作者列举了几种常见的调试方法，在调试之魔鬼指南类型中，作者列举了几种常见错误的调试方法(Page.539)，</p><ul>
+<li>凭猜测找到缺陷</li><li>不要把时间浪费在理解问题上</li><li>用最唾手可得的方式修正错误</li></ul><p>我估计很多码农都有过这种想法吧，尤其是在压力大，时间紧迫的时候，哈哈。另外，作者还提到一种方式，叫迷信式调试。描述迷信式调试的这一段作者很幽默，一起欣赏下，</p><blockquote>
+<p>(Page.539~Page.540)撒旦已慷慨地将地狱的某个部分租给那些在调试时怨天尤人的程序员了。每个团队里都也许有这样一个程序员，他总会遇到无穷的问题：不听话的及其，奇怪的编译器错误，月圆时才会出现的编程语言的隐藏缺陷，实效的数据，忘记做的重要改动，一个不能正常保存程序的疯狂的编辑器——你怎么描述这种行为好呢。这就是“迷信式编程(programming by superstition)”。</p></blockquote><p>看到这一段，让我想起酷壳上一篇名为《各种流行的编程风格》的文章。好吧，我中枪了&mldr;
+在关于编译器给出语法错误方面，文中介绍了几种调试的方法(Page.549)，</p><ul>
+<li>不要过分信任编辑器信息中的行号</li><li>不要迷信编译器信息</li><li>不要轻信编译器的第二条信息</li><li>分而治之</li><li>找出没有配对的注释或者引号</li></ul><p>在修正错误的时候，文中给出了几种建议(Page.550~554)，</p><ul>
+<li>在动手之前先要理解问题</li><li>理解程序本身，而不仅仅是问题</li><li>验证对错误的分析</li><li>放松一下</li><li>保存初始的源代码</li><li>治本，而不是治标</li><li>修改代码时一定要有恰当的理由</li><li>一次只做一个改动</li><li>检查自己的改动</li><li>增加能暴露问题的单元测试</li><li>搜索类似的缺陷</li></ul><h2 id=第二十四章重构>第二十四章——重构</h2><p>重构其实是一个很大的话题。本章对重构进行了简介，并从特定的重构，安全的重构以及重构策略三个方面做了讲解。对于什么情况下进行重构，文中给出了很多条重构的理由，找几条典型的记录下，</p><ul>
+<li>(Page.565)冗长的子程序，在面向对象的编程中，很少会需要用到长度超过一个屏幕的子程序。</li><li>(Page.567)数据成员被设置为公用</li><li>(Page.568)在子程序调用前使用了设置代码(setup code)，或在调用后使用了收尾代码(takedown code)</li><li>(Page.569)程序中的一些代码似乎是在将来的某个时候才会用到的</li></ul><p>在特定重构一节，作者对不同层面的重构给出了相应的重构方法。具体都涉及到哪些层面，我想在此列一下，具体的方法就不说了，列出来可真就成了巨人的汗衫了(看过一点《Window程序设计》那本书的同学笑了)，呵呵。</p><ul>
+<li>数据级的重构</li><li>语句级的重构</li><li>子程序级重构</li><li>类实现的重构</li><li>类接口的重构</li><li>系统级重构</li></ul><p>其实，我是觉得，对于这些不同层面的重构，其原则只有一个，就是KISS原则。对于不同层级的重构，如果尽可能的保持KISS原则，应该不会有大的偏差，只不过对于不同层级的重构，应用的方法不同而已。但我觉得书中提到的这些方法主要是起到了借鉴作用，还得要具体情况具体分析，似乎这句话听起来有点像废话，其实我的意思是，任何时候都不要太教条，世间没有什么救世主，哈哈。</p><p>接下来是安全的重构。这部分主要是在提醒你，重构的时候要注意安全。其实最中心思想就是要避免在重构的过程中犯一些无法纠正的错误。关于这部分，文中也出了一些建议(Page.579~Page.581)，</p><ul>
+<li>保存初始代码</li><li>重构的步伐请小些</li><li>同一时间只做一项重构</li><li>把要做的事情一条条列出来</li><li>设置一个停车场</li><li>多使用检查点</li><li>利用编译器警告信息</li><li>重新测试</li><li>增加测试用例</li><li>检查对代码的修改</li><li>根据重构风险级别来调整重构方法</li></ul><p>这些建议细细品味觉得真的很受用，不过关键还是得根据自己的实际情况落实到实处哇。</p><p>关于不宜重构的情况，文中指出，</p><blockquote>
+<p>(Page.582)不要把重构当作先写后改的代名词。重构最大的问题在于被滥用。</p></blockquote><p>我觉得可能很多人思想上就把重构当成了理所当然的补救措施，从而在开发阶段掉以轻心，降低了代码质量。另外一条是，</p><blockquote>
+<p>(Page.582)避免用重构代替重写。</p></blockquote><h2 id=第二十五章代码调整策略>第二十五章——代码调整策略</h2><p>关于性能问题，作者说，</p><blockquote>
+<p>(Page.587)你可以在两个层面考虑性能问题：策略上和技术上。</p></blockquote><p>虽然是从两个层面进行考虑，不过本章只是从策略层面进行了讲解。</p><p>首先，对代码调整做了简介，对其中的一些概念做了解释。例如Pareto法则，</p><blockquote>
+<p>(Page.592)Pareto法则也就是众所周知的80/20法则。它讲述的是你可以用20%的努力取得80%的成绩。这一法则适用于程序设计之外的众多领域，它对程序优化也绝对有效。</p></blockquote><p>这一点很重要。作者也用自己亲身经历的例子做了证明。很多时候，软件运行效率的低下并不是大部分代码有问题，而是一小部分代码出现了问题，只要找到那一小部分就可以对软件的优化起到决定性作用。对于优化，作者列出了一些很荒谬的观点(Page.593~Page.595)。</p><ul>
+<li>在高级语言中，减少代码的行数就可以提升所生成的机器代码的运行速度，或是减少其资源占用——错误！</li><li>特定运算可能比其他的快，代码规模也较小——错误！</li><li>应当随时随地进行优化——错误！</li><li>程序的运行速度同其正确性同等重要——错误！</li></ul><p>对于这些错误的观点，书中展开做了解释。对于我来说，学习占主要成分，不是说这些错误我没有犯过，而是有些错误我还没有想到过&mldr;好吧，我很受伤，桑心了。</p><p>对于下面这句话，我觉得灰常的在理，</p><blockquote>
+<p>(Page.596)程序员应当使用高质量的设计，把程序编写正确。使之模块化并易于修改，将让后期的维护工作变得很容易。</p></blockquote><p>关于这句话的理解，我觉得对于软件的优化来说，设计的重要性要大于局部的代码改动。</p><p>对于常见的影响性能的热点，书中列举了几点(Page.598~Page.599)。</p><ul>
+<li>输入/输出操作</li><li>分页</li><li>系统调用</li><li>解释型语言</li><li>错误</li></ul><p>关于性能的测量，作者给出了很理性的解答。例如，</p><blockquote>
+<p>(Page.603)性能问题的很多方面都是违反直觉的。&mldr;经验对性能优化也没有太大的帮助。&mldr;在任何一种因素发生改变后，所有的经验之谈也会成为狗屁。除非对效果进行测量评估，否则你永远也无法确定某次优化所带来的影响。</p></blockquote><p>对于这部分作者给出了自己的一个教训，</p><blockquote>
+<p>(Page.604)我得到了一个教训，如果没有测量性能变化，那么你想当然的优化结果不过是代码变得更为晦涩难懂了。</p></blockquote><p>说的很明白，对没有确实测量结果的优化，都是毫无道理的。不但如此，还让降低了代码的可读性。</p><h2 id=第二十六章代码调整技术>第二十六章——代码调整技术</h2><p>本章主要从代码上对优化做了讲解。首先对于逻辑判断语句提出了一些建议。</p><ul>
+<li>(Page.610)在知道答案后停止判断。例如，在 for 循环中一旦得到结果就跳出循环，减少循环次数。</li><li>(Page.612)按照出现频率来调整判断顺序。例如，在 if-else 语句和 switch-case 语句中，把预计频繁出现的判断尽量排到前面。</li></ul><p>对于循环，也给出了一些建议。</p><ul>
+<li>(Page.616)将判断外提。如果在循环运行时某个判断结果不会改变，你就可以把这个判断提到循环的外面，从而避免在循环中进行判断。</li><li>(Page.617)合并。合并(jamming)，或融合(fusion)，就是把两个对相同一组元素进行操作的循环合并在一起。此举所带来的好处就是把两个循环的总开销减少至单个循环的开销。</li><li>(Page.620)尽可能的减少在循环内部做的工作。</li><li>(Page.621) 哨兵值。当循环的判断条件是一个符合判断的时候，你可以通过简化判断来节省代码运行时间。如果该循环是一个查找循环，简化方法之一就是使用一个哨兵值(sentinel value)，你可以把它放到循环范围的末尾，从而保证循环一定能够中止。</li><li>(Page.623)把最忙的循环放到最内层。</li><li>(Page.623)削减强度。削减强度意味着用多次轻量级运算(例如加法)来代替一次代价高昂的运算(例如乘法)。</li></ul><p>在数据使用上，同样给出了一些优化的建议。</p><ul>
+<li>(Page.625)使用整型数而不是浮点数。整型数的加法和乘法要比浮点数的相应运算快很多。</li><li>(Page.625)数组维度尽可能少。</li><li>(Page.626)尽可能减少数组引用。</li><li>(Page.627)使用辅助索引的意思就是天假相关数据，使得对某种数据类型的访问更为高效。书中给出了两种索引方式，一种是字符串长度索引。另一种是独立的平行的索引结构。</li><li>(Page.628)使用缓存机制。缓存机制就是把某些值存起来，使得最常用的值会比不太常用的值更容易被获取。</li></ul><p>对于表达式方面，也给出了同样的一些建议，不过在这里就不列举了，因为都是用一些比较长的例子，或者是条目一一列举出来的，所以我觉得这里再列举出来感觉也没啥意思。</p><p>最后，在子程序方面，也给出了一些优化的建议。</p><ul>
+<li>(Page.639)将子程序重写为内联</li><li>(Page.640)用低级语言重写代码</li></ul><p>好啦，基本上整个这部分讲的就是这些。感觉这部分内容很杂，当然主题还是代码优化，只不过涉及到的面比较广，所以给人的感觉就比较杂。不过还好，一路看下来，并没有感到特别的云里雾里的。中心思想还是比较清晰的，脉络也比较清晰。</p></section><footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/programming/>programming</a>
+</section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css integrity=sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js integrity=sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js integrity=sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+</article><aside class=related-contents--wrapper>
+<h2 class=section-title>Related contents</h2><div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/post/2013/03/31/reading-code-complete4/>
+<div class=article-image>
+<img src=/post/2013/03/31/reading-code-complete4/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（四）" data-key=reading-code-complete4 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（四）</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2013/03/24/reading-code-complete3/>
+<div class=article-image>
+<img src=/post/2013/03/24/reading-code-complete3/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（三）" data-key=reading-code-complete3 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（三）</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2013/03/17/reading-code-complete2/>
+<div class=article-image>
+<img src=/post/2013/03/17/reading-code-complete2/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（二）" data-key=reading-code-complete2 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（二）</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2013/03/08/reading-code-complete1/>
+<div class=article-image>
+<img src=/post/2013/03/08/reading-code-complete1/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（一）" data-key=reading-code-complete1 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（一）</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2013/01/20/building-facebook/>
+<div class=article-image>
+<img src=/post/2013/01/20/building-facebook/title.f66cab7f8c2b0861778700a16dbd1d57_hu781b8f13410d620ed59aa59108167aac_2804141_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 打造 Facebook" data-key=building-facebook data-hash="md5-9myrf4wrCGF3hwChbb0dVw==">
+</div><div class=article-details>
+<h2 class=article-title>打造 Facebook</h2></div></a>
+</article></div></div></aside><footer class=site-footer>
+<section class=copyright>
+&copy;
+2012 -
+2022 OhCoder
+</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div><div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main><aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-license" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 21H6a3 3 0 01-3-3v-1h10v2a2 2 0 004 0V5a2 2 0 112 2h-2m2-4H8A3 3 0 005 6v11"/><line x1="9" y1="7" x2="13" y2="7"/><line x1="9" y1="11" x2="13" y2="11"/></svg>
+</div><h2 class="widget-title section-title">Table of contents</h2><div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#第二十章软件质量概述>第二十章——软件质量概述</a></li><li><a href=#第二十一章协同构建>第二十一章——协同构建</a></li><li><a href=#第二十二章开发者测试>第二十二章——开发者测试</a></li><li><a href=#第二十三章调试>第二十三章——调试</a></li><li><a href=#第二十四章重构>第二十四章——重构</a></li><li><a href=#第二十五章代码调整策略>第二十五章——代码调整策略</a></li><li><a href=#第二十六章代码调整技术>第二十六章——代码调整技术</a></li></ol></nav></div></section><section class="widget tagCloud">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rainbow" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 17c0-5.523-4.477-10-10-10S2 11.477 2 17"/><path d="M18 17A6 6 0 106 17"/><path d="M14 17a2 2 0 10-4 0"/></svg>
+</div><h2 class="widget-title section-title">Categories</h2><div class=tagCloud-tags>
+<a href=/categories/diary/ class=font_size_15>
+日记
+</a>
+<a href=/categories/reading/ class=font_size_6>
+读书笔记
+</a>
+<a href=/categories/test/ class=font_size_2>
+Test
+</a>
+<a href=/categories/syntax/ class=font_size_1>
+syntax
+</a>
+<a href=/categories/themes/ class=font_size_1>
+themes
+</a>
+<a href=/categories/%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9/ class=font_size_1>
+تجربة
+</a>
+<a href=/categories/%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9-%D9%85%D8%B9-%D9%81%D8%B1%D8%A7%D8%BA%D8%A7%D8%AA/ class=font_size_1>
+تجربة مع فراغات
+</a>
+<a href=/categories/%E6%B5%8B%E8%AF%95/ class=font_size_1>
+测试
+</a>
+</div></section><section class="widget tagCloud">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cloud-storm" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 18a4.6 4.4.0 010-9 5 4.5.0 0111 2h1a3.5 3.5.0 010 7h-1"/><polyline points="13 14 11 18 14 18 12 22"/></svg>
+</div><h2 class="widget-title section-title">Tags</h2><div class=tagCloud-tags>
+<a href=/tags/programming/ class=font_size_5>
+programming
+</a>
+<a href=/tags/css/ class=font_size_1>
+css
+</a>
+<a href=/tags/emoji/ class=font_size_1>
+emoji
+</a>
+<a href=/tags/facebook/ class=font_size_1>
+facebook
+</a>
+<a href=/tags/git/ class=font_size_1>
+git
+</a>
+<a href=/tags/html/ class=font_size_1>
+html
+</a>
+<a href=/tags/markdown/ class=font_size_1>
+markdown
+</a>
+<a href=/tags/privacy/ class=font_size_1>
+privacy
+</a>
+<a href=/tags/ruby/ class=font_size_1>
+ruby
+</a>
+<a href=/tags/shortcodes/ class=font_size_1>
+shortcodes
+</a>
+<a href=/tags/themes/ class=font_size_1>
+themes
+</a>
+<a href=/tags/vim/ class=font_size_1>
+vim
+</a>
+<a href=/tags/%D9%85%D8%A7%D8%B1%D9%83%D8%AF%D8%A7%D9%88%D9%86/ class=font_size_1>
+ماركداون
+</a>
+<a href=/tags/%D9%86%D8%B5/ class=font_size_1>
+نص
+</a>
+<a href=/tags/%D9%88%D8%B3%D9%85-%D9%85%D8%B9-%D9%81%D8%B1%D8%A7%D8%BA%D8%A7%D8%AA/ class=font_size_1>
+وسم مع فراغات
+</a>
+</div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script>
+</body></html>
