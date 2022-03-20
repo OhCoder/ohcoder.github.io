@@ -481,6 +481,52 @@ $$&lt;/p></description></item><item><title>Emoji Support</title><link>https://oh
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
+&lt;/div></description></item><item><title>想尝试一个游戏</title><link>https://ohcoder.com/post/2013/04/28/diary/</link><pubDate>Sun, 28 Apr 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/04/28/diary/</guid><description>&lt;img src="https://ohcoder.com/post/2013/04/28/diary/title.jpg" alt="Featured image of post 想尝试一个游戏" />&lt;p>关于 Web 方面的学习，本周开始读《&lt;a class="link" href="https://book.douban.com/subject/10746113/" target="_blank" rel="noopener"
+>HTTP权威指南&lt;/a>》，算是打基础吧。因为之前没有怎么做过 Web 方面的开发，所以我觉得先打一打基础或许能够更好的为以后深入的学习做准备。按照老规矩，为了帮助自己学习的更扎实，每学完一部分就做一些摘抄，算是再过一遍脑子，勉强算作是笔记吧。记录过程中偶尔会穿插一些感想或感悟。&lt;/p>
+&lt;p>当然了，学习 Web 的同时，iOS 的学习也不能丢掉，尽量保持二者的平衡。或者说，目前的时间分配应该是四六，当然后者是六。既然想法已经明确了，剩下的就抓紧时间了。&lt;/p>
+&lt;p>其实，回顾这段时间的整体状态，我觉得还是有点低效了。我觉得我可以再高效一点，接下来我想试试看，尽最大努力，根据当前的自制力，看下自己到底一个礼拜可以学多少东西。&lt;/p>
+&lt;p>为什么突然有这个想法呢？因为我突然想到罗永浩同学当年花了一年的时间就把英语从高中水平学到可以教 GRE 的状态，我觉得挺好奇的。当然，我不否认故事的真实性，而且我还相信，只要是正常人，并且足够专注和勤奋，大部分人是可以做到的。只不过我挺想知道，要达到那样的一种状态是一种什么样的感觉，或者说要想达到那样的状态需要如何克制自己。还有，我想知道自己能不能达到那样一种状态。即便最后达不到，我也想了解一下自己有多大的差距。&lt;/p>
+&lt;p>说到底，我只是想挑战一下自己，觉得应该挺好玩的。想想看，反正对自己也没什么坏处。当然了，这里所说的一个礼拜，当然不是只有下一个礼拜，而是接下来的一段时间。至于评判的标准，想了想确实不太容易进行衡量。不过也没什么关系，说容易也容易，就用读书的数量和具体做了多少事情来衡量吧。所有这些所做的事情都记录到博客中,过段时间回头进行总结。至于具体要读哪些书，基本上心里已经有数了。尽量把我当前窗台上放的书都读完。如果我真能读完这些书，看看到底能花多少时间。至于到底有哪些书，大家不要有好奇心，每读一本书都会记录在博客上，如果真有幸能够读完，大家自然就知道了，嘿嘿。当然了，除此之外还会做自己想做的事情，毕竟学习计算机还得落实到实践当中，所以除了读完那些书以外，看看还能做点儿什么好玩的事情。&lt;/p>
+&lt;p>今天是四月二十八日，无论怎样时间都是自己的，就从明天开始吧。目前已经确定的，有两件事可能会耽搁一些时间，五月中旬可能要回一趟家，家里有些事情需要回去呆两天，而且年后还没回去过。六月份多半还要找房子搬家，房东说要重新装修房子，虽然年后房租已经涨过一次了，可能还是觉得目前我们交的房租不满意吧，估计是想装修完之后租高价。这两件事情可能会耽搁一些时间。不过，不管怎样，时间都是自己的。如何把这些事情的影响降到最低，那也是自己的事情。所以，呃，自己的事情还得自己解决啊，呵呵。&lt;/p>
+&lt;p>这个礼拜学习之余，除了每个礼拜看的《冰与火之歌》以及《绿箭侠》以外，还看了一部电影，名字叫《&lt;a class="link" href="https://movie.douban.com/subject/1849031/" target="_blank" rel="noopener"
+>当幸福来敲门&lt;/a>》。评价很高的一部片子，根据真实人物改编，蛮励志的。呵呵，心灵鸡汤的话就不多说了，有兴趣的朋友可以看看。&lt;/p>
+&lt;p>记得高中三年，我好像语文考试就没及过格，印象中最高分数是 89 分(150分满分)。语文古文基本上就没背过，但是奇怪的是，我很清楚的记得《荀子·劝学篇》中有这么一句话：&lt;/p>
+&lt;blockquote>
+&lt;p>骐骥一跃，不能十步；驽马十驾，功在不舍。&lt;/p>
+&lt;/blockquote></description></item><item><title>Raspberry Pi、读书、...</title><link>https://ohcoder.com/post/2013/04/22/diary/</link><pubDate>Mon, 22 Apr 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/04/22/diary/</guid><description>&lt;img src="https://ohcoder.com/post/2013/04/22/diary/title.jpg" alt="Featured image of post Raspberry Pi、读书、..." />&lt;p>感觉本周发生了好多事情。先说说关于我的吧。&lt;/p>
+&lt;p>本周二的时候听了一期 &lt;a class="link" href="https://teahour.fm/" target="_blank" rel="noopener"
+>Teahour&lt;/a> 的 Podcast，节目最后的时候听人介绍了一件好玩的东西，名字叫 &lt;a class="link" href="https://www.raspberrypi.org" target="_blank" rel="noopener"
+>Raspberry Pi&lt;/a>，中文名叫&lt;!-- raw HTML omitted -->树莓派&lt;!-- raw HTML omitted -->，是一台小型计算机，还算便宜吧，两百多块钱。网上了解之后，忍不住下午就在淘宝上订了一台。&lt;/p>
+&lt;p>&lt;img src="https://ohcoder.com/post/2013/04/22/diary/raspberrypi.jpg"
+width="778"
+height="584"
+srcset="https://ohcoder.com/post/2013/04/22/diary/raspberrypi_hu0bd031d3a1b7d7c577074137df616983_212128_480x0_resize_q75_box.jpg 480w, https://ohcoder.com/post/2013/04/22/diary/raspberrypi_hu0bd031d3a1b7d7c577074137df616983_212128_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="319px"
+>&lt;/p>
+&lt;p>大概礼拜四的时候收到了货，然后折腾了两天。对于这个小玩意，真的好喜欢。Raspberry Pi 的操作系统是基于 Debian 的，正好可以学习用，而且 &lt;a class="link" href="https://github.com/raspberrypi" target="_blank" rel="noopener"
+>系统以及相关工具&lt;/a> 在 GitHub 上也是开源的。所以拿到手之后立刻就在上面设置了 SSH，然后搭建了 Ruby 的开发环境，然后装上了 Git。后来才发现系统自带了 Python。不过无所谓啦，我还是想学 Ruby 滴。当然啦，既然装了 Ruby，自然少不了 Rails。装完之后创建了一个应用，还在上面跑了一下，通过局域网访问了一下，速度还是不错滴，哈哈。&lt;/p>
+&lt;p>除了搭建 Ruby 的开发环境以外，安装了 Apache ，至于为什么不安装当前火爆的 Nginx。我觉得有两点原因吧。第一点是因为我 VPS 上装的就是 Apache ，考虑用 Raspberry Pi 当我的测试机用。第二点我觉得，虽然都说 Nginx 的性能比 Apache 好，我觉得还是先从原理上学习一下吧，具体使用上应该不会差太多，而且我觉得很多都是心理问题。在 Nginx 还没出来之前，很多大网站不都是 Apache 么？所以说都是炒作惹得祸。当然了，我并不是不肯接受新事物。我是认为作为学习，其实都差不多，原理搞明白了，剩下的都好办。&lt;/p>
+&lt;p>因为 Pi 自身没有显示器，所以为其安装了 &lt;a class="link" href="https://realvnc.com/" target="_blank" rel="noopener"
+>VNC&lt;/a>。如果哪次想通过图形界面访问 Pi，先在 Pi 上起一个 VNC 的 Server，然后直接在 Mac 上通过 VNC 进行连接就可以了，灰常方便。登陆进去之后，直接看到的就是 X Widow。&lt;/p>
+&lt;p>除此之外，本周把《&lt;a class="link" href="http://book.douban.com/subject/1477390/" target="_blank" rel="noopener"
+>代码大全(第二版)&lt;/a>》读完了，大体上来说，算是过了一遍吧。整体有了一些印象，夸奖的话我就不多说了，真的是好书哇。学到了很多东西，除了单纯的技术以外，我觉得更重要的是纠正了很多错误的观点，同时增加了见识，开阔了眼界。从宏观上对软件开发有了一个整体的认识。车轱辘话就不多说了，以后没事的时候可以经常当手册翻一翻，很多知识点读一遍肯定是记不住的。&lt;/p>
+&lt;p>接下来给自己安排的书是《&lt;a class="link" href="https://book.douban.com/subject/10746113/" target="_blank" rel="noopener"
+>HTTP权威指南&lt;/a>》。深知自身基础知识匮乏，又想以后在移动互联网讨口饭吃，路还是要一步一步的走哇，路漫漫啊&amp;hellip;。整体看了一下，这本书大体分为五部分，还是按老规矩，一个礼拜读一部分，每读一部分写一篇笔记，算作总结。&lt;/p>
+&lt;p>这个礼拜成都地震了，给灾区的人们送去一份祝愿吧，其他的似乎自己也做不了什么。&lt;/p>
+&lt;p>另外，这个礼拜的心态调整的还算不错吧，希望下个礼拜能坚持住。&lt;/p>
+&lt;p>今天听到一首来自 &lt;a class="link" href="https://zh.wikipedia.org/zh-cn/%E6%96%B0%E5%9E%A3%E7%B5%90%E8%A1%A3" target="_blank" rel="noopener"
+>新恒结衣&lt;/a> 的歌曲，很喜欢。分享给大家（注：曾经的 xiami 网站已经没了，此处为当年嵌入的代码，以此为念）：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">embed&lt;/span> &lt;span class="nx">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;http://www.xiami.com/widget/0_1769721877/singlePlayer.swf&amp;#34;&lt;/span> &lt;span class="nx">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;application/x-shockwave-flash&amp;#34;&lt;/span> &lt;span class="nx">width&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;257&amp;#34;&lt;/span> &lt;span class="nx">height&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;33&amp;#34;&lt;/span> &lt;span class="nx">wmode&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;transparent&amp;#34;&lt;/span>&lt;span class="o">&amp;gt;&amp;lt;&lt;/span>&lt;span class="err">/embed&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
 &lt;/div></description></item><item><title>读《代码大全（第二版）》笔记（七）</title><link>https://ohcoder.com/post/2013/04/21/reading-code-complete7/</link><pubDate>Sun, 21 Apr 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/04/21/reading-code-complete7/</guid><description>&lt;img src="https://ohcoder.com/post/2013/04/21/reading-code-complete7/title.jpg" alt="Featured image of post 读《代码大全（第二版）》笔记（七）" />&lt;p>本周读完第七部分。第七部分也是本书的最后一部分，讲的主题是&lt;!-- raw HTML omitted -->软件工艺&lt;!-- raw HTML omitted -->。此部分一共分为五章，涉及的内容关联性不大，比较杂乱，主要包括代码的书写格式，以及良好的注释应该如何写。另外还包括一章专门讲程序员性格的，我觉得也是蛮有意思的。对于我这种天生脑子不太好使的同学，看完这一章之后似乎又看到了一丝前途的光明。最后两章讲的比较泛泛了，说的比较零散，涉及到很多常识类的大道理。下面简要总结一下。&lt;/p>
 &lt;h2 id="第三十一章布局与风格">第三十一章——布局与风格&lt;/h2>
 &lt;p>本章主要讲了代码编写的格式问题。套用书中的话叫&lt;/p>
@@ -910,7 +956,13 @@ $$&lt;/p></description></item><item><title>Emoji Support</title><link>https://oh
 &lt;/blockquote>
 &lt;p>我想这一句话总结了本书的主旨。本书的所有章节都是在围绕这个话题展开，:)。本章后面讲的就不多说了，基本上属于总结性的话题。&lt;/p>
 &lt;h2 id="第三十五章何处有更多信息">第三十五章——何处有更多信息&lt;/h2>
-&lt;p>呵呵，题目很清楚。本章列出了一些不同阶段程序员可以参考的资料。这里就不多说了。&lt;/p></description></item><item><title>读《代码大全（第二版）》笔记（六）</title><link>https://ohcoder.com/post/2013/04/14/reading-code-complete6/</link><pubDate>Sun, 14 Apr 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/04/14/reading-code-complete6/</guid><description>&lt;img src="https://ohcoder.com/post/2013/04/14/reading-code-complete6/title.jpg" alt="Featured image of post 读《代码大全（第二版）》笔记（六）" />&lt;p>本周读了本书的第六部分，此部分的主题为系统考虑。本部分分为四个章节，分别描述了程序规模对构建软件的影响，对构建的管理，系统的集成，以及相关的编程工具。&lt;/p>
+&lt;p>呵呵，题目很清楚。本章列出了一些不同阶段程序员可以参考的资料。这里就不多说了。&lt;/p></description></item><item><title>2013年4月15日</title><link>https://ohcoder.com/post/2013/04/14/2013-04-14/</link><pubDate>Sun, 14 Apr 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/04/14/2013-04-14/</guid><description>&lt;img src="https://ohcoder.com/post/2013/04/14/2013-04-14/title.jpg" alt="Featured image of post 2013年4月15日" />&lt;p>时间过的好快啊，今天已经进入 4 月中旬了，危机感好严重的说&amp;hellip;&lt;/p>
+&lt;p>本周的状态不是很好，尤其是从礼拜四开始，后面几天的心态一直都不怎么平静，总是会胡思乱想一些事情，感觉好莫名其妙，不确定是不是因为危机感而导致的心态的不平静。反正最终影响了学习效率&amp;hellip;，现在感到有点追悔莫及，感觉大好的时间都着这样莫名其妙的浪费掉了，好可惜。调整一下心态吧&amp;hellip;&amp;hellip;&lt;/p>
+&lt;p>发现一个很诡异的现象。如果我在坚持做一件事情，此时如果不去多想，不去安排什么计划，结果反而有可能坚持住。但是如果我去刻意做一个时间上的计划，反而最后有可能半途而废，而且半途而废的时间点最可能是制定完计划的那段时间。我仔细回想了一下之前针对其他事情做的一些计划，夭折的很多，反而是那些不去计划的事情，很多却莫名其妙的有可能最后坚持下来。反正感觉好奇怪的现象啊，所以以后我也不打算去做什么长久的计划了，想做就去做，如果这个事情是一个花时间的事情的话，也不要考虑太多，按部就班的去做就好了，感觉太在意的话，反而有可能适得其反，不如顺其自然，心平气和的去做。接下来的一些事情就按这种方法试试看，看看效果会不会好一点。&lt;/p>
+&lt;p>另外，我发现在某些方面，我也有一些强迫症。比如，iPad 上不允许 App Store 图标上一直出现软件升级的提示，几乎每次相关 App 升级都是为了把那个提示取消才去升级 App 的。还比如，晚睡。这几天几乎每天我都提醒我自己要早睡，结果每天都是当天睡当天的觉。早上起来之后就会后悔，发誓今天晚上要早睡，结果到了晚上不知不觉就又熬到凌晨两三点，然后又不断的后悔，第二天早上醒来又发誓&amp;hellip;如此循环，你们说这算不算强迫症的一种？&lt;/p>
+&lt;p>这个礼拜由于心态不是很好，所以学习效率上感觉明显不如前段时间，得调整下，尽量避免再影响心情，把那些扯淡的事情先放一放。俗话说的好，车到山前必有路。有些事情想那么多也没用，该来自然会来，不该来的你想也不会来。大家都是唯物主义者，呵呵。&lt;/p>
+&lt;p>学习计划上没什么变化。道路清晰可见，剩下的只是静下心来做事情就好了，所以也没什么可啰嗦的。&lt;/p>
+&lt;p>关于周记文章的题目，有很多都是直接用日期，没有自定义题目。因为感觉每次说的内容都比较杂，想到哪就说到哪，所以题目一般不太好起。另外，一般情况下，内容一般都会和日期挂钩，所以觉得就以时间为主线还是说的过去的。当然了，这个都不一定，哪次想起合适的名字了，就不用日期了，不过我感觉，一般情况下，用日期的次数会比较多，:D&lt;/p></description></item><item><title>读《代码大全（第二版）》笔记（六）</title><link>https://ohcoder.com/post/2013/04/14/reading-code-complete6/</link><pubDate>Sun, 14 Apr 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/04/14/reading-code-complete6/</guid><description>&lt;img src="https://ohcoder.com/post/2013/04/14/reading-code-complete6/title.jpg" alt="Featured image of post 读《代码大全（第二版）》笔记（六）" />&lt;p>本周读了本书的第六部分，此部分的主题为系统考虑。本部分分为四个章节，分别描述了程序规模对构建软件的影响，对构建的管理，系统的集成，以及相关的编程工具。&lt;/p>
 &lt;p>还是老样子，下面对每一章的内容进行简要的摘录。&lt;/p>
 &lt;h2 id="第二十七章程序规模对构建的影响">第二十七章——程序规模对构建的影响&lt;/h2>
 &lt;p>本章开始描述了交流与规模的关系，提出&lt;/p>
@@ -1039,7 +1091,18 @@ $$&lt;/p></description></item><item><title>Emoji Support</title><link>https://oh
 &lt;p>对于这种集成方法，是选中某个特定的“竖直块/vertical slice”，对它及早开发并进行集成。对于这个功能模块，是从头到尾的进行完成，而且过程中应该能找出系统设计所做的假设中的全部主要问题。这种方法，通常和“风险导向的集成”或“功能导向的集成”结合使用。&lt;/p>
 &lt;p>本章最后，还提到了两种方法，一种是daily build，另一种是冒烟测试。对于这两种方法就不展开说了。&lt;/p>
 &lt;h2 id="第三十章编程工具">第三十章——编程工具&lt;/h2>
-&lt;p>从标题也可以看出，本章主要围绕着工具展开，其中包括设计工具、代码管理工具、编程工具等。整个章节大概翻了一下，基本都是介绍性的说明了一下功能，或者是作用等，这里就不多说了，没有太大的意义，因为每个人的工作习惯都不一样，而且随着时间的推移，很多工程上的方法也都在不断的变化，所以感觉这部分没有太大的参考价值。&lt;/p></description></item><item><title>读《代码大全（第二版）》笔记（五）</title><link>https://ohcoder.com/post/2013/04/07/reading-code-complete5/</link><pubDate>Sun, 07 Apr 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/04/07/reading-code-complete5/</guid><description>&lt;img src="https://ohcoder.com/post/2013/04/07/reading-code-complete5/title.jpg" alt="Featured image of post 读《代码大全（第二版）》笔记（五）" />&lt;p>本书的第五部分讲的主题为 &lt;strong>代码改善&lt;/strong>。&lt;/p>
+&lt;p>从标题也可以看出，本章主要围绕着工具展开，其中包括设计工具、代码管理工具、编程工具等。整个章节大概翻了一下，基本都是介绍性的说明了一下功能，或者是作用等，这里就不多说了，没有太大的意义，因为每个人的工作习惯都不一样，而且随着时间的推移，很多工程上的方法也都在不断的变化，所以感觉这部分没有太大的参考价值。&lt;/p></description></item><item><title>2013年4月7日</title><link>https://ohcoder.com/post/2013/04/07/2013-04-07/</link><pubDate>Sun, 07 Apr 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/04/07/2013-04-07/</guid><description>&lt;img src="https://ohcoder.com/post/2013/04/07/2013-04-07/title.jpg" alt="Featured image of post 2013年4月7日" />&lt;p>这个礼拜整体下来，感觉还算比较充实。不变的就不多说了，来回的车轱辘话，也没啥意思。说说变化的地方吧。&lt;/p>
+&lt;p>这个礼拜开始锻炼了。嗯，当然不是出去跑步，对于本来就不吸烟的三好男人，那不是属于自杀行为么？主要还是在屋子里玩玩哑铃什么的，活动活动。有两个多月没有活动了，所以一开始也不能太剧烈了，逐步适应吧。当然，还是得小心后背，千万不要再受桑，真是桑不起啊～！&lt;/p>
+&lt;p>哦，另外一点需要提一下的是，为博客添加了&lt;a class="link" href="ohcoder.com/404.html" >404 页面&lt;/a>（注：原链接已失效），凡是访问本站木有的页面都会跳转到 404 页面。此页面的内容是寻找小孩的公益组织，算是尽自己一份微薄之力吧，积德行善总归是好事啊，还是很开心的，哈哈。对于博客来说也有好处，也不会给来访者看到那个丑陋的页面了，呵呵。&lt;/p>
+&lt;p>前天整理了一下屋子里的书，重新进行了分门别类。具体想法是这样的，《&lt;a class="link" href="https://book.douban.com/subject/1477390/" target="_blank" rel="noopener"
+>代码大全(第二版)&lt;/a>》这本书还有两部分就读完了，一本 900 页的书读了一个多月。虽然计算机类大部头的书非常平常，但是 900 页的书也算的上是比较厚的书了。整体读下来感觉还不错，这种学习方式我感觉还算是挺有效的，每个礼拜既不用花太多时间，也感觉不到太大的读书压力，还算是轻松的就读下来了，所以想着用这种方式又给自己计划了几本书，这些书都是一些基础理论书籍，既需要花长时间才能读完，又不能立竿见影的见到效果。但是呢对以后的积累又能起到决定性作用，所以这些书既要读，又不能影响对应用层面的学习。&lt;/p>
+&lt;p>还有就是，这种读一些章节，然后写一篇笔记的方式，我也比较接受。算是自己给自己下的一个套儿，自己监督自己吧。你想啊，如果书没读，或者根本就没看懂，你敢随随便便就挂到网上“示众”么？反正我没这个贼胆儿，脸皮也没那么厚。当然了，写出来的也未必都是正确的，但是理解错误和糊弄人，明眼人一眼就能看出来。这种事情是装不出来的，再说这事儿再怎么糊弄，到头来不还是糊弄自己么？跟别人半毛钱关系木有。明眼人看见了，笑笑就过去了，你自己不懂还是不懂，何苦折腾自己呢！&lt;/p>
+&lt;p>其实本质上，我是觉得这种读书笔记对于书的内容的整体理解真的是挺有帮助的。有很多概念都是在写笔记的时候，又会产生更深一步的理解。而且写的过程中，也是对看过内容的一个总结的过程，可以让你跳出书的知识点的细节，从整体上高度概括内容的实质，理清作者关于本章要说明的核心内容，对于锻炼自己的理解能力和高度概括能力也是一个很好的锻炼，所以我觉得，不管怎么看，这个习惯都是一个好习惯，应该坚持下去。而且经过一个多月的尝试，从心里上来说，还是比较认可这种学习方式的，这一点我觉得是最重要的。&lt;/p>
+&lt;p>最后想说的一点是，前两天突然想做一个个人的 Wiki。原因是这样的，前两天在学习 iOS 的时候积累了一些小的知识点，说写篇博客记录下吧，又不够篇幅。不记录一下吧，过段时间又担心给忘记。然后就想做一个个人的 Wiki，专门用来记录这些小的知识点，平时遇到了就放上去，以后再碰到直接去查一下就OK了，就不用再用 Google 去搜索了，省了很多事情，还积累了知识点。&lt;/p>
+&lt;p>后来到网上简单搜了下，综合考虑了一下，用 Jekyll 我觉得挺合适的，一来不用装数据库，静态页面很快。二来，我的博客用的就是基于 Ruby 的，环境什么都配好的，直接看下使用说明就能上手了，后来在网上看了下基于 Jekyll 的开源模版，好像还是蛮多的，索性就用 Jekyll 了，有时间了小折腾一下。&lt;/p>
+&lt;p>哦，还有个事情，差点忘了说，《&lt;a class="link" href="https://movie.douban.com/subject/10590706/" target="_blank" rel="noopener"
+>冰与火之歌(第三季)&lt;/a>》已经开始了，有兴趣的朋友可以关注下了。这下子，每个礼拜有两部美剧可以看了，另一部是《&lt;a class="link" href="https://movie.douban.com/subject/10527257/" target="_blank" rel="noopener"
+>绿剑侠(第一季)&lt;/a>》，每周都会更新，剧情很轻松，都挺好看的，有兴趣的同学可以看看。《绿剑侠》国内的普通视频网站就有，比如爱奇艺什么的，《冰与火之歌(第三季)》貌似得从网上找种子下载，具体的可以 Google 下。&lt;/p></description></item><item><title>读《代码大全（第二版）》笔记（五）</title><link>https://ohcoder.com/post/2013/04/07/reading-code-complete5/</link><pubDate>Sun, 07 Apr 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/04/07/reading-code-complete5/</guid><description>&lt;img src="https://ohcoder.com/post/2013/04/07/reading-code-complete5/title.jpg" alt="Featured image of post 读《代码大全（第二版）》笔记（五）" />&lt;p>本书的第五部分讲的主题为 &lt;strong>代码改善&lt;/strong>。&lt;/p>
 &lt;p>这一部分总共包括七章，从软件开发的不同阶段以及不同角度进行了描述，当然了，中心就是 &lt;strong>代码改善&lt;/strong> 代码的构建、开发者测试、调试、重构以及代码的调整等不同方面进行了讲述。&lt;/p>
 &lt;p>下面还是对每一章内容做一个简要的总结。&lt;/p>
 &lt;h2 id="第二十章软件质量概述">第二十章——软件质量概述&lt;/h2>
@@ -1306,7 +1369,15 @@ $$&lt;/p></description></item><item><title>Emoji Support</title><link>https://oh
 &lt;li>(Page.639)将子程序重写为内联&lt;/li>
 &lt;li>(Page.640)用低级语言重写代码&lt;/li>
 &lt;/ul>
-&lt;p>好啦，基本上整个这部分讲的就是这些。感觉这部分内容很杂，当然主题还是代码优化，只不过涉及到的面比较广，所以给人的感觉就比较杂。不过还好，一路看下来，并没有感到特别的云里雾里的。中心思想还是比较清晰的，脉络也比较清晰。&lt;/p></description></item><item><title>读《代码大全（第二版）》笔记（四）</title><link>https://ohcoder.com/post/2013/03/31/reading-code-complete4/</link><pubDate>Sun, 31 Mar 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/03/31/reading-code-complete4/</guid><description>&lt;img src="https://ohcoder.com/post/2013/03/31/reading-code-complete4/title.jpg" alt="Featured image of post 读《代码大全（第二版）》笔记（四）" />&lt;p>本周读了第四部分——&lt;strong>语句&lt;/strong>。&lt;/p>
+&lt;p>好啦，基本上整个这部分讲的就是这些。感觉这部分内容很杂，当然主题还是代码优化，只不过涉及到的面比较广，所以给人的感觉就比较杂。不过还好，一路看下来，并没有感到特别的云里雾里的。中心思想还是比较清晰的，脉络也比较清晰。&lt;/p></description></item><item><title>2013年3月31日</title><link>https://ohcoder.com/post/2013/03/31/2013-03-31/</link><pubDate>Sun, 31 Mar 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/03/31/2013-03-31/</guid><description>&lt;img src="https://ohcoder.com/post/2013/03/31/2013-03-31/title.jpg" alt="Featured image of post 2013年3月31日" />&lt;p>本周，周一到周四，过的灰常苦。主要是前几天还是在忙上个礼拜提到的那件苦逼事。不过还好，之后的一个月里应该算是告一段落了。&lt;/p>
+&lt;p>关于学习方面，不管怎样，还是没有落下，读完了《&lt;a class="link" href="https://book.douban.com/subject/1477390/" target="_blank" rel="noopener"
+>代码大全(第二版)&lt;/a>》的第四部分。写了一篇笔记。关于 Ruby 的学习，感觉还是不太习惯从网上东一段西一段的拼凑着学习，还是想找本书，系统的过一遍，感觉这样学心里比较踏实，可能完全是心里作用或是学习习惯问题。所以最终还是没忍住，从网上订了两本 Ruby 的书。&lt;/p>
+&lt;p>另外，本周没有开始锻炼身体，我想从下周开始吧，逐渐恢复锻炼。不管怎么说，这年头儿有一个好身体，真的是多少钱都买不来啊，健健康康才是最重要的，尤其是得了病之后，就开始后悔平时没有好好锻炼身体，而且锻炼身体这个事儿，也不是一朝一夕的事情，还是需要长久保持才能收到一定的效果。其实我是觉得，也不用多大的运动量，每天保持活动活动就可以，能够养成习惯是最好不过的。&lt;/p>
+&lt;p>关于英语的学习，有时间想再把语法什么的过一遍。听力什么的，感觉去年一年进步还是挺明显的。可能是因为硬着头皮看了一些 WWDC 视频的原因吧。单词什么的就比较烂了，感觉完全是业余水平，也只能和老外在网上扯扯淡，要是正儿八经的沟通基本就歇菜了。口语就不用提了，我不知道面对英语世界的老外，我发出来的音他能不能听出来说的是英语。不过你还别说，对于英国英语、美国英语、加拿大英语的发音我有时候还是能蒙对的，爱尔兰英语有时候我也能蒙对，话说我翻译的 Box2D 教程的原作者 Chris 就来自爱尔兰，呵呵呵。印度英语就不用提了，我肯定能听出来，印度人说出来的英语，一般都是拐着弯儿就出来了。&lt;/p>
+&lt;p>瞎扯了两句英语，开了个玩笑。废话不多说了，还是先把英语基础搞明白吧。&lt;/p>
+&lt;p>闲扯两句微信的公共平台。说实话，我是真心佩服公共平台上的几个微信账号啊。每天雷打不动的定期一篇文章，是每天哦。要知道，如果没什么想法的话，很难保持每天发布文章的，而且每次发布的文章都很有内容。肚子里没点墨水，是很难每天一篇文章的。曾经当我决定每个礼拜写一篇日志的时候，心里还担心能不能有那么多的话要说，虽然一直到目前为止，还能坚持住，但是和人家的每天更新相比，简直是小巫见大巫啊。哦，忘记说了，我说的那几个微信公共平台上的帐号也都是个人在发布消息，而且大部分都是技术流的大牛，想想，一个搞技术的这么能侃，真的挺牛b的，能文能武哇。另外，想说一下，我上微信的唯一目的就是看看他们发布的文章，对于我来说，微信就是一个每天更新的电子杂志，仅此而已。放心，哥肯定不会去约炮，约炮的那是陌陌。&lt;/p>
+&lt;p>坚持每个礼拜写日记以来，我越来越觉得话开始多起来，有时候，写着写着就开始把持不住自己，越写越想写，即便写的都是废话，但是说出来心里就很爽的感觉，反正计算机也不会嫌我唠叨。有时候，还是偶尔会蹦出一个想法，担心自己会越来越向话痨的方向靠拢。不过回头又一想，发微信的那几个老大都没成话痨，我还差的远呢&amp;hellip;&lt;/p>
+&lt;p>说两句正经的，其实我越来越觉得，写作这项运动真的挺好的。不但可以整理自己的思路，还锻炼了自己的表达能力，同时一边写一边还能激发你的灵感。有时候，我感觉我能从写作当中得到一种愉悦的感觉，越写越想写，好爽。呃，说着说着，好像又没正经了，算了，打住吧，碎觉去鸟！&lt;/p></description></item><item><title>读《代码大全（第二版）》笔记（四）</title><link>https://ohcoder.com/post/2013/03/31/reading-code-complete4/</link><pubDate>Sun, 31 Mar 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/03/31/reading-code-complete4/</guid><description>&lt;img src="https://ohcoder.com/post/2013/03/31/reading-code-complete4/title.jpg" alt="Featured image of post 读《代码大全（第二版）》笔记（四）" />&lt;p>本周读了第四部分——&lt;strong>语句&lt;/strong>。&lt;/p>
 &lt;p>这一部分包括的章节比较多，首先分别用 三 个章节讲述了三种常见的语句结构，随后用一章的内容谈论了一下不常见的控制结构。在使用控制结构方面，为了降低复杂度，本部分专门用一章讲述了一种方法，最后用一章内容描述了一下常见的控制问题，本部分总共包括 六 章内容。&lt;/p>
 &lt;h2 id="第十四章组织直线型代码">第十四章——组织直线型代码&lt;/h2>
 &lt;p>本章篇幅比较短，主要讲述了一些如何让用户从外部调用对象方法的时候能够清楚的遵循一定的顺序。换句话说，就是让别人调用你的方法的时候能够简单明了的知道这些方法的调用顺序。书中给出了一些指导原则。&lt;/p>
@@ -1603,7 +1674,18 @@ $$&lt;/p></description></item><item><title>Emoji Support</title><link>https://oh
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>整体上来说，这部分的主要内容就是控制结构，这几章都紧扣主题，而且我发现所有实施的办法都是为了控制复杂度，到目前为止，和之前的猜测还一直比较吻合。总体策略上，我发现主线就是遵守&lt;!-- raw HTML omitted -->KISS&lt;!-- raw HTML omitted -->原则。&lt;/p></description></item><item><title>读《代码大全（第二版）》笔记（三）</title><link>https://ohcoder.com/post/2013/03/24/reading-code-complete3/</link><pubDate>Sun, 24 Mar 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/03/24/reading-code-complete3/</guid><description>&lt;img src="https://ohcoder.com/post/2013/03/24/reading-code-complete3/title.jpg" alt="Featured image of post 读《代码大全（第二版）》笔记（三）" />&lt;p>继续上一周的阅读，本周读了第三部分－变量。&lt;/p>
+&lt;p>整体上来说，这部分的主要内容就是控制结构，这几章都紧扣主题，而且我发现所有实施的办法都是为了控制复杂度，到目前为止，和之前的猜测还一直比较吻合。总体策略上，我发现主线就是遵守&lt;!-- raw HTML omitted -->KISS&lt;!-- raw HTML omitted -->原则。&lt;/p></description></item><item><title>2013年3月24日</title><link>https://ohcoder.com/post/2013/03/24/2013-03-24/</link><pubDate>Sun, 24 Mar 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/03/24/2013-03-24/</guid><description>&lt;img src="https://ohcoder.com/post/2013/03/24/2013-03-24/title.jpg" alt="Featured image of post 2013年3月24日" />&lt;p>这周过的有点苦逼，具体的就不说了，属于负能量，避免影响大家的心情，呵呵。估计这种苦逼状态还得持续一段时间，看到这篇文章的同学就祝我走狗屎运吧，(｡- _ -｡) 。&lt;/p>
+&lt;p>本周还是按照惯例，坚持读《&lt;a class="link" href="https://book.douban.com/subject/1477390/" target="_blank" rel="noopener"
+>代码大全(第2版)&lt;/a>》这本书，并写了一篇笔记。&lt;/p>
+&lt;p>另外，在学习 OpenGL ES，发现教程还是很少的，除了那本英文版的《&lt;a class="link" href="https://book.douban.com/subject/3175883/" target="_blank" rel="noopener"
+>OpenGL ES 2.0 Programming Guide&lt;/a>》教程以外，好像就没什么像样的资料了，尤其是结合 iOS 框架开发的参考教程。盘算着学习一段时间以后，总结下 OpenGL ES 在 iOS 下开发入门的内容，写两篇文章，也算是对自己所学知识的一个梳理。&lt;/p>
+&lt;p>另外，关于 iOS 的学习先不多说什么了，目前碰到的问题基本上网都能搜到，说明我的水平还很水，差的很多，继续努力吧，:)。&lt;/p>
+&lt;p>另外，打算下个礼拜开始恢复锻炼身体了。关键还是不确定后背的伤修养的怎么样了，反正现在不管怎么扭，感觉不到痛了。不行的话，保险起见，再过一个星期再看看。锻炼也不打算出去跑步，我的肺真的是顶不住。目前打算还是在屋子里适当的玩玩哑铃什么的。&lt;/p>
+&lt;p>说实话，通过去年后半年的锻炼，我感觉到上半身有明显肌肉突起哦，尤其是肩膀和胳膊。还是小有成就嘛，呵呵。其实，锻炼身体还是健康为第一位，想了想，年前把后背扭到了，真是有点划不来啊。以后要适当吧，保证在能力范围内吧，呵呵。&lt;/p>
+&lt;p>想了想，前两篇文章都有把生活的内容和技术相关的东西掺杂在一起，感觉好像很杂的样子，让不喜欢技术的朋友看了可能会很不爽，以后还是把生活和技术细节分开记录吧，本来就是不相干的事情，撮合到一块儿感觉也很乱。&lt;/p>
+&lt;p>别的就没什么好说的了，感觉这个礼拜就这些生活上的事情。&lt;/p>
+&lt;p>哦，最后想起一件事情，喜欢程序员圈子八卦的同学可以转向&lt;a class="link" href="https://coolshell.cn/articles/9308.html" target="_blank" rel="noopener"
+>这里&lt;/a>，(⌒▽⌒)&lt;/p></description></item><item><title>读《代码大全（第二版）》笔记（三）</title><link>https://ohcoder.com/post/2013/03/24/reading-code-complete3/</link><pubDate>Sun, 24 Mar 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/03/24/reading-code-complete3/</guid><description>&lt;img src="https://ohcoder.com/post/2013/03/24/reading-code-complete3/title.jpg" alt="Featured image of post 读《代码大全（第二版）》笔记（三）" />&lt;p>继续上一周的阅读，本周读了第三部分－变量。&lt;/p>
 &lt;p>整个第三部分，包括第 10 章到第 13 章，一共有四章都是围绕变量展开。可见变量在程序设计当中有多重要。&lt;/p>
 &lt;h2 id="第十章使用变量的一般事项">第十章－使用变量的一般事项&lt;/h2>
 &lt;p>从本章标题中也可以看出，本章主要就是在讲变量的使用。&lt;/p>
