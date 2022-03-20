@@ -1,4 +1,562 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>读书笔记 on OhCoder</title><link>https://ohcoder.com/categories/reading/</link><description>Recent content in 读书笔记 on OhCoder</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 07 Apr 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://ohcoder.com/categories/reading/index.xml" rel="self" type="application/rss+xml"/><item><title>读《代码大全（第二版）》笔记（五）</title><link>https://ohcoder.com/post/2013/04/07/reading-code-complete5/</link><pubDate>Sun, 07 Apr 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/04/07/reading-code-complete5/</guid><description>&lt;img src="https://ohcoder.com/post/2013/04/07/reading-code-complete5/title.jpg" alt="Featured image of post 读《代码大全（第二版）》笔记（五）" />&lt;p>本书的第五部分讲的主题为 &lt;strong>代码改善&lt;/strong>。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>读书笔记 on OhCoder</title><link>https://ohcoder.com/categories/reading/</link><description>Recent content in 读书笔记 on OhCoder</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 21 Apr 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://ohcoder.com/categories/reading/index.xml" rel="self" type="application/rss+xml"/><item><title>读《代码大全（第二版）》笔记（七）</title><link>https://ohcoder.com/post/2013/04/21/reading-code-complete7/</link><pubDate>Sun, 21 Apr 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/04/21/reading-code-complete7/</guid><description>&lt;img src="https://ohcoder.com/post/2013/04/21/reading-code-complete7/title.jpg" alt="Featured image of post 读《代码大全（第二版）》笔记（七）" />&lt;p>本周读完第七部分。第七部分也是本书的最后一部分，讲的主题是&lt;!-- raw HTML omitted -->软件工艺&lt;!-- raw HTML omitted -->。此部分一共分为五章，涉及的内容关联性不大，比较杂乱，主要包括代码的书写格式，以及良好的注释应该如何写。另外还包括一章专门讲程序员性格的，我觉得也是蛮有意思的。对于我这种天生脑子不太好使的同学，看完这一章之后似乎又看到了一丝前途的光明。最后两章讲的比较泛泛了，说的比较零散，涉及到很多常识类的大道理。下面简要总结一下。&lt;/p>
+&lt;h2 id="第三十一章布局与风格">第三十一章——布局与风格&lt;/h2>
+&lt;p>本章主要讲了代码编写的格式问题。套用书中的话叫&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.729)本章转向计算机的编程的美学话题——程序源代码的布局。&lt;/p>
+&lt;/blockquote>
+&lt;p>在 &lt;em>布局的极端情况&lt;/em> 这一节中，书中列举了一些格式混乱的代码，作为反面例子。&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.732)对于格式化的基本原理，好的布局凸显程序的逻辑结构。&lt;/p>
+&lt;/blockquote>
+&lt;p>好的代码书写能够更好的帮助我们阅读代码。我想但凡读过牛人写的代码的同学，应该会有所体会。&lt;/p>
+&lt;p>我记得当我刚开始写程序的时候，那个时候但凡看见一个程序写的熟练的人都非常的羡慕。曾经也多次感慨，啥时候咱也能像人家那样，熟练的写代码呢？&lt;/p>
+&lt;p>那么什么才是好布局呢？或者说良好布局的目标是什么呢？书中列出了几条(Page.735)，&lt;/p>
+&lt;ul>
+&lt;li>准确表现代码的逻辑结构&lt;/li>
+&lt;li>始终如一地表现代码的逻辑结构。&lt;/li>
+&lt;li>改善可读性&lt;/li>
+&lt;li>经得起修改&lt;/li>
+&lt;/ul>
+&lt;p>关于布局技术一节，提到「空白」、和「括号」。对于空白的使用，主要包括分组、空行、缩进等方式。括号就不用多说了，对于容易引起奇异的地方，最好用括号予以区分。一方面可以避免错误。另一方面增加可读性。&lt;/p>
+&lt;p>代码的布局风格，主要分为「纯块结构」、「模仿纯块结构」、「使用begin-end对(花括号)指定块边界」、「行尾布局」。下面针对不同的风格，摘录一些代码示例进行展示。&lt;/p>
+&lt;ul>
+&lt;li>纯块布局(Page.738)&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>(Page.739)纯if块的Visual Basic示例&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-vb" data-lang="vb">&lt;span class="line">&lt;span class="cl">&lt;span class="k">If&lt;/span> &lt;span class="n">pixelColor&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Color_Red&lt;/span> &lt;span class="k">Then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">End&lt;/span> &lt;span class="k">If&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;em>(Page.739)纯while块的Visual Basic示例&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-vb" data-lang="vb">&lt;span class="line">&lt;span class="cl">&lt;span class="k">while&lt;/span> &lt;span class="n">pixelColor&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Color_Red&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">Wend&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;em>(Page.739)纯case块的Visual Basic示例&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-vb" data-lang="vb">&lt;span class="line">&lt;span class="cl">&lt;span class="k">Select&lt;/span> &lt;span class="k">Case&lt;/span> &lt;span class="n">pixelColor&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">case&lt;/span> &lt;span class="n">Color_Red&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">case&lt;/span> &lt;span class="n">Color_Green&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">case&lt;/span> &lt;span class="k">Else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">End&lt;/span> &lt;span class="k">Select&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>模仿纯块结构&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>(Page.741)模仿纯if块的C++示例&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c++" data-lang="c++">&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">pixelColor&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Color_Red&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;em>(Page.741)模仿纯while块的C++示例&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c++" data-lang="c++">&lt;span class="line">&lt;span class="cl">&lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">pixelColor&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Color_Red&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;em>(Page.741)模仿纯switchcase块的C++示例&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c++" data-lang="c++">&lt;span class="line">&lt;span class="cl">&lt;span class="k">switch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">pixelColor&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">case&lt;/span> &lt;span class="nl">Color_Red&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">case&lt;/span> &lt;span class="nl">Color_Green&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">default&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>​&lt;/p>
+&lt;ul>
+&lt;li>使用begin-end对(花括号)指定块边界 &lt;br>
+&lt;em>(Page.742)使用begin和end作为if块边界的C++例子&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c++" data-lang="c++">&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">pixelColor&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Color_Red&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;em>(Page.742)使用begin和end作为while块边界的C++例子&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c++" data-lang="c++">&lt;span class="line">&lt;span class="cl">&lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">pixelColor&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">Color_Red&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;em>(Page.743)使用begin和end作为switch/case代码块边界的C++例子&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c++" data-lang="c++">&lt;span class="line">&lt;span class="cl">&lt;span class="k">switch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">pixelColor&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">case&lt;/span> &lt;span class="nl">Color_Red&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">case&lt;/span> &lt;span class="nl">Color_Green&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">default&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>行尾布局
+&lt;em>(Page.744)Visual Basic中较少见但看上去相当好的行尾布局示例&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c++" data-lang="c++">&lt;span class="line">&lt;span class="cl">&lt;span class="n">If&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">soldCount&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="n">Then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">markdown&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">0.10&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">profit&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">0.05&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">markdown&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">0.05&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">End&lt;/span> &lt;span class="n">If&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;em>(Page.744)Visual Basic使用行尾布局的while代码块示例&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c++" data-lang="c++">&lt;span class="line">&lt;span class="cl">&lt;span class="n">While&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">pixelColor&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Color_Red&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">statement2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">Wend&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;em>(Page.744)更典型的Visual Basic示例，其行尾布局已失去应有的作用&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c++" data-lang="c++">&lt;span class="line">&lt;span class="cl">&lt;span class="n">If&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">soldCount&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">10&lt;/span> &lt;span class="n">And&lt;/span> &lt;span class="n">prevMonthSales&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="n">Then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">If&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">soldCount&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">100&lt;/span> &lt;span class="n">And&lt;/span> &lt;span class="n">prevMonthSales&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="n">Then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">If&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">soldCount&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="n">Then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">markdown&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">0.1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">profit&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">0.05&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">markdown&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">0.05&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">End&lt;/span> &lt;span class="n">If&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">markdown&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">0.025&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">End&lt;/span> &lt;span class="n">If&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">Else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">markdown&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">0.0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">End&lt;/span> &lt;span class="n">If&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;p>好啦，列举了这么多的格式，到底那种风格最好呢？书中并没有给出答案，&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.745)所有风格都不绝对可靠，都偶尔需要进行“合理而明显”的折中。&lt;/p>
+&lt;/blockquote>
+&lt;p>随后书中对一些常见代码书写结构给出了一些建议。例如，&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.758))每行仅写一条语句&lt;/p>
+&lt;/blockquote>
+&lt;p>并针对此条语句给出了一些很有说服力的理由。对于数据声明的布局，和语句一样，也是每行只声明一个数据。这些理解起来都比较容易，在这里就不罗列代码了。&lt;/p>
+&lt;p>对于注释的布局也同样重要，注释写的好，也可以大大增进程序的可读性。我记得在我刚开始写代码的时候，增经有一段时期非常喜欢写注释，几乎每一行都要加上注释，以显得很专业，:D。其实，后来看书才了解到，什么应该写注释，什么时候没必要写。有时候不必要的注释让人看起来很冗余。反而会影响代码的阅读。&lt;/p>
+&lt;p>子程序的布局原则主要包括两个方面(Page.766)，&lt;/p>
+&lt;ul>
+&lt;li>用空行分割子程序的各部分&lt;/li>
+&lt;li>将子程序参数按标准缩进&lt;/li>
+&lt;/ul>
+&lt;p>类的布局分为两部分，一部分是类接口的布局，另一类是类实现的布局。类接口布局时，一般按如下顺序表示(Page.768)：&lt;/p>
+&lt;ol>
+&lt;li>说明类及其完整用法的头部注释&lt;/li>
+&lt;li>构造函数与析构函数&lt;/li>
+&lt;li>public子程序&lt;/li>
+&lt;li>protected子程序&lt;/li>
+&lt;li>private子程序和数据成员&lt;/li>
+&lt;/ol>
+&lt;p>类实现的布局，通常按如下顺序排布(Page.768~769)：&lt;/p>
+&lt;ol>
+&lt;li>描述类所在文件之内容的头部注释&lt;/li>
+&lt;li>类数据&lt;/li>
+&lt;li>public子程序&lt;/li>
+&lt;li>protected子程序&lt;/li>
+&lt;li>private子程序&lt;/li>
+&lt;/ol>
+&lt;p>书中也对文件和程序布局给出了一些建议(Page.771)，&lt;/p>
+&lt;ul>
+&lt;li>一个文件应只有一个类&lt;/li>
+&lt;li>文件的命名应该与类有关&lt;/li>
+&lt;li>在文件中清晰地分隔各子程序&lt;/li>
+&lt;li>按字母顺序排列子程序&lt;/li>
+&lt;/ul>
+&lt;h2 id="第三十二章自说明代码">第三十二章——自说明代码&lt;/h2>
+&lt;p>本章主要将了程序中注释相关问题。但是本章在一开始就表明了注释的态度。例如，&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.778)在代码层文档中起主要作用的因素并非注释，而是好的编程风格。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>(Page.779)对于精心编写的代码而言，注释不过是美丽衣裳上的小饰物而已。&lt;/p>
+&lt;/blockquote>
+&lt;p>其实，这两句话的意思是说，再清晰的注释也比不过简单明了的代码。对于什么情况下需要写注释，书中并没有给出定义，但是用了一段程序员之间的对话进行了表述。&lt;/p>
+&lt;p>对于注释的作用共分为六种(Page.786)，&lt;/p>
+&lt;ul>
+&lt;li>重复代码&lt;/li>
+&lt;li>解释代码&lt;/li>
+&lt;li>代码标记&lt;/li>
+&lt;li>概述代码&lt;/li>
+&lt;li>代码意图说明&lt;/li>
+&lt;li>传达代码无法表达的信息&lt;/li>
+&lt;/ul>
+&lt;p>随后书中提到，&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.788)对于完工的代码，只允许有的三种注释类型：代码无法表述的信息、目的性注释和概述性注释。&lt;/p>
+&lt;/blockquote>
+&lt;p>关于高效的注释，书中给出了几条指导原则(Page.788~Page.791)，&lt;/p>
+&lt;ul>
+&lt;li>采用不会打断或抑制修改的注释风格&lt;/li>
+&lt;li>用伪代码编程法减少注释时间&lt;/li>
+&lt;li>将注释继承到你的开发风格中&lt;/li>
+&lt;li>性能不是逃避注释的好借口&lt;/li>
+&lt;/ul>
+&lt;p>代码的注释技术分为两种，一种是单行注释。另一种是多行注释。在解释单/多行注释的过程中，分别说了注释数据和单/多行语句的方式，并通过一些小的代码片段简要说明了哪些注释会带来问题。这些小片段写的都很繁琐，所以这里也就不列举了，说一下这些注释的共性，很简单，就是繁琐。原因更多的是想让代码看起来美观，但却给维护带来了较高的成本。&lt;/p>
+&lt;h2 id="第三十三章个人性格">第三十三章——个人性格&lt;/h2>
+&lt;p>说实话，看完这章的整体感受是，对于以写程序为生，似乎又看到了一丝的光明&amp;hellip;&amp;hellip;
+这里列举一些书中提到的经验。有些给了我很大的启发，对自己以后的规划起到了一些借鉴作用。&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.821)如何专注你的聪明才智，比你有多聪明更重要。&lt;/p>
+&lt;/blockquote>
+&lt;p>对于这句话，我觉得之前我走了不少弯路。前几年做的工作大多比较零散，坦白说没有往深度做，也没有这样的机会。当然了，主要原因还是在自己没有意识到这一点吧。我想以后，我会专注一些，把精力放到自己感兴趣的技术上来。&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.821)精通编程的人是那些了解自己头脑有多大局限性的人，都很谦虚&lt;/p>
+&lt;/blockquote>
+&lt;p>这一点，我觉得前几年我做的还不够。有的时候，回头想想我可能过于自信了，其实可能是因为太自卑了，所以才要表现的很自信吧。&lt;/p>
+&lt;p>对于求知欲这部分，有一段话讲的很好，&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.822)一旦承认自己的脑袋要理解多数程序还有难度，并意识到有效的编程就是去追寻改善这一境况的方式时，你就会开始需要付毕生精力的漫长求索过程。在成为高手的过程中，对技术的事物的求知欲具有压倒一切的重要性。&lt;/p>
+&lt;/blockquote>
+&lt;p>对于这段话来说，我发现我做的还差很多，虽然我早发现自己技术上差的还很多，但是我不知道能不能用毕生的精力去追求，我想我能做的就是尽自己最大的努力。&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.823)学习编程的一个特别好的途径是研究高手的程序。&lt;/p>
+&lt;/blockquote>
+&lt;p>这一点在很多高手的经验之谈中经常会看到。所谓的捷径，我想也就是这个吧，:)。&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.826)拒绝认错是一个让人特别讨厌的习惯。&lt;/p>
+&lt;/blockquote>
+&lt;p>现实中，见过很多这样的朋友。大部分原因可能是因为面子吧，呵呵。对于这一点，貌似全世界的程序员都有这个通病，只不过有的人比较坦诚，有的人比较猥琐。我自己觉得，但凡是坦诚认错的人，更表明了他有信心。拉不下脸来认错的人，其实是没有自信的表现，最后可能让自己错过纠正错误的机会，其实是不明智的表现。&lt;/p>
+&lt;p>书中有一段在讲&lt;!-- raw HTML omitted -->经验&lt;!-- raw HTML omitted -->。我很认可其中的观点，&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.831)与其他行业相比，软件开发行业的经验比书本知识价值要小，&amp;hellip;。&lt;/p>
+&lt;/blockquote>
+&lt;p>这一点比较好理解，但是不容易被大多数行业内的人接受，这需要时间慢慢转变。&lt;/p>
+&lt;h2 id="第三十四章软件工艺的话题">第三十四章——软件工艺的话题&lt;/h2>
+&lt;blockquote>
+&lt;p>(Page.837)致力于降低复杂度是软件开发的核心。&lt;/p>
+&lt;/blockquote>
+&lt;p>我想这一句话总结了本书的主旨。本书的所有章节都是在围绕这个话题展开，:)。本章后面讲的就不多说了，基本上属于总结性的话题。&lt;/p>
+&lt;h2 id="第三十五章何处有更多信息">第三十五章——何处有更多信息&lt;/h2>
+&lt;p>呵呵，题目很清楚。本章列出了一些不同阶段程序员可以参考的资料。这里就不多说了。&lt;/p></description></item><item><title>读《代码大全（第二版）》笔记（六）</title><link>https://ohcoder.com/post/2013/04/14/reading-code-complete6/</link><pubDate>Sun, 14 Apr 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/04/14/reading-code-complete6/</guid><description>&lt;img src="https://ohcoder.com/post/2013/04/14/reading-code-complete6/title.jpg" alt="Featured image of post 读《代码大全（第二版）》笔记（六）" />&lt;p>本周读了本书的第六部分，此部分的主题为系统考虑。本部分分为四个章节，分别描述了程序规模对构建软件的影响，对构建的管理，系统的集成，以及相关的编程工具。&lt;/p>
+&lt;p>还是老样子，下面对每一章的内容进行简要的摘录。&lt;/p>
+&lt;h2 id="第二十七章程序规模对构建的影响">第二十七章——程序规模对构建的影响&lt;/h2>
+&lt;p>本章开始描述了交流与规模的关系，提出&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.650)&amp;hellip;二者的关系并不是加性的而是乘性的。即交流路径的条数大致正比于人数的平方。&lt;/p>
+&lt;/blockquote>
+&lt;p>根据项目规模的不同，会对错误产生不同的影响。&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.651)项目的规模既会影响错误的数量，也会影响错误的类型。&lt;/p>
+&lt;/blockquote>
+&lt;p>坦白说，这句话中所说的项目规模会对错误数量产生影响很自然可以想到，但是说也会影响错误的类型，我之前是没有想到的。&lt;/p>
+&lt;p>书中谈到项目规模对生产率影响一节时，引用到这样一句话，我觉得对于移动互联网的开发也是蛮适合的。这句话是这样说的&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.653)&amp;hellip;，完成项目的小型团队的生产率摇臂大型团队高出 39%，那么这些团队各有多少人呢？答案是，小项目两个人，大项目三个人(1984)。&lt;/p>
+&lt;/blockquote>
+&lt;p>之前看《&lt;!-- raw HTML omitted -->打造Facebook&lt;!-- raw HTML omitted -->》那本书的时候，作者提到在 Facebook 内部开发一个新项目，一般人数也很少。例如他自己主导开发的那个项目，一开始也只有三个人。&lt;/p>
+&lt;p>对于项目规模对开发活动的影响一节中，文中指出&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.655)规模相近的项目会执行相似的活动，但是随着项目规模不同，其所需要进行的活动的种类也会有明显的差异。&lt;/p>
+&lt;/blockquote>
+&lt;p>最后谈论了一下不同级别的规模与方法论之间的关系。其实，本章讲的都比较概括，不过中心思想很明确，主要就是描述了因为程序规模的不同对于构建软件不同方面的影响。&lt;/p>
+&lt;h2 id="第二十八章管理构建">第二十八章——管理构建&lt;/h2>
+&lt;p>本章主要讲了对于软件开发过程中的项目管理。&lt;/p>
+&lt;p>在编码方面，提出了一些建议，其中对于定制标准方面，书中给出了一条建议，我觉得可以直接用于实践，&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.662)如果项目中有人要制定标准，那么应该由一位受人尊敬的架构师来做，而不应该由管理者来做。在软件项目中，“专家层”起的作用至少与“管理层”相同。&lt;/p>
+&lt;/blockquote>
+&lt;p>其实，像这种直接面向技术层面的问题，管理者或许没有资深的技术人员更专业。对于良好的编码实践要比呆板的标准更容易实行。书中给出了几条建议(Page.662~Page.664)。&lt;/p>
+&lt;ul>
+&lt;li>给项目的每一部分分派两个人&lt;/li>
+&lt;li>逐行复查代码&lt;/li>
+&lt;li>要求代码签名&lt;/li>
+&lt;li>安排一些好的代码示例供人参考&lt;/li>
+&lt;li>强调代码是公有财产&lt;/li>
+&lt;li>奖励好代码&lt;/li>
+&lt;li>一份简单的标准&lt;/li>
+&lt;/ul>
+&lt;p>上面的建议的好处也比较明显，就不展开说了。&lt;/p>
+&lt;p>接下来讲到配置管理，什么是配置管理？&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.664)配置管理是 “系统化地定义项目工件(project arifacts)和处理变化，以使项目一直保持其完整性” 的实践活动。它的另一种说法是“变更控制”。其中的技术包括评估所提交的更改、追踪更改、保留系统在不同时间点的各历史版本。&lt;/p>
+&lt;/blockquote>
+&lt;p>对于构建过程中需求的变更和设计的变更，书中给出了一种方法是，&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.666)&amp;hellip;，记下所有的想法和建议，不管它实现起来有多容易。把它记录下来，直到你有时间去处理它们。到那时，把它当做整体(group)来看待，从中选中最有益的一些变更来加以实施。&lt;/p>
+&lt;/blockquote>
+&lt;p>即便如此，对于软件的变更也会是一大难题。估计很多朋友都在网上看到过一些有趣的漫画，内容大概是项目经理让程序员不停的改动需求，直到程序员崩溃&amp;hellip;。书中对此现象的评价说&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.667)缺乏规范的变更控制是当今软件业面临的主要管理难题之一。&lt;/p>
+&lt;/blockquote>
+&lt;p>看来，变更是一个世界性的难题，呵呵。&lt;/p>
+&lt;p>对于软件代码变更的管理，书中提到了版本管理软件的使用。版本管理软件不但可以有效的管理代码变更，还可以对代码起到备份的作用，不会轻易丢失代码。&lt;/p>
+&lt;p>对于评估构建的进度方面，书中提到了一些评估项目的方法(Page.671~Page.672)。&lt;/p>
+&lt;ul>
+&lt;li>建立目标&lt;/li>
+&lt;li>为评估留出时间，并且做出计划&lt;/li>
+&lt;li>清楚地说明软件需求&lt;/li>
+&lt;li>在底层细节层面进行评估&lt;/li>
+&lt;li>使用若干不同的评估方法，并且比较其结果&lt;/li>
+&lt;li>定期做重新评估&lt;/li>
+&lt;/ul>
+&lt;p>具体就不展开说了，都比较容易理解。&lt;/p>
+&lt;p>对于项目进度影响最大的原因是&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.674)&amp;hellip;所开发的程序的规模。&lt;/p>
+&lt;/blockquote>
+&lt;p>这一点很容易理解，呵呵。&lt;/p>
+&lt;p>在度量这一节中，文中提出了对项目进行度量的两个根本原因。&lt;/p>
+&lt;ul>
+&lt;li>(Page.677)任何一种项目特征(attribute)都是可以用某种方法来度量的，而且总会比根本不度量好得多。&lt;/li>
+&lt;li>(Page.678)反对度量就是认为最好不要去了解项目中到底在发生什么。&lt;/li>
+&lt;/ul>
+&lt;p>其实，关于度量，我自己的理解是，需要有一个大致的标尺来丈量项目的进度，但也不应该过于依赖这种度量，要张弛有度，保证项目不偏离大方向。&lt;/p>
+&lt;p>本章后面部分讲述了一些管理方面的经验。例如如何和你的管理者沟通等等。其中有很多建议实践性很强，并且针对性也很强，需要有相应的环境为基础，所以在此就不罗列了，没太大意义。&lt;/p>
+&lt;h2 id="第二十九章集成">第二十九章——集成&lt;/h2>
+&lt;p>本章讲述了几种软件集成的方式，但各有利弊，无银弹。&lt;/p>
+&lt;p>对于集成的方式，分为两种：阶段式集成和增量集成。&lt;/p>
+&lt;p>首先从阶段式集成开始介绍。阶段式集成的另一个名称是“大爆炸集成”。阶段式集成面临的问题，摘用书中的一句话描述，&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.691)阶段式集成的一个问题是，当第一次把系统中的类放到一起时，新的问题会不可避免地大量浮现，而问题的成因可能是方方面面的。&lt;/p>
+&lt;/blockquote>
+&lt;p>书中说，对于&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.692)&amp;hellip;，对微型程序——而言，阶段式集成或许是最佳方式。&lt;/p>
+&lt;/blockquote>
+&lt;p>其实也可以看出，阶段式集成非常的不常用。下面介绍增量集成。&lt;/p>
+&lt;p>在增量集成中，可以一次一块地将程序模块拼接起来。对于增量集成的好处，书中列出了几条(Page.693~Page.694)：&lt;/p>
+&lt;ul>
+&lt;li>易于定位错误&lt;/li>
+&lt;li>及早在项目里取得系统级的成果&lt;/li>
+&lt;li>改善进度的监控&lt;/li>
+&lt;li>改善客户关系&lt;/li>
+&lt;li>更加充分地测试系统中的各个单元&lt;/li>
+&lt;li>能在更短的开发进度计划内建造出整个系统&lt;/li>
+&lt;/ul>
+&lt;p>其实，我感觉这些条条框框基本上也记不太准确，可以作为参考吧。对于增量集成的策略，书中提到了几种，下面一一说明。&lt;/p>
+&lt;p>自顶向下集成&lt;/p>
+&lt;p>故名思义，在自顶向下的集成中，首先编写并集成位于层次体系(hierachy)顶部的类。此种策略，除了具有增量集成的一般优点以外，能相对较早地测试系统的控制逻辑，能够在项目早期完成一个能部分工作的系统。&lt;/p>
+&lt;p>但是除了优点以外，当然还有缺点，在纯粹的自顶向下集成将棘手的系统接口的演练留到最后才进行。书中给出的最终意见是&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.696)实现纯粹的自顶向下集成也是近乎不可能的。&lt;/p>
+&lt;/blockquote>
+&lt;p>自底向上集成&lt;/p>
+&lt;p>在自底向上的集成中，需要先编写集成位于hierarchy底部的类。关于这种方法的优缺点，书中说&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.697)它能讲错误的可能来源限制到“正在被集成的那一个类”上，因此容易定位错误。&lt;/p>
+&lt;/blockquote>
+&lt;p>但同样，缺点是&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.697)它将重要的高层系统接口集成工作留到最后才进行。&lt;/p>
+&lt;/blockquote>
+&lt;p>三明治集成&lt;/p>
+&lt;p>关于这种方法，&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.698)首先是集成层次体系(hierachy)顶部的高层业务对象(business-object)类。然后集成底部的与设备接口的类和广泛使用的工具类。这些高层类和底层类是三明治的那两片面包。&lt;/p>
+&lt;/blockquote>
+&lt;p>这种集成方法避免了纯粹的自底向上或自顶向下集成的僵化做法。先集成通常比较棘手的类，降低了后期的风险。&lt;/p>
+&lt;p>风险导向的集成&lt;/p>
+&lt;p>风险导向的集成也称为“困难部件优先集成”。它和三明治集成类似，也是趋向于先集成顶层类和底层类，讲中间层类留后处理，但是它们的出发点不同。其实不同点主要就在于，风险导向的集成偏向与先把风险高的部件进行集成。&lt;/p>
+&lt;p>功能导向的集成&lt;/p>
+&lt;p>顾名思义，也就是一次集成一项功能。&lt;/p>
+&lt;blockquote>
+&lt;p>(Page.701)纯碎的功能导向的集成和纯碎的自顶向下或自底向上集成一样苦难。通常需要先集成某些底层的代码，之后才能集成某些重要的功能。&lt;/p>
+&lt;/blockquote>
+&lt;p>T—型集成&lt;/p>
+&lt;p>对于这种集成方法，是选中某个特定的“竖直块/vertical slice”，对它及早开发并进行集成。对于这个功能模块，是从头到尾的进行完成，而且过程中应该能找出系统设计所做的假设中的全部主要问题。这种方法，通常和“风险导向的集成”或“功能导向的集成”结合使用。&lt;/p>
+&lt;p>本章最后，还提到了两种方法，一种是daily build，另一种是冒烟测试。对于这两种方法就不展开说了。&lt;/p>
+&lt;h2 id="第三十章编程工具">第三十章——编程工具&lt;/h2>
+&lt;p>从标题也可以看出，本章主要围绕着工具展开，其中包括设计工具、代码管理工具、编程工具等。整个章节大概翻了一下，基本都是介绍性的说明了一下功能，或者是作用等，这里就不多说了，没有太大的意义，因为每个人的工作习惯都不一样，而且随着时间的推移，很多工程上的方法也都在不断的变化，所以感觉这部分没有太大的参考价值。&lt;/p></description></item><item><title>读《代码大全（第二版）》笔记（五）</title><link>https://ohcoder.com/post/2013/04/07/reading-code-complete5/</link><pubDate>Sun, 07 Apr 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/04/07/reading-code-complete5/</guid><description>&lt;img src="https://ohcoder.com/post/2013/04/07/reading-code-complete5/title.jpg" alt="Featured image of post 读《代码大全（第二版）》笔记（五）" />&lt;p>本书的第五部分讲的主题为 &lt;strong>代码改善&lt;/strong>。&lt;/p>
 &lt;p>这一部分总共包括七章，从软件开发的不同阶段以及不同角度进行了描述，当然了，中心就是 &lt;strong>代码改善&lt;/strong> 代码的构建、开发者测试、调试、重构以及代码的调整等不同方面进行了讲述。&lt;/p>
 &lt;p>下面还是对每一章内容做一个简要的总结。&lt;/p>
 &lt;h2 id="第二十章软件质量概述">第二十章——软件质量概述&lt;/h2>

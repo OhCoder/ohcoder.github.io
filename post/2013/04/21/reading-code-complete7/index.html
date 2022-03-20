@@ -1,0 +1,488 @@
+<!doctype html><html lang=en-us dir=ltr>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="本周读完第七部分。第七部分也是本书的最后一部分，讲的主题是软件工艺。此部分一共分为五章，涉及的内容关联性不大，比较杂乱，主要包括代码的书写格"><title>读《代码大全（第二版）》笔记（七）</title><link rel=canonical href=https://ohcoder.com/post/2013/04/21/reading-code-complete7/>
+<link rel=stylesheet href=/scss/style.min.4106a7b4d25dd419c5774d9ba3a705d0134876711f67a125f7f13a5223c0ba73.css><meta property="og:title" content="读《代码大全（第二版）》笔记（七）">
+<meta property="og:description" content="本周读完第七部分。第七部分也是本书的最后一部分，讲的主题是软件工艺。此部分一共分为五章，涉及的内容关联性不大，比较杂乱，主要包括代码的书写格">
+<meta property="og:url" content="https://ohcoder.com/post/2013/04/21/reading-code-complete7/">
+<meta property="og:site_name" content="OhCoder">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="programming"><meta property="article:published_time" content="2013-04-21T00:00:00+00:00"><meta property="article:modified_time" content="2013-04-21T00:00:00+00:00"><meta property="og:image" content="https://ohcoder.com/post/2013/04/21/reading-code-complete7/title.jpg">
+<meta name=twitter:title content="读《代码大全（第二版）》笔记（七）">
+<meta name=twitter:description content="本周读完第七部分。第七部分也是本书的最后一部分，讲的主题是软件工艺。此部分一共分为五章，涉及的内容关联性不大，比较杂乱，主要包括代码的书写格"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://ohcoder.com/post/2013/04/21/reading-code-complete7/title.jpg">
+</head><body class=article-page>
+<script>(function(){const e="StackColorScheme";localStorage.setItem(e,"dark")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky">
+<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box>
+<span class=hamburger-inner></span>
+</span>
+</button>
+<header>
+<figure class=site-avatar>
+<a href=/>
+<img src=/img/avatar_hu55511690b51ceae960c0ffab8deedb37_101683_300x0_resize_q75_box.jpg width=300 height=299 class=site-logo loading=lazy alt=Avatar>
+</a>
+<span class=emoji>💭</span>
+</figure><div class=site-meta>
+<h1 class=site-name><a href=/>OhCoder</a></h1><h2 class=site-description>宇称的神秘日记</h2></div></header><ol class=social-menu>
+<li>
+<a href=https://github.com/OhCoder target=_blank title=GitHub><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+</a>
+</li><li>
+<a href=https://twitter.com/ohcoder target=_blank title=Twitter><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
+</a>
+</li></ol><ol class=menu id=main-menu>
+<li>
+<a href=/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span>
+</a>
+</li><li>
+<a href=/page/2019/05/28/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span>
+</a>
+</li><li>
+<a href=/page/2022/03/06/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>About</span>
+</a>
+</li><div class=menu-bottom-section>
+</div></ol></aside><main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/post/2013/04/21/reading-code-complete7/>
+<img src=/post/2013/04/21/reading-code-complete7/title_hu6f8835bfb4d550680a97dd841449a3e2_1953517_800x0_resize_q75_box.jpg srcset="/post/2013/04/21/reading-code-complete7/title_hu6f8835bfb4d550680a97dd841449a3e2_1953517_800x0_resize_q75_box.jpg 800w, /post/2013/04/21/reading-code-complete7/title_hu6f8835bfb4d550680a97dd841449a3e2_1953517_1600x0_resize_q75_box.jpg 1600w" width=800 height=450 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（七）">
+</a>
+</div><div class=article-details>
+<header class=article-category>
+<a href=/categories/reading/ style=background-color:#2a9d8f;color:#fff>
+读书笔记
+</a>
+</header><div class=article-title-wrapper>
+<h2 class=article-title>
+<a href=/post/2013/04/21/reading-code-complete7/>读《代码大全（第二版）》笔记（七）</a>
+</h2></div><footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Apr 21, 2013</time>
+</div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+8 minute read
+</time>
+</div></footer></div></header><section class=article-content>
+<p>本周读完第七部分。第七部分也是本书的最后一部分，讲的主题是软件工艺。此部分一共分为五章，涉及的内容关联性不大，比较杂乱，主要包括代码的书写格式，以及良好的注释应该如何写。另外还包括一章专门讲程序员性格的，我觉得也是蛮有意思的。对于我这种天生脑子不太好使的同学，看完这一章之后似乎又看到了一丝前途的光明。最后两章讲的比较泛泛了，说的比较零散，涉及到很多常识类的大道理。下面简要总结一下。</p><h2 id=第三十一章布局与风格>第三十一章——布局与风格</h2><p>本章主要讲了代码编写的格式问题。套用书中的话叫</p><blockquote>
+<p>(Page.729)本章转向计算机的编程的美学话题——程序源代码的布局。</p></blockquote><p>在 <em>布局的极端情况</em> 这一节中，书中列举了一些格式混乱的代码，作为反面例子。</p><blockquote>
+<p>(Page.732)对于格式化的基本原理，好的布局凸显程序的逻辑结构。</p></blockquote><p>好的代码书写能够更好的帮助我们阅读代码。我想但凡读过牛人写的代码的同学，应该会有所体会。</p><p>我记得当我刚开始写程序的时候，那个时候但凡看见一个程序写的熟练的人都非常的羡慕。曾经也多次感慨，啥时候咱也能像人家那样，熟练的写代码呢？</p><p>那么什么才是好布局呢？或者说良好布局的目标是什么呢？书中列出了几条(Page.735)，</p><ul>
+<li>准确表现代码的逻辑结构</li><li>始终如一地表现代码的逻辑结构。</li><li>改善可读性</li><li>经得起修改</li></ul><p>关于布局技术一节，提到「空白」、和「括号」。对于空白的使用，主要包括分组、空行、缩进等方式。括号就不用多说了，对于容易引起奇异的地方，最好用括号予以区分。一方面可以避免错误。另一方面增加可读性。</p><p>代码的布局风格，主要分为「纯块结构」、「模仿纯块结构」、「使用begin-end对(花括号)指定块边界」、「行尾布局」。下面针对不同的风格，摘录一些代码示例进行展示。</p><ul>
+<li>纯块布局(Page.738)</li></ul><p><em>(Page.739)纯if块的Visual Basic示例</em></p><div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-vb data-lang=vb><span class=line><span class=cl><span class=k>If</span> <span class=n>pixelColor</span> <span class=o>=</span> <span class=n>Color_Red</span> <span class=k>Then</span>
+</span></span><span class=line><span class=cl>    <span class=n>statement1</span>
+</span></span><span class=line><span class=cl>    <span class=n>statement2</span>
+</span></span><span class=line><span class=cl><span class=k>End</span> <span class=k>If</span>
+</span></span></code></pre></td></tr></table></div></div><p><em>(Page.739)纯while块的Visual Basic示例</em></p><div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-vb data-lang=vb><span class=line><span class=cl><span class=k>while</span> <span class=n>pixelColor</span> <span class=o>=</span> <span class=n>Color_Red</span>
+</span></span><span class=line><span class=cl>    <span class=n>statement1</span>
+</span></span><span class=line><span class=cl>    <span class=n>statement2</span>
+</span></span><span class=line><span class=cl>    <span class=p>...</span>
+</span></span><span class=line><span class=cl><span class=k>Wend</span>
+</span></span></code></pre></td></tr></table></div></div><p><em>(Page.739)纯case块的Visual Basic示例</em></p><div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-vb data-lang=vb><span class=line><span class=cl><span class=k>Select</span> <span class=k>Case</span> <span class=n>pixelColor</span>
+</span></span><span class=line><span class=cl>    <span class=k>case</span> <span class=n>Color_Red</span>
+</span></span><span class=line><span class=cl>        <span class=n>statement1</span>
+</span></span><span class=line><span class=cl>        <span class=n>statement2</span>
+</span></span><span class=line><span class=cl>        <span class=p>...</span>
+</span></span><span class=line><span class=cl>    <span class=k>case</span> <span class=n>Color_Green</span>
+</span></span><span class=line><span class=cl>        <span class=n>statement1</span>
+</span></span><span class=line><span class=cl>        <span class=n>statement2</span>
+</span></span><span class=line><span class=cl>        <span class=p>...</span>
+</span></span><span class=line><span class=cl>    <span class=k>case</span> <span class=k>Else</span>
+</span></span><span class=line><span class=cl>        <span class=n>statement1</span>
+</span></span><span class=line><span class=cl>        <span class=n>statement2</span>
+</span></span><span class=line><span class=cl>        <span class=p>...</span>
+</span></span><span class=line><span class=cl><span class=k>End</span> <span class=k>Select</span> 
+</span></span></code></pre></td></tr></table></div></div><ul>
+<li>模仿纯块结构</li></ul><p><em>(Page.741)模仿纯if块的C++示例</em></p><div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=n>pixelColor</span> <span class=o>==</span> <span class=n>Color_Red</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>statement1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>statement2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>...</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p><em>(Page.741)模仿纯while块的C++示例</em></p><div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=k>while</span> <span class=p>(</span><span class=n>pixelColor</span> <span class=o>==</span> <span class=n>Color_Red</span><span class=p>)</span> 
+</span></span><span class=line><span class=cl>    <span class=n>statement1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>statement2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>...</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p><em>(Page.741)模仿纯switchcase块的C++示例</em></p><div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=k>switch</span> <span class=p>(</span><span class=n>pixelColor</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>case</span> <span class=nl>Color_Red</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>statement1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>statement2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>...</span>
+</span></span><span class=line><span class=cl>    <span class=k>break</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>case</span> <span class=nl>Color_Green</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>statement1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>statement2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>...</span>
+</span></span><span class=line><span class=cl>    <span class=k>break</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>default</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>statement1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>statement2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>...</span>
+</span></span><span class=line><span class=cl>    <span class=k>break</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>​</p><ul>
+<li>使用begin-end对(花括号)指定块边界 <br>
+<em>(Page.742)使用begin和end作为if块边界的C++例子</em></li></ul><div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=n>pixelColor</span> <span class=o>==</span> <span class=n>Color_Red</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>statement1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>statement2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>...</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p><em>(Page.742)使用begin和end作为while块边界的C++例子</em></p><div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=k>while</span> <span class=p>(</span><span class=n>pixelColor</span> <span class=o>==</span> <span class=n>Color_Red</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>statement1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>statement2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>...</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p><em>(Page.743)使用begin和end作为switch/case代码块边界的C++例子</em></p><div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=k>switch</span> <span class=p>(</span><span class=n>pixelColor</span><span class=p>)</span> 
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>case</span> <span class=nl>Color_Red</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>statement1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>statement2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>...</span>
+</span></span><span class=line><span class=cl>    <span class=k>break</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=k>case</span> <span class=nl>Color_Green</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>statement1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>statement2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>...</span>
+</span></span><span class=line><span class=cl>    <span class=k>break</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=k>default</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>statement1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>statement2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>...</span>
+</span></span><span class=line><span class=cl>    <span class=k>break</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>        
+</span></span></code></pre></td></tr></table></div></div><ul>
+<li>
+<p>行尾布局
+<em>(Page.744)Visual Basic中较少见但看上去相当好的行尾布局示例</em></p><div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=n>If</span> <span class=p>(</span><span class=n>soldCount</span> <span class=o>&gt;</span> <span class=mi>1000</span><span class=p>)</span> <span class=n>Then</span>
+</span></span><span class=line><span class=cl>  <span class=n>markdown</span> <span class=o>=</span> <span class=mf>0.10</span>
+</span></span><span class=line><span class=cl>  <span class=n>profit</span> <span class=o>=</span> <span class=mf>0.05</span>
+</span></span><span class=line><span class=cl>  <span class=n>Else</span>
+</span></span><span class=line><span class=cl>  <span class=n>markdown</span> <span class=o>=</span> <span class=mf>0.05</span>
+</span></span><span class=line><span class=cl><span class=n>End</span> <span class=n>If</span>
+</span></span></code></pre></td></tr></table></div></div><p><em>(Page.744)Visual Basic使用行尾布局的while代码块示例</em></p><div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=n>While</span> <span class=p>(</span><span class=n>pixelColor</span> <span class=o>=</span> <span class=n>Color_Red</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=n>statement1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>statement2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>...</span>
+</span></span><span class=line><span class=cl><span class=n>Wend</span>
+</span></span></code></pre></td></tr></table></div></div><p><em>(Page.744)更典型的Visual Basic示例，其行尾布局已失去应有的作用</em></p><div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=n>If</span> <span class=p>(</span><span class=n>soldCount</span> <span class=o>&gt;</span> <span class=mi>10</span> <span class=n>And</span> <span class=n>prevMonthSales</span> <span class=o>&gt;</span> <span class=mi>10</span><span class=p>)</span> <span class=n>Then</span>
+</span></span><span class=line><span class=cl>  <span class=n>If</span> <span class=p>(</span><span class=n>soldCount</span> <span class=o>&gt;</span> <span class=mi>100</span> <span class=n>And</span> <span class=n>prevMonthSales</span> <span class=o>&gt;</span> <span class=mi>10</span><span class=p>)</span> <span class=n>Then</span>
+</span></span><span class=line><span class=cl>      <span class=n>If</span> <span class=p>(</span><span class=n>soldCount</span> <span class=o>&gt;</span> <span class=mi>1000</span><span class=p>)</span> <span class=n>Then</span>
+</span></span><span class=line><span class=cl>        <span class=n>markdown</span> <span class=o>=</span> <span class=mf>0.1</span>
+</span></span><span class=line><span class=cl>        <span class=n>profit</span> <span class=o>=</span> <span class=mf>0.05</span>
+</span></span><span class=line><span class=cl>      <span class=n>Else</span>
+</span></span><span class=line><span class=cl>        <span class=n>markdown</span> <span class=o>=</span> <span class=mf>0.05</span>
+</span></span><span class=line><span class=cl>      <span class=n>End</span> <span class=n>If</span>
+</span></span><span class=line><span class=cl>  <span class=n>Else</span>
+</span></span><span class=line><span class=cl>    <span class=n>markdown</span> <span class=o>=</span> <span class=mf>0.025</span>
+</span></span><span class=line><span class=cl>  <span class=n>End</span> <span class=n>If</span>
+</span></span><span class=line><span class=cl><span class=n>Else</span>
+</span></span><span class=line><span class=cl>  <span class=n>markdown</span> <span class=o>=</span> <span class=mf>0.0</span>
+</span></span><span class=line><span class=cl><span class=n>End</span> <span class=n>If</span>  
+</span></span></code></pre></td></tr></table></div></div></li></ul><p>好啦，列举了这么多的格式，到底那种风格最好呢？书中并没有给出答案，</p><blockquote>
+<p>(Page.745)所有风格都不绝对可靠，都偶尔需要进行“合理而明显”的折中。</p></blockquote><p>随后书中对一些常见代码书写结构给出了一些建议。例如，</p><blockquote>
+<p>(Page.758))每行仅写一条语句</p></blockquote><p>并针对此条语句给出了一些很有说服力的理由。对于数据声明的布局，和语句一样，也是每行只声明一个数据。这些理解起来都比较容易，在这里就不罗列代码了。</p><p>对于注释的布局也同样重要，注释写的好，也可以大大增进程序的可读性。我记得在我刚开始写代码的时候，增经有一段时期非常喜欢写注释，几乎每一行都要加上注释，以显得很专业，:D。其实，后来看书才了解到，什么应该写注释，什么时候没必要写。有时候不必要的注释让人看起来很冗余。反而会影响代码的阅读。</p><p>子程序的布局原则主要包括两个方面(Page.766)，</p><ul>
+<li>用空行分割子程序的各部分</li><li>将子程序参数按标准缩进</li></ul><p>类的布局分为两部分，一部分是类接口的布局，另一类是类实现的布局。类接口布局时，一般按如下顺序表示(Page.768)：</p><ol>
+<li>说明类及其完整用法的头部注释</li><li>构造函数与析构函数</li><li>public子程序</li><li>protected子程序</li><li>private子程序和数据成员</li></ol><p>类实现的布局，通常按如下顺序排布(Page.768~769)：</p><ol>
+<li>描述类所在文件之内容的头部注释</li><li>类数据</li><li>public子程序</li><li>protected子程序</li><li>private子程序</li></ol><p>书中也对文件和程序布局给出了一些建议(Page.771)，</p><ul>
+<li>一个文件应只有一个类</li><li>文件的命名应该与类有关</li><li>在文件中清晰地分隔各子程序</li><li>按字母顺序排列子程序</li></ul><h2 id=第三十二章自说明代码>第三十二章——自说明代码</h2><p>本章主要将了程序中注释相关问题。但是本章在一开始就表明了注释的态度。例如，</p><blockquote>
+<p>(Page.778)在代码层文档中起主要作用的因素并非注释，而是好的编程风格。</p></blockquote><blockquote>
+<p>(Page.779)对于精心编写的代码而言，注释不过是美丽衣裳上的小饰物而已。</p></blockquote><p>其实，这两句话的意思是说，再清晰的注释也比不过简单明了的代码。对于什么情况下需要写注释，书中并没有给出定义，但是用了一段程序员之间的对话进行了表述。</p><p>对于注释的作用共分为六种(Page.786)，</p><ul>
+<li>重复代码</li><li>解释代码</li><li>代码标记</li><li>概述代码</li><li>代码意图说明</li><li>传达代码无法表达的信息</li></ul><p>随后书中提到，</p><blockquote>
+<p>(Page.788)对于完工的代码，只允许有的三种注释类型：代码无法表述的信息、目的性注释和概述性注释。</p></blockquote><p>关于高效的注释，书中给出了几条指导原则(Page.788~Page.791)，</p><ul>
+<li>采用不会打断或抑制修改的注释风格</li><li>用伪代码编程法减少注释时间</li><li>将注释继承到你的开发风格中</li><li>性能不是逃避注释的好借口</li></ul><p>代码的注释技术分为两种，一种是单行注释。另一种是多行注释。在解释单/多行注释的过程中，分别说了注释数据和单/多行语句的方式，并通过一些小的代码片段简要说明了哪些注释会带来问题。这些小片段写的都很繁琐，所以这里也就不列举了，说一下这些注释的共性，很简单，就是繁琐。原因更多的是想让代码看起来美观，但却给维护带来了较高的成本。</p><h2 id=第三十三章个人性格>第三十三章——个人性格</h2><p>说实话，看完这章的整体感受是，对于以写程序为生，似乎又看到了一丝的光明&mldr;&mldr;
+这里列举一些书中提到的经验。有些给了我很大的启发，对自己以后的规划起到了一些借鉴作用。</p><blockquote>
+<p>(Page.821)如何专注你的聪明才智，比你有多聪明更重要。</p></blockquote><p>对于这句话，我觉得之前我走了不少弯路。前几年做的工作大多比较零散，坦白说没有往深度做，也没有这样的机会。当然了，主要原因还是在自己没有意识到这一点吧。我想以后，我会专注一些，把精力放到自己感兴趣的技术上来。</p><blockquote>
+<p>(Page.821)精通编程的人是那些了解自己头脑有多大局限性的人，都很谦虚</p></blockquote><p>这一点，我觉得前几年我做的还不够。有的时候，回头想想我可能过于自信了，其实可能是因为太自卑了，所以才要表现的很自信吧。</p><p>对于求知欲这部分，有一段话讲的很好，</p><blockquote>
+<p>(Page.822)一旦承认自己的脑袋要理解多数程序还有难度，并意识到有效的编程就是去追寻改善这一境况的方式时，你就会开始需要付毕生精力的漫长求索过程。在成为高手的过程中，对技术的事物的求知欲具有压倒一切的重要性。</p></blockquote><p>对于这段话来说，我发现我做的还差很多，虽然我早发现自己技术上差的还很多，但是我不知道能不能用毕生的精力去追求，我想我能做的就是尽自己最大的努力。</p><blockquote>
+<p>(Page.823)学习编程的一个特别好的途径是研究高手的程序。</p></blockquote><p>这一点在很多高手的经验之谈中经常会看到。所谓的捷径，我想也就是这个吧，:)。</p><blockquote>
+<p>(Page.826)拒绝认错是一个让人特别讨厌的习惯。</p></blockquote><p>现实中，见过很多这样的朋友。大部分原因可能是因为面子吧，呵呵。对于这一点，貌似全世界的程序员都有这个通病，只不过有的人比较坦诚，有的人比较猥琐。我自己觉得，但凡是坦诚认错的人，更表明了他有信心。拉不下脸来认错的人，其实是没有自信的表现，最后可能让自己错过纠正错误的机会，其实是不明智的表现。</p><p>书中有一段在讲经验。我很认可其中的观点，</p><blockquote>
+<p>(Page.831)与其他行业相比，软件开发行业的经验比书本知识价值要小，&mldr;。</p></blockquote><p>这一点比较好理解，但是不容易被大多数行业内的人接受，这需要时间慢慢转变。</p><h2 id=第三十四章软件工艺的话题>第三十四章——软件工艺的话题</h2><blockquote>
+<p>(Page.837)致力于降低复杂度是软件开发的核心。</p></blockquote><p>我想这一句话总结了本书的主旨。本书的所有章节都是在围绕这个话题展开，:)。本章后面讲的就不多说了，基本上属于总结性的话题。</p><h2 id=第三十五章何处有更多信息>第三十五章——何处有更多信息</h2><p>呵呵，题目很清楚。本章列出了一些不同阶段程序员可以参考的资料。这里就不多说了。</p></section><footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/programming/>programming</a>
+</section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css integrity=sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js integrity=sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js integrity=sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+</article><aside class=related-contents--wrapper>
+<h2 class=section-title>Related contents</h2><div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/post/2013/04/14/reading-code-complete6/>
+<div class=article-image>
+<img src=/post/2013/04/14/reading-code-complete6/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（六）" data-key=reading-code-complete6 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（六）</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2013/04/07/reading-code-complete5/>
+<div class=article-image>
+<img src=/post/2013/04/07/reading-code-complete5/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（五）" data-key=reading-code-complete5 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（五）</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2013/03/31/reading-code-complete4/>
+<div class=article-image>
+<img src=/post/2013/03/31/reading-code-complete4/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（四）" data-key=reading-code-complete4 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（四）</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2013/03/24/reading-code-complete3/>
+<div class=article-image>
+<img src=/post/2013/03/24/reading-code-complete3/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（三）" data-key=reading-code-complete3 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（三）</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2013/03/17/reading-code-complete2/>
+<div class=article-image>
+<img src=/post/2013/03/17/reading-code-complete2/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（二）" data-key=reading-code-complete2 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（二）</h2></div></a>
+</article></div></div></aside><footer class=site-footer>
+<section class=copyright>
+&copy;
+2012 -
+2022 OhCoder
+</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div><div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main><aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-license" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 21H6a3 3 0 01-3-3v-1h10v2a2 2 0 004 0V5a2 2 0 112 2h-2m2-4H8A3 3 0 005 6v11"/><line x1="9" y1="7" x2="13" y2="7"/><line x1="9" y1="11" x2="13" y2="11"/></svg>
+</div><h2 class="widget-title section-title">Table of contents</h2><div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#第三十一章布局与风格>第三十一章——布局与风格</a></li><li><a href=#第三十二章自说明代码>第三十二章——自说明代码</a></li><li><a href=#第三十三章个人性格>第三十三章——个人性格</a></li><li><a href=#第三十四章软件工艺的话题>第三十四章——软件工艺的话题</a></li><li><a href=#第三十五章何处有更多信息>第三十五章——何处有更多信息</a></li></ol></nav></div></section><section class="widget tagCloud">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rainbow" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 17c0-5.523-4.477-10-10-10S2 11.477 2 17"/><path d="M18 17A6 6 0 106 17"/><path d="M14 17a2 2 0 10-4 0"/></svg>
+</div><h2 class="widget-title section-title">Categories</h2><div class=tagCloud-tags>
+<a href=/categories/diary/ class=font_size_15>
+日记
+</a>
+<a href=/categories/reading/ class=font_size_8>
+读书笔记
+</a>
+<a href=/categories/test/ class=font_size_2>
+Test
+</a>
+<a href=/categories/syntax/ class=font_size_1>
+syntax
+</a>
+<a href=/categories/themes/ class=font_size_1>
+themes
+</a>
+<a href=/categories/%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9/ class=font_size_1>
+تجربة
+</a>
+<a href=/categories/%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9-%D9%85%D8%B9-%D9%81%D8%B1%D8%A7%D8%BA%D8%A7%D8%AA/ class=font_size_1>
+تجربة مع فراغات
+</a>
+<a href=/categories/%E6%B5%8B%E8%AF%95/ class=font_size_1>
+测试
+</a>
+</div></section><section class="widget tagCloud">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cloud-storm" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 18a4.6 4.4.0 010-9 5 4.5.0 0111 2h1a3.5 3.5.0 010 7h-1"/><polyline points="13 14 11 18 14 18 12 22"/></svg>
+</div><h2 class="widget-title section-title">Tags</h2><div class=tagCloud-tags>
+<a href=/tags/programming/ class=font_size_7>
+programming
+</a>
+<a href=/tags/css/ class=font_size_1>
+css
+</a>
+<a href=/tags/emoji/ class=font_size_1>
+emoji
+</a>
+<a href=/tags/facebook/ class=font_size_1>
+facebook
+</a>
+<a href=/tags/git/ class=font_size_1>
+git
+</a>
+<a href=/tags/html/ class=font_size_1>
+html
+</a>
+<a href=/tags/markdown/ class=font_size_1>
+markdown
+</a>
+<a href=/tags/privacy/ class=font_size_1>
+privacy
+</a>
+<a href=/tags/ruby/ class=font_size_1>
+ruby
+</a>
+<a href=/tags/shortcodes/ class=font_size_1>
+shortcodes
+</a>
+<a href=/tags/themes/ class=font_size_1>
+themes
+</a>
+<a href=/tags/vim/ class=font_size_1>
+vim
+</a>
+<a href=/tags/%D9%85%D8%A7%D8%B1%D9%83%D8%AF%D8%A7%D9%88%D9%86/ class=font_size_1>
+ماركداون
+</a>
+<a href=/tags/%D9%86%D8%B5/ class=font_size_1>
+نص
+</a>
+<a href=/tags/%D9%88%D8%B3%D9%85-%D9%85%D8%B9-%D9%81%D8%B1%D8%A7%D8%BA%D8%A7%D8%AA/ class=font_size_1>
+وسم مع فراغات
+</a>
+</div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script>
+</body></html>

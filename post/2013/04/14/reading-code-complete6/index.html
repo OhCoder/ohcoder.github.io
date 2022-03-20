@@ -1,0 +1,237 @@
+<!doctype html><html lang=en-us dir=ltr>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="本周读了本书的第六部分，此部分的主题为系统考虑。本部分分为四个章节，分别描述了程序规模对构建软件的影响，对构建的管理，系统的集成，以及相关的"><title>读《代码大全（第二版）》笔记（六）</title><link rel=canonical href=https://ohcoder.com/post/2013/04/14/reading-code-complete6/>
+<link rel=stylesheet href=/scss/style.min.4106a7b4d25dd419c5774d9ba3a705d0134876711f67a125f7f13a5223c0ba73.css><meta property="og:title" content="读《代码大全（第二版）》笔记（六）">
+<meta property="og:description" content="本周读了本书的第六部分，此部分的主题为系统考虑。本部分分为四个章节，分别描述了程序规模对构建软件的影响，对构建的管理，系统的集成，以及相关的">
+<meta property="og:url" content="https://ohcoder.com/post/2013/04/14/reading-code-complete6/">
+<meta property="og:site_name" content="OhCoder">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="programming"><meta property="article:published_time" content="2013-04-14T00:00:00+00:00"><meta property="article:modified_time" content="2013-04-14T00:00:00+00:00"><meta property="og:image" content="https://ohcoder.com/post/2013/04/14/reading-code-complete6/title.jpg">
+<meta name=twitter:title content="读《代码大全（第二版）》笔记（六）">
+<meta name=twitter:description content="本周读了本书的第六部分，此部分的主题为系统考虑。本部分分为四个章节，分别描述了程序规模对构建软件的影响，对构建的管理，系统的集成，以及相关的"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://ohcoder.com/post/2013/04/14/reading-code-complete6/title.jpg">
+</head><body class=article-page>
+<script>(function(){const e="StackColorScheme";localStorage.setItem(e,"dark")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky">
+<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box>
+<span class=hamburger-inner></span>
+</span>
+</button>
+<header>
+<figure class=site-avatar>
+<a href=/>
+<img src=/img/avatar_hu55511690b51ceae960c0ffab8deedb37_101683_300x0_resize_q75_box.jpg width=300 height=299 class=site-logo loading=lazy alt=Avatar>
+</a>
+<span class=emoji>💭</span>
+</figure><div class=site-meta>
+<h1 class=site-name><a href=/>OhCoder</a></h1><h2 class=site-description>宇称的神秘日记</h2></div></header><ol class=social-menu>
+<li>
+<a href=https://github.com/OhCoder target=_blank title=GitHub><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+</a>
+</li><li>
+<a href=https://twitter.com/ohcoder target=_blank title=Twitter><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
+</a>
+</li></ol><ol class=menu id=main-menu>
+<li>
+<a href=/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span>
+</a>
+</li><li>
+<a href=/page/2019/05/28/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span>
+</a>
+</li><li>
+<a href=/page/2022/03/06/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>About</span>
+</a>
+</li><div class=menu-bottom-section>
+</div></ol></aside><main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/post/2013/04/14/reading-code-complete6/>
+<img src=/post/2013/04/14/reading-code-complete6/title_hu6f8835bfb4d550680a97dd841449a3e2_1953517_800x0_resize_q75_box.jpg srcset="/post/2013/04/14/reading-code-complete6/title_hu6f8835bfb4d550680a97dd841449a3e2_1953517_800x0_resize_q75_box.jpg 800w, /post/2013/04/14/reading-code-complete6/title_hu6f8835bfb4d550680a97dd841449a3e2_1953517_1600x0_resize_q75_box.jpg 1600w" width=800 height=450 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（六）">
+</a>
+</div><div class=article-details>
+<header class=article-category>
+<a href=/categories/reading/ style=background-color:#2a9d8f;color:#fff>
+读书笔记
+</a>
+</header><div class=article-title-wrapper>
+<h2 class=article-title>
+<a href=/post/2013/04/14/reading-code-complete6/>读《代码大全（第二版）》笔记（六）</a>
+</h2></div><footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Apr 14, 2013</time>
+</div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+7 minute read
+</time>
+</div></footer></div></header><section class=article-content>
+<p>本周读了本书的第六部分，此部分的主题为系统考虑。本部分分为四个章节，分别描述了程序规模对构建软件的影响，对构建的管理，系统的集成，以及相关的编程工具。</p><p>还是老样子，下面对每一章的内容进行简要的摘录。</p><h2 id=第二十七章程序规模对构建的影响>第二十七章——程序规模对构建的影响</h2><p>本章开始描述了交流与规模的关系，提出</p><blockquote>
+<p>(Page.650)&mldr;二者的关系并不是加性的而是乘性的。即交流路径的条数大致正比于人数的平方。</p></blockquote><p>根据项目规模的不同，会对错误产生不同的影响。</p><blockquote>
+<p>(Page.651)项目的规模既会影响错误的数量，也会影响错误的类型。</p></blockquote><p>坦白说，这句话中所说的项目规模会对错误数量产生影响很自然可以想到，但是说也会影响错误的类型，我之前是没有想到的。</p><p>书中谈到项目规模对生产率影响一节时，引用到这样一句话，我觉得对于移动互联网的开发也是蛮适合的。这句话是这样说的</p><blockquote>
+<p>(Page.653)&mldr;，完成项目的小型团队的生产率摇臂大型团队高出 39%，那么这些团队各有多少人呢？答案是，小项目两个人，大项目三个人(1984)。</p></blockquote><p>之前看《打造Facebook》那本书的时候，作者提到在 Facebook 内部开发一个新项目，一般人数也很少。例如他自己主导开发的那个项目，一开始也只有三个人。</p><p>对于项目规模对开发活动的影响一节中，文中指出</p><blockquote>
+<p>(Page.655)规模相近的项目会执行相似的活动，但是随着项目规模不同，其所需要进行的活动的种类也会有明显的差异。</p></blockquote><p>最后谈论了一下不同级别的规模与方法论之间的关系。其实，本章讲的都比较概括，不过中心思想很明确，主要就是描述了因为程序规模的不同对于构建软件不同方面的影响。</p><h2 id=第二十八章管理构建>第二十八章——管理构建</h2><p>本章主要讲了对于软件开发过程中的项目管理。</p><p>在编码方面，提出了一些建议，其中对于定制标准方面，书中给出了一条建议，我觉得可以直接用于实践，</p><blockquote>
+<p>(Page.662)如果项目中有人要制定标准，那么应该由一位受人尊敬的架构师来做，而不应该由管理者来做。在软件项目中，“专家层”起的作用至少与“管理层”相同。</p></blockquote><p>其实，像这种直接面向技术层面的问题，管理者或许没有资深的技术人员更专业。对于良好的编码实践要比呆板的标准更容易实行。书中给出了几条建议(Page.662~Page.664)。</p><ul>
+<li>给项目的每一部分分派两个人</li><li>逐行复查代码</li><li>要求代码签名</li><li>安排一些好的代码示例供人参考</li><li>强调代码是公有财产</li><li>奖励好代码</li><li>一份简单的标准</li></ul><p>上面的建议的好处也比较明显，就不展开说了。</p><p>接下来讲到配置管理，什么是配置管理？</p><blockquote>
+<p>(Page.664)配置管理是 “系统化地定义项目工件(project arifacts)和处理变化，以使项目一直保持其完整性” 的实践活动。它的另一种说法是“变更控制”。其中的技术包括评估所提交的更改、追踪更改、保留系统在不同时间点的各历史版本。</p></blockquote><p>对于构建过程中需求的变更和设计的变更，书中给出了一种方法是，</p><blockquote>
+<p>(Page.666)&mldr;，记下所有的想法和建议，不管它实现起来有多容易。把它记录下来，直到你有时间去处理它们。到那时，把它当做整体(group)来看待，从中选中最有益的一些变更来加以实施。</p></blockquote><p>即便如此，对于软件的变更也会是一大难题。估计很多朋友都在网上看到过一些有趣的漫画，内容大概是项目经理让程序员不停的改动需求，直到程序员崩溃&mldr;。书中对此现象的评价说</p><blockquote>
+<p>(Page.667)缺乏规范的变更控制是当今软件业面临的主要管理难题之一。</p></blockquote><p>看来，变更是一个世界性的难题，呵呵。</p><p>对于软件代码变更的管理，书中提到了版本管理软件的使用。版本管理软件不但可以有效的管理代码变更，还可以对代码起到备份的作用，不会轻易丢失代码。</p><p>对于评估构建的进度方面，书中提到了一些评估项目的方法(Page.671~Page.672)。</p><ul>
+<li>建立目标</li><li>为评估留出时间，并且做出计划</li><li>清楚地说明软件需求</li><li>在底层细节层面进行评估</li><li>使用若干不同的评估方法，并且比较其结果</li><li>定期做重新评估</li></ul><p>具体就不展开说了，都比较容易理解。</p><p>对于项目进度影响最大的原因是</p><blockquote>
+<p>(Page.674)&mldr;所开发的程序的规模。</p></blockquote><p>这一点很容易理解，呵呵。</p><p>在度量这一节中，文中提出了对项目进行度量的两个根本原因。</p><ul>
+<li>(Page.677)任何一种项目特征(attribute)都是可以用某种方法来度量的，而且总会比根本不度量好得多。</li><li>(Page.678)反对度量就是认为最好不要去了解项目中到底在发生什么。</li></ul><p>其实，关于度量，我自己的理解是，需要有一个大致的标尺来丈量项目的进度，但也不应该过于依赖这种度量，要张弛有度，保证项目不偏离大方向。</p><p>本章后面部分讲述了一些管理方面的经验。例如如何和你的管理者沟通等等。其中有很多建议实践性很强，并且针对性也很强，需要有相应的环境为基础，所以在此就不罗列了，没太大意义。</p><h2 id=第二十九章集成>第二十九章——集成</h2><p>本章讲述了几种软件集成的方式，但各有利弊，无银弹。</p><p>对于集成的方式，分为两种：阶段式集成和增量集成。</p><p>首先从阶段式集成开始介绍。阶段式集成的另一个名称是“大爆炸集成”。阶段式集成面临的问题，摘用书中的一句话描述，</p><blockquote>
+<p>(Page.691)阶段式集成的一个问题是，当第一次把系统中的类放到一起时，新的问题会不可避免地大量浮现，而问题的成因可能是方方面面的。</p></blockquote><p>书中说，对于</p><blockquote>
+<p>(Page.692)&mldr;，对微型程序——而言，阶段式集成或许是最佳方式。</p></blockquote><p>其实也可以看出，阶段式集成非常的不常用。下面介绍增量集成。</p><p>在增量集成中，可以一次一块地将程序模块拼接起来。对于增量集成的好处，书中列出了几条(Page.693~Page.694)：</p><ul>
+<li>易于定位错误</li><li>及早在项目里取得系统级的成果</li><li>改善进度的监控</li><li>改善客户关系</li><li>更加充分地测试系统中的各个单元</li><li>能在更短的开发进度计划内建造出整个系统</li></ul><p>其实，我感觉这些条条框框基本上也记不太准确，可以作为参考吧。对于增量集成的策略，书中提到了几种，下面一一说明。</p><p>自顶向下集成</p><p>故名思义，在自顶向下的集成中，首先编写并集成位于层次体系(hierachy)顶部的类。此种策略，除了具有增量集成的一般优点以外，能相对较早地测试系统的控制逻辑，能够在项目早期完成一个能部分工作的系统。</p><p>但是除了优点以外，当然还有缺点，在纯粹的自顶向下集成将棘手的系统接口的演练留到最后才进行。书中给出的最终意见是</p><blockquote>
+<p>(Page.696)实现纯粹的自顶向下集成也是近乎不可能的。</p></blockquote><p>自底向上集成</p><p>在自底向上的集成中，需要先编写集成位于hierarchy底部的类。关于这种方法的优缺点，书中说</p><blockquote>
+<p>(Page.697)它能讲错误的可能来源限制到“正在被集成的那一个类”上，因此容易定位错误。</p></blockquote><p>但同样，缺点是</p><blockquote>
+<p>(Page.697)它将重要的高层系统接口集成工作留到最后才进行。</p></blockquote><p>三明治集成</p><p>关于这种方法，</p><blockquote>
+<p>(Page.698)首先是集成层次体系(hierachy)顶部的高层业务对象(business-object)类。然后集成底部的与设备接口的类和广泛使用的工具类。这些高层类和底层类是三明治的那两片面包。</p></blockquote><p>这种集成方法避免了纯粹的自底向上或自顶向下集成的僵化做法。先集成通常比较棘手的类，降低了后期的风险。</p><p>风险导向的集成</p><p>风险导向的集成也称为“困难部件优先集成”。它和三明治集成类似，也是趋向于先集成顶层类和底层类，讲中间层类留后处理，但是它们的出发点不同。其实不同点主要就在于，风险导向的集成偏向与先把风险高的部件进行集成。</p><p>功能导向的集成</p><p>顾名思义，也就是一次集成一项功能。</p><blockquote>
+<p>(Page.701)纯碎的功能导向的集成和纯碎的自顶向下或自底向上集成一样苦难。通常需要先集成某些底层的代码，之后才能集成某些重要的功能。</p></blockquote><p>T—型集成</p><p>对于这种集成方法，是选中某个特定的“竖直块/vertical slice”，对它及早开发并进行集成。对于这个功能模块，是从头到尾的进行完成，而且过程中应该能找出系统设计所做的假设中的全部主要问题。这种方法，通常和“风险导向的集成”或“功能导向的集成”结合使用。</p><p>本章最后，还提到了两种方法，一种是daily build，另一种是冒烟测试。对于这两种方法就不展开说了。</p><h2 id=第三十章编程工具>第三十章——编程工具</h2><p>从标题也可以看出，本章主要围绕着工具展开，其中包括设计工具、代码管理工具、编程工具等。整个章节大概翻了一下，基本都是介绍性的说明了一下功能，或者是作用等，这里就不多说了，没有太大的意义，因为每个人的工作习惯都不一样，而且随着时间的推移，很多工程上的方法也都在不断的变化，所以感觉这部分没有太大的参考价值。</p></section><footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/programming/>programming</a>
+</section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css integrity=sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js integrity=sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js integrity=sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+</article><aside class=related-contents--wrapper>
+<h2 class=section-title>Related contents</h2><div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/post/2013/04/21/reading-code-complete7/>
+<div class=article-image>
+<img src=/post/2013/04/21/reading-code-complete7/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（七）" data-key=reading-code-complete7 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（七）</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2013/04/07/reading-code-complete5/>
+<div class=article-image>
+<img src=/post/2013/04/07/reading-code-complete5/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（五）" data-key=reading-code-complete5 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（五）</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2013/03/31/reading-code-complete4/>
+<div class=article-image>
+<img src=/post/2013/03/31/reading-code-complete4/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（四）" data-key=reading-code-complete4 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（四）</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2013/03/24/reading-code-complete3/>
+<div class=article-image>
+<img src=/post/2013/03/24/reading-code-complete3/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（三）" data-key=reading-code-complete3 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（三）</h2></div></a>
+</article><article class=has-image>
+<a href=/post/2013/03/17/reading-code-complete2/>
+<div class=article-image>
+<img src=/post/2013/03/17/reading-code-complete2/title.89e5da6af1c18489d72622b22b845310_hu6f8835bfb4d550680a97dd841449a3e2_1953517_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 读《代码大全（第二版）》笔记（二）" data-key=reading-code-complete2 data-hash="md5-ieXaavHBhInXJiKyK4RTEA==">
+</div><div class=article-details>
+<h2 class=article-title>读《代码大全（第二版）》笔记（二）</h2></div></a>
+</article></div></div></aside><footer class=site-footer>
+<section class=copyright>
+&copy;
+2012 -
+2022 OhCoder
+</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div><div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main><aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-license" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 21H6a3 3 0 01-3-3v-1h10v2a2 2 0 004 0V5a2 2 0 112 2h-2m2-4H8A3 3 0 005 6v11"/><line x1="9" y1="7" x2="13" y2="7"/><line x1="9" y1="11" x2="13" y2="11"/></svg>
+</div><h2 class="widget-title section-title">Table of contents</h2><div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#第二十七章程序规模对构建的影响>第二十七章——程序规模对构建的影响</a></li><li><a href=#第二十八章管理构建>第二十八章——管理构建</a></li><li><a href=#第二十九章集成>第二十九章——集成</a></li><li><a href=#第三十章编程工具>第三十章——编程工具</a></li></ol></nav></div></section><section class="widget tagCloud">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rainbow" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 17c0-5.523-4.477-10-10-10S2 11.477 2 17"/><path d="M18 17A6 6 0 106 17"/><path d="M14 17a2 2 0 10-4 0"/></svg>
+</div><h2 class="widget-title section-title">Categories</h2><div class=tagCloud-tags>
+<a href=/categories/diary/ class=font_size_15>
+日记
+</a>
+<a href=/categories/reading/ class=font_size_8>
+读书笔记
+</a>
+<a href=/categories/test/ class=font_size_2>
+Test
+</a>
+<a href=/categories/syntax/ class=font_size_1>
+syntax
+</a>
+<a href=/categories/themes/ class=font_size_1>
+themes
+</a>
+<a href=/categories/%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9/ class=font_size_1>
+تجربة
+</a>
+<a href=/categories/%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9-%D9%85%D8%B9-%D9%81%D8%B1%D8%A7%D8%BA%D8%A7%D8%AA/ class=font_size_1>
+تجربة مع فراغات
+</a>
+<a href=/categories/%E6%B5%8B%E8%AF%95/ class=font_size_1>
+测试
+</a>
+</div></section><section class="widget tagCloud">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cloud-storm" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 18a4.6 4.4.0 010-9 5 4.5.0 0111 2h1a3.5 3.5.0 010 7h-1"/><polyline points="13 14 11 18 14 18 12 22"/></svg>
+</div><h2 class="widget-title section-title">Tags</h2><div class=tagCloud-tags>
+<a href=/tags/programming/ class=font_size_7>
+programming
+</a>
+<a href=/tags/css/ class=font_size_1>
+css
+</a>
+<a href=/tags/emoji/ class=font_size_1>
+emoji
+</a>
+<a href=/tags/facebook/ class=font_size_1>
+facebook
+</a>
+<a href=/tags/git/ class=font_size_1>
+git
+</a>
+<a href=/tags/html/ class=font_size_1>
+html
+</a>
+<a href=/tags/markdown/ class=font_size_1>
+markdown
+</a>
+<a href=/tags/privacy/ class=font_size_1>
+privacy
+</a>
+<a href=/tags/ruby/ class=font_size_1>
+ruby
+</a>
+<a href=/tags/shortcodes/ class=font_size_1>
+shortcodes
+</a>
+<a href=/tags/themes/ class=font_size_1>
+themes
+</a>
+<a href=/tags/vim/ class=font_size_1>
+vim
+</a>
+<a href=/tags/%D9%85%D8%A7%D8%B1%D9%83%D8%AF%D8%A7%D9%88%D9%86/ class=font_size_1>
+ماركداون
+</a>
+<a href=/tags/%D9%86%D8%B5/ class=font_size_1>
+نص
+</a>
+<a href=/tags/%D9%88%D8%B3%D9%85-%D9%85%D8%B9-%D9%81%D8%B1%D8%A7%D8%BA%D8%A7%D8%AA/ class=font_size_1>
+وسم مع فراغات
+</a>
+</div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script>
+</body></html>
