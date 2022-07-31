@@ -420,7 +420,104 @@ $$&lt;/p></description></item><item><title>Emoji Support</title><link>https://oh
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>想尝试一个游戏</title><link>https://ohcoder.com/post/2013/04/28/diary/</link><pubDate>Sun, 28 Apr 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/04/28/diary/</guid><description>&lt;img src="https://ohcoder.com/post/2013/04/28/diary/title.jpg" alt="Featured image of post 想尝试一个游戏" />&lt;p>关于 Web 方面的学习，本周开始读《&lt;a class="link" href="https://book.douban.com/subject/10746113/" target="_blank" rel="noopener"
+&lt;/div></description></item><item><title>少喝咖啡</title><link>https://ohcoder.com/post/2013/06/09/diary/</link><pubDate>Sun, 09 Jun 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/06/09/diary/</guid><description>&lt;img src="https://ohcoder.com/post/2013/06/09/diary/title.jpg" alt="Featured image of post 少喝咖啡" />&lt;p>北京这一个礼拜以来天气一直很糟糕。几乎每天都要下雨，前天晚上貌似还下了大雨。&lt;/p>
+&lt;p>不过整体对我来说天气的影响倒是不大，只是我觉得自己的作息应该改一改了&amp;hellip;.&lt;/p>
+&lt;p>这个礼拜整体来说没有什么大的变化，依旧是学习，琢磨做东西。对于日语的学习，把五十音图重新复习了一下，包括平假名和片假名的发音和书写。不过整体掌握还不算是太熟悉，尚未达到无意识反应的状态，不过我觉得这已经不影响对后面的课文的学习，只是一开始对单词的学习，反应可能不会很快。我想随着对词汇深入的学习，会越来越熟练。&lt;/p>
+&lt;p>除了对日语的学习，顺便把英语的语法重新熟悉一下。下个礼拜 Apple 的 &lt;a class="link" href="https://developer.apple.com/wwdc/" target="_blank" rel="noopener"
+>WWDC &lt;/a> 就要召开了，到时候会有很多视频需要看，除了学习技术以外，顺便也可以把英语听力练习一下。我想，接下来这两个礼拜，看 WWDC 的视频会成为一项主要的任务。这既是体力活儿，又是脑力活儿。&lt;/p>
+&lt;p>前些天把 &lt;a class="link" href="https://zh.wikipedia.org/zh/%E6%9D%BE%E6%9C%AC%E8%A1%8C%E5%BC%98" target="_blank" rel="noopener"
+>Matz&lt;/a> 同学新出的书《&lt;a class="link" href="https://book.douban.com/subject/24536403/" target="_blank" rel="noopener"
+>代码的未来&lt;/a>》看完了。对于开阔眼界，增长见识非常有用。其实这本书是对 Matz 同学以前所写文章的一个整理，分门别类的对不同技术方向做了划分，最后编辑整理成书的。&lt;/p>
+&lt;p>书中对一些当今一些比较前沿的技术领域提出了一些作者自己的看法，内容所涉及的范围比较广。我觉得对于每天只关注自己工作范围内的同学增长见识还是挺不错的。虽然本书在第一版印刷的地方有一些错误或遗漏的地方，但是大体上并不影响阅读，而且不能否认译者翻译的水平还是挺高的，完全感受不到晦涩的词汇。另外，一边读一边能够感受到，Matz 同学在写作的时候使用了很多暗喻的词汇，以及很多口语化的比喻，翻译起来应该会有不小难度，总体来说还是值得大家一看的。&lt;/p>
+&lt;p>前些天说要和几个朋友一起做游戏。最近这些天做了一些思考，经过整体的考量，昨天晚上也一起做了沟通。沟通的结果，我觉得目前我不太适合参与这款 app，其中主要原因是时间和精力。但是对于目前来说，我会无偿为他们提供 Box2d 方面技术的支持，可以尽可能的帮助他们用 Box2d 实现他们需要的效果，但不参与 app 源代码的书写工作。以后条件允许的情况下，如果想加入再做考虑。&lt;/p>
+&lt;p>目前，我认为这样做于人于己都是一个不错的选择。一来不会因为我的原因拖累 app 的开发进度。二来我可以只花费小部分时间在 Box2d 方面对其他人有一个技术支持，也算是尽自己一点余力。&lt;/p>
+&lt;p>最后，我发现我是真的不能喝咖啡了。当然了，至于这个礼拜喝了几天咖啡的原因，主要是因为自己的作息给闹的。这几天睡眠不规律，中午吃饭的时候喝一杯咖啡，导致心慌，甚至昨天晚上有失眠情况出现，跟打了鸡血似的，异常兴奋。导致今天早上五点钟起床把 Vim 之前所安装的插件重新整理里一遍，统一使用 &lt;a class="link" href="https://github.com/gmarik/vundle" target="_blank" rel="noopener"
+>Vundle&lt;/a> 进行了管理，.vim 目录下顿时整洁了很多。但是作息上的时间也基本上快变成美国时间了，黑白将近颠倒。今天晚上争取早点睡，调整一下作息时间，尽可能恢复早睡早起的习惯。&lt;/p></description></item><item><title>拖延症</title><link>https://ohcoder.com/post/2013/06/03/diary/</link><pubDate>Mon, 03 Jun 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/06/03/diary/</guid><description>&lt;img src="https://ohcoder.com/post/2013/06/03/diary/title.jpg" alt="Featured image of post 拖延症" />&lt;p>本周整体还算是充实。按部就班的开始读一些书。&lt;/p>
+&lt;p>读了《&lt;a class="link" href="https://book.douban.com/subject/1320282/" target="_blank" rel="noopener"
+>什么是数学&lt;/a>》这本书的前两章数论相关的章节，进度并没有想象的那么快，一方面是自己底子就不咋地。另一方面也不想只是为了读书而读书，想顺便把书中相关的枝枝叶叶展开来都了解一下。毕竟温习知识才是目的。&lt;/p>
+&lt;p>这本书虽然只是读了前两章数论，感受到这本书确实是一本不错的书，需要细细品味，囫囵吞枣只能事倍功半。很多数学中基本原理的由来都讲到了。我推测，读完一遍本书，能够对数学世界的各个分支会有一个整体的脉络图，对自己以前上学时候所学的零散的数学知识想必也会有一个清晰的系统性的条理。&lt;/p>
+&lt;p>通过学习数论这部分，我才真正的意识到数学的根是数论(我数学确实是挺白痴的吧:P)。更重要的是通过读书中所讲的知识点，能够勾起我主动的去了解相关分支的欲望，这一点非常重要。所以我也意识到，读这本书只能细嚼慢咽，快不得。&lt;/p>
+&lt;p>除此之外，读一本 UI 方面的书，名字叫《&lt;a class="link" href="https://book.douban.com/subject/6792322/" target="_blank" rel="noopener"
+>认知与设计&lt;/a>》。这本书很薄，才一百多页。但是内容讲的却很精，是理解UI设计的基础书籍，看了这本书可以对有些UI的设计准则有一个基本的认识。&lt;/p>
+&lt;p>不愧是 UI 设计类书籍，书的排版和装订都很不错，加上图文并茂的格式，让人阅读器来畅快淋漓。当然有些细节的地方讲的还是比较抽象的，尤其是对于思维认知那部分。我想如果结合着自己的一些生活当中的感受进行理解，或许体会更深刻。整体来说，这本书确实是非常好的UI设计方面的入门书籍。&lt;/p>
+&lt;p>人文方面，这周读了一本胡适同学的书，名字叫《&lt;a class="link" href="https://book.douban.com/subject/1938873/" target="_blank" rel="noopener"
+>胡适论教育&lt;/a>》。这本书是其他人对胡适书信或者演讲稿的整理，内容当然大部分都和教育相关。&lt;/p>
+&lt;p>通过读这本书，解除了我对于学习方面及未来相关的很多疑惑。读完这本书我发现，其实当今年轻人所有的疑惑，几十年前也有，这不是一代人的事情，而是每一代年轻人都会有的困惑。好玩的是，从他的书信和演讲稿中可以看出，其实每一代年轻人都会有不思进取，盲目是从，跟风，投机取巧，逃避社会现实的种种行为。不过，令人鼓舞的是，胡适先生给出的建议和观点打消了我很多顾虑，至少从他那里我等到了肯定的回答。&lt;/p>
+&lt;p>每当我发现这本书中所讲的很多道理，放到当今社会依然通用时，我就会被震撼到。有时候，读着读着就会有一种穿越的感觉，发现历史是如此的相似，相似的令人发指！有时候也小感慨一下，这就是历史轮回，人类一代一代的生老病死，知识虽然在不断交替中更新和前进，但人类的智慧却增长的如此有限。&lt;/p>
+&lt;p>另外，胡适同学被称为现代的孔子，读完他写的一些文字之后，是彻底的折服了。很后悔没有早些时候读一读他写的一些文字。不过还好，忙羊补牢，我决定先把这个&lt;a class="link" href="https://book.douban.com/series/11387" target="_blank" rel="noopener"
+>系列的丛书&lt;/a>读完。&lt;/p>
+&lt;p>最后，我发现我在不知不觉中患有拖延症。半年前跟其他人吹牛说我要学习日语了。半年后的今天我发现，我还停留在五十音图的阶段，真是太丢人了。每当周末看到&lt;!-- raw HTML omitted -->伞哥&lt;!-- raw HTML omitted -->关于外语的学习近况时，都在心里忏悔，每次都对自己说，下个礼拜就开始学&amp;hellip;我想我不能再下个礼拜了&amp;hellip;.今天已经进入六月的第二天(确切的说是第三天)，2013 年已经过半。&lt;/p>
+&lt;p>网上了解了一下日语方面的考试，2013 年 12 月初会有日语等级考试，我不能再等了。我计划参加年底的日语考试，目标定在日语二级，一级就先算了&amp;hellip;我还知道自己是谁。我曾经发誓再也不考国内的 SB 考试的，不过还好，日语考试不属于国内的考试&amp;hellip;.&lt;/p>
+&lt;p>对于英语的学习，听力方面，我想过几天的 WWDC 会有很多视频可以充分的锻炼我的听力。语法方面我需要再熟悉熟悉，词汇方面，就靠各种英文文档吧，不过，对于词汇的学习，我想我还是会找一些背单词的小册子进行系统的学习的，只看英文文档太有局限性了。过些日子，心血来潮，就用英语写博客，看看会写成什么样子。不过我想门槛不在于写作本身，而是心理关，^ _ ^。&lt;/p>
+&lt;p>最后，分享一首歌曲。如果你情绪低落，可以试试看，我很喜欢里面的小提琴。&lt;/p>
+&lt;p>(注：以下是一段 xiami 音乐网嵌入音乐的代码。然而如今 xiami 音乐已经关闭，留下此段代码，留作纪念)&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">embed&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://www.xiami.com/widget/0_3480575/singlePlayer.swf&amp;#34;&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;application/x-shockwave-flash&amp;#34;&lt;/span> &lt;span class="na">width&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;257&amp;#34;&lt;/span> &lt;span class="na">height&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;33&amp;#34;&lt;/span> &lt;span class="na">wmode&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;transparent&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">embed&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>还债</title><link>https://ohcoder.com/post/2013/05/27/diary/</link><pubDate>Mon, 27 May 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/05/27/diary/</guid><description>&lt;img src="https://ohcoder.com/post/2013/05/27/diary/title.jpg" alt="Featured image of post 还债" />&lt;p>本周把《&lt;a class="link" href="https://book.douban.com/subject/10746113/" target="_blank" rel="noopener"
+>HTTP权威指南&lt;/a>》这本书读完了，虽然笔记只写到第四部分。另外，还读了一本 Ruby 的入门书籍。除了这些之外，开始阅读一些非技术类的书，比如&lt;a class="link" href="https://lixiaolai.com/" target="_blank" rel="noopener"
+>李笑来&lt;/a>的《&lt;a class="link" href="https://book.douban.com/subject/5171244/" target="_blank" rel="noopener"
+>把时间当作朋友&lt;/a>》。这本书看了开头的几章，很奇怪，竟然发现有很多想法都和书中类似，感觉不像是在学习，更像是在聊天。有兴趣的朋友可以一看，貌似他已经把这本书开源了，放到了 Google Code 上，有兴趣的可以&lt;a class="link" href="https://code.google.com/p/befriend-with-time/" target="_blank" rel="noopener"
+>下载&lt;/a>(貌似需要翻墙。注：原链接已失效)电子版的一看。&lt;/p>
+&lt;p>除此之外，我感觉我又应验了这句很经典的话——“出来混迟早要还的”。为什么这么说呢？不瞒大家说，上学的时候数学学的实在是太烂，又加上混社会这几年也不怎么接触，所以导致现在想通过一些基本的数学知识，来理解其他知识的时候实在是汗颜。所以反思了一下，长叹一口气，该还的债迟早是要还的。&lt;/p>
+&lt;p>这次决定重新科普一下数学知识，不打算再逃避了。也许会花很多精力，但是想来想去对以后的积累都是有帮助的，如果坚持下来，对以后总归是有好处的。&lt;/p>
+&lt;p>不管怎么说，这些都是上学时候欠下的债，该还迟早是要还的。&lt;/p>
+&lt;p>云风在他的《&lt;a class="link" href="https://blog.codingnow.com/2012/12/programmer.html" target="_blank" rel="noopener"
+>程序员的职业素养&lt;/a>》中，有一个观点，现在是深有体会。&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;hellip;大多数人都喜欢在自己熟悉的知识结构下解决问题，因为全新的东西总有学习门槛，你需要去了解很多基础知识才能开始实际的工作。在大脑里把相关信息组织起来轻松调配，和借助外部资料是很不一样的。后者要经历一个相当痛苦的过程。&amp;hellip;&lt;/p>
+&lt;/blockquote>
+&lt;p>这段时间学习 Ruby 算是小有体会。&lt;/p>
+&lt;p>另外，接下来因为我想学习的内容涉及到一些基础的数学知识，后又发现数学知识实在匮乏，又把我拽回到了数学这个点。纠结了一阵，想了想，算了，就顺便复习一下数学吧。就当是自己给自己挖了一个坑，若干年后发现自己掉到了自己挖的坑里，能怨谁呢？&lt;/p>
+&lt;p>看了看书架上放着一本《&lt;a class="link" href="https://book.douban.com/subject/1320282/" target="_blank" rel="noopener"
+>什么是数学&lt;/a>》，依然白白净净的。又看了看豆瓣上的评价，都说是经典，都说内容很有趣，都说怎么怎么好。那好吧，相信群众的眼睛是雪亮的。其实不管怎么说，对于数学，我感觉是再也绕不过去了，要么我把她解决了，要么她把我解决了。&lt;/p>
+&lt;p>呃，加油！！&lt;/p></description></item><item><title>纠正认为观念</title><link>https://ohcoder.com/post/2013/05/20/diary/</link><pubDate>Mon, 20 May 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/05/20/diary/</guid><description>&lt;img src="https://ohcoder.com/post/2013/05/20/diary/title.jpg" alt="Featured image of post 纠正认为观念" />&lt;p>本周一回到北京，逐步进入学习生活的正轨。日子过的很平淡，没有什么特别的事情。&lt;/p>
+&lt;p>只是前两天，网上有位朋友希望能够搭伙利用业余时间一起做款游戏。经过几次沟通，觉得大家都很有热情，谈的还算投机，想来也没有什么进度压力，时间上也没有什么额外的压力，抱着只是想做一款称心的产品的心态，成败都没有太多损失，所以也没有做太多的推辞。反正不论成败，如果能交到不错的朋友，也算是一件好事情。&lt;/p>
+&lt;p>除此以外，这些天让我对人文类的知识有了重新的认识。原谅我之前对人文类知识的狭隘认识。或许是因为前些年初入社会的时候被社会上的一些陋习所误导，外加自己又是学习理科的，免不了对于学习人文社科类的知识有一种狭隘的偏见。很长一段时间都无知的认为这些人文类的知识无非是一些斗心眼的无聊把戏，而且曾经一直无知的认为人文类的知识只能让你增添几分吹牛皮的功力，毫无实用价值，尤其在中国现代这样的社会里。&lt;/p>
+&lt;p>但是这几天，我对此类认识有了 180 度的转变。也逐渐认识到高中学习阶段文理分科在知识结构上带来的弊端。回忆了一下，突然产生这种改观的原因。起点可能是因为看了几段采访&lt;a class="link" href="http://blog.sina.com.cn/victory" target="_blank" rel="noopener"
+>袁岳&lt;/a>的视频。&lt;/p>
+&lt;p>前两年也看过几段袁岳的视频，关于采访的或是演讲。但是那个时候心里潜意识里是排斥的，所以对于他所讲的话没有理性的去思考过，那个时候总是一棒子打死，总觉得那是在溜须拍马，有些话还有点心灵鸡汤的感觉。你知道，如果一个人对某件事情一开始就从内心里有所排斥，那么他就不会理性、公正的对这件事有一个客观而清醒的认识。虽然很多人都明白这个道理，但是真正轮到自己头上的时候，依然不能控制自己。&lt;/p>
+&lt;p>当然，说这些的重点，目的并不在于我对袁岳这个人有任何个人崇拜。只是碰巧袁岳的一些话点醒了我思考。如果换成别人，或许也会有一样的结果。&lt;/p>
+&lt;p>我突然发现，社会学是一门很有意思的学科。思考人类的群体行为是一件蛮好玩的事情。想象一下如果你能够深刻的洞察社会现象，并能够有一些自己的预见性，是一件多么有智慧的技能。如果你能够看到社会现象背后的一些本质原因，我觉得会是一件非常有趣的事情，至少他让你活的比别人更明白。让你对人类社会的认知更深刻。你会站在一个更高的点，来审视眼前所发生的一切，并且可以对此作出解释。这一点在我看来非常有智慧。&lt;/p>
+&lt;p>有些历史为什么总是在重演？为什么有些人明知道那是不符合逻辑的事情，还要为之？为什么有些事情明明不符合逻辑，很多人却意识不到，而且还会以一种冠冕堂皇的理由去做？为什么有些人觉得现今社会很无奈？而有些人却处处能看到机会？为什么有些人坐等着被社会改变？而有些人却积极的寻找自己的未来？在人与人相处的过程中，为什么有些事情这么做，对方就可以接受，而换一种方式，对方就会有不一样的感受。如何扩大自己的社交关系，在互动中取得共赢？等等类似问题。&lt;/p>
+&lt;p>我觉得如果能正确解释这些事情，可以化解很多烦恼，至少可以帮助我们清晰而理性的认识社会，或许可以帮助一个人把他的着眼点放的更远。我觉得这是一种智慧的体现。不要误会，这么说并不是说具体的技术变的不重要了。对于这两者，它们之间只有分工的不同，没有高低贵贱之分。&lt;/p>
+&lt;p>或许有朋友会有疑问，想这些有个 p 用，能直接当饭吃么？对此我只能说，祝我们彼此好运吧。&lt;/p>
+&lt;p>其实，我一直比较喜欢&lt;a class="link" href="https://movie.douban.com/celebrity/1010208/" target="_blank" rel="noopener"
+>王志文&lt;/a>这个演员。他扮演的很多角色都能够引起你的一些思考。不管是实实在在的生活方面的思考，还是看起来很虚的关于价值观上的思考。今天也发现他拍的一部电视剧《&lt;a class="link" href="https://movie.douban.com/subject/2347485/" target="_blank" rel="noopener"
+>天道&lt;/a>》很不错。其中他扮演的丁元英就是一个挑战普世价值观念的角色。对于这个人的很多观念我都比较认同，也许前两年看，我可能接受不了这个人的观点。&lt;/p>
+&lt;p>片子是 2007 年上映的，不过，我想即便是对于当今社会(2013年)，这个人物所表现出的理念或者价值观，仍然会被大多数人所不能接受。&lt;/p>
+&lt;p>另外，为自己列了一个关于社会学读物的书单。既然意识到了，就希望自己能够弥补一下在这方面的知识，也尽可能的提升一下自己的人文气息。&lt;/p></description></item><item><title>持续学习</title><link>https://ohcoder.com/post/2013/05/13/diary/</link><pubDate>Mon, 13 May 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/05/13/diary/</guid><description>&lt;img src="https://ohcoder.com/post/2013/05/13/diary/title.jpg" alt="Featured image of post 持续学习" />&lt;p>真是计划赶不上变化，因为家里有些事情，本周四回家了。这几天基本上一直在忙家里的事情。和家里的朋友们聚了聚，吃了一顿晚饭。所以本周的学习任务又没有完成。&lt;/p>
+&lt;p>不准备给自己找任何借口，明天回北京，这一周抓紧时间吧。争取把进度赶上，有一件事情比较顺利，就是之前说的让人想吐槽的事情，终于顺利结束了。我想接下来可以把全部精力都放到正轨上来。不管怎么说，本周回家也算是计划内的事情，心理多少也还是有准备的，花掉的时间也没有产生太大的愧疚感。&lt;/p>
+&lt;p>说一说本次回家的一些感想吧。&lt;/p>
+&lt;p>其实，这次回来我还是感受到了一些变化的。我发现在家里生活的朋友们逐渐适应了安逸的生活，虽然他们也在不断的为未来的生活所奔波，但是可以明显的感受到，他们学习新知识的脚步已经明显放缓。其中的原因有多方面的，比如三线城市的生活节奏更缓慢，竞争压力变小，逐渐被个人家庭环境所左右，等等吧。&lt;/p>
+&lt;p>想来这些因素基本上都是社会环境所驱使。但是不管怎样，路是自己选的，所以并没有好坏之分。&lt;/p>
+&lt;p>算上回来那天，一共在家待了四天。在这四天里，生活节奏猛然放缓，突然有一种停滞的感觉。老实说，我不太喜欢这种感觉，可能是习惯了让自己每天都很充实的生活节奏。突然停下来几天，就会产生一种唯恐被社会淘汰的危机感。&lt;/p>
+&lt;p>我喜欢让自己每天都在进步的感觉，虽然很辛苦，但心里却很踏实，让人时刻充满了希望。产生这种想法的原因，我想多半来自于危机感。产生这种危机感的原因，我想是因为深知自身知识的匮乏，要学的东西很多。希望能够靠自己的力量来一点一点实现自己的想法。&lt;/p>
+&lt;p>不知道为什么，我一直不太羡慕有些同学总想少劳多得的价值观。我不觉得不干活可以拿钱是多么了不起的事情，反而我倒是觉得这种人活着挺没劲的，一点生存的价值都没有。虽然社会现状是一个笑贫不笑娼的年代，跟人谈理想多半会被嘲笑成幼稚。算了，打住吧，负能量的话还是少说，多说无益。自己心里明白就好了。&lt;/p>
+&lt;p>除此之外，对于持续学习有所感触。我突然意识到很多同学在毕业之后学习的步伐就放慢了很多，甚至开始停滞不前。然后开始吃老本，下意识里觉得工作年限变成衡量一个人是否有能力的标准。我觉得这一点挺可怕的，久而久之，如果有一天这个人的自有知识被逐渐淘汰以后，而这个人又没有意识到的话，那么这个人的自信就会变成自负，逐步沦为无知。&lt;/p>
+&lt;p>粗略想了一下，为什么很多同学会在毕业之后不再主动学习。或许有三方面原因，一方面是社会现状的浮躁，很多同学总想一夜暴富，看书学习太慢了。另一方面，或许是觉得看书学习没什么用，不如认一个干爹更省劲儿。最后一方面，或许已经有一个比较好的爹。&lt;/p>
+&lt;p>为什么会想到这些呢？或许是因为自己总结了一下过去几年自己走过的一些路，想了想自己，又想了想增经身边的人，突然想到的吧。其实，我觉得根本原因可能是因为很多同学对于读书学习看不到希望所致。因为他们看到了太多不靠学习就发财的例子，从主观上就希望自己哪天也能走狗屎运。所以很多人不断的买彩票&amp;hellip;&amp;hellip;如果你也买，那么提前恭喜你发财。&lt;/p>
+&lt;p>透过这些想法，我也发现，自己不是一个太容易接受安逸生活的人，或许是因为刚毕业的那几年吃了很多苦头养成的习惯，又或许是这几年觉得以前认为是不可超越的牛人，其实是可以通过不断努力无限接近的，当然想超越牛人有时候还得需要一点点运气。&lt;/p>
+&lt;p>不管怎样，我都想通过自己不断的努力达到自己心中理想的状态。我不认为坐享其成是一种成功。对于我来说，这只不过是满足了一个人的虚荣心而已。除此之外，毫无任何意义。&lt;/p>
+&lt;p>产生上面说的一些想法的原因，可能是因为这几年自己通过一些努力，实现了或正在实现一些自己以前无法想象的生活状态。总之，持续的学习，让我看到了希望。&lt;/p>
+&lt;p>我越来越觉得，人生经历对我很重要。因为，我认为，百年之后，看博客的你和我结果都一样。&lt;/p></description></item><item><title>有点忙…</title><link>https://ohcoder.com/post/2013/05/06/diary/</link><pubDate>Mon, 06 May 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/05/06/diary/</guid><description>&lt;img src="https://ohcoder.com/post/2013/05/06/diary/title.jpg" alt="Featured image of post 有点忙…" />&lt;p>这个礼拜貌似没有时间写读书笔记了，不过读书的进度我是没有落下，只是写笔记的时间没有了。好吧，本来想个理由让自己心安理得一点，后来想了想，还是算了吧，没啥意思，没做就是没做，找任何理由都是白扯。&lt;/p>
+&lt;p>那就说说这个礼拜都干了点啥吧。除了读书以外，还在忙另外一件事情。一件想让我吐槽的事情。为了让自己显得文雅一点，同时不扫大家的兴，在这就不废话了。这件事情也算是快结束了(希望是吧，=_=)，不管怎么说，这个事情花了我不少时间，有没有价值我不知道，我只是觉得做事情要善始善终。&lt;/p>
+&lt;p>这件事情就此打住，说说别的。这个礼拜用了一下 &lt;a class="link" href="https://www.iforce2d.net/rube-free/" target="_blank" rel="noopener"
+>R.U.B.E&lt;/a>。软件的作者就是我所翻译教程的原作者，随后用此软件做了几个小 demo，并加载到 iOS 上运行了一下，功能很强大，开发效率非常快。工具可以嵌入图片，可以倒出 JSON 数据格式的文件，貌似是热心的网友针对不同语言写了对应的加载器，可以直接把 JSON 文件的数据加载到 iOS 的程序里。对应的加载器貌似有 Javascript 版本，可以方便的嵌入网页，不过这个我没有尝试，理论上应该不是很复杂。&lt;/p>
+&lt;p>作为回报，反馈了一个 bug 和一个希望软件未来能够拥有的 feature，嘻嘻。使用软件的过程中，也算是熟悉一下 Box2D 吧。说实话，我也有一段时间没研究过了。说到这里，应该翻译一下 Box2D 高级教程了，这个帐貌似已经欠了好久了。高级教程现在已经累积了八篇文章了，又够我翻译一阵子了，另外也仔细研究一下 Box2D，真正做点好玩的东西出来。&lt;/p>
+&lt;p>前些天发现了一个国外的视频课程&lt;a class="link" href="https://www.coursera.org/" target="_blank" rel="noopener"
+>网站&lt;/a>，目测很多都是世界知名大学的课程，其中还有几门在准备阶段的中文课程，貌似是来自香港的大学开的。&lt;/p>
+&lt;p>从其中找了一门基础课，还是想打打基础，我总觉得自己的基础太差了。粗略浏览了一下，发现一门来自普林斯顿大学的计算机课程，名字叫&lt;a class="link" href="https://class.coursera.org/comparch-2012-001/class/index" target="_blank" rel="noopener"
+>计算机体系结构(Computer Architecture)&lt;/a>，简单看了一下简介，说是面向高年级本科生和研究生一年级的同学。了解了一下课程用的教材都比较新，幸运的是，国内已经有了译本，还是刚刚翻译的，热乎的。主要教材是《&lt;a class="link" href="https://book.douban.com/subject/7006537/" target="_blank" rel="noopener"
+>计算机体系结构&lt;/a>》，另外一本隐约记得是视频中那位帅哥老师在课程开始推荐的辅助教材，叫《&lt;a class="link" href="https://book.douban.com/subject/2185652/" target="_blank" rel="noopener"
+>现代处理器设计&lt;/a>》。英文版教材就先免了吧，我对自己的英语水平还是有自知之明的。等通过中文教材把这些基础知识先过一遍有点基础以后再考虑看英文版吧，那个时候至少碰到不会的专业名词还可以猜一猜。现在肯定不行，基本上碰到了就是个文盲状态，这一点我还是挺有自信的。&lt;/p>
+&lt;p>所以想了一下，打算把这本书看一看。至于视频，就全当练习英语听力了，能听懂多少算多少吧。估计连蒙带猜带比划的能看懂个七七八八。无所谓啦，实在不行就当英语听力练习了，还可以治疗失眠症，反正没坏处，何乐不为。&lt;/p>
+&lt;p>就这些吧，读书笔记下个礼拜一并补上。时间过的好快&amp;hellip;不知不觉都五月初了&amp;hellip;&lt;/p></description></item><item><title>想尝试一个游戏</title><link>https://ohcoder.com/post/2013/04/28/diary/</link><pubDate>Sun, 28 Apr 2013 00:00:00 +0000</pubDate><guid>https://ohcoder.com/post/2013/04/28/diary/</guid><description>&lt;img src="https://ohcoder.com/post/2013/04/28/diary/title.jpg" alt="Featured image of post 想尝试一个游戏" />&lt;p>关于 Web 方面的学习，本周开始读《&lt;a class="link" href="https://book.douban.com/subject/10746113/" target="_blank" rel="noopener"
 >HTTP权威指南&lt;/a>》，算是打基础吧。因为之前没有怎么做过 Web 方面的开发，所以我觉得先打一打基础或许能够更好的为以后深入的学习做准备。按照老规矩，为了帮助自己学习的更扎实，每学完一部分就做一些摘抄，算是再过一遍脑子，勉强算作是笔记吧。记录过程中偶尔会穿插一些感想或感悟。&lt;/p>
 &lt;p>当然了，学习 Web 的同时，iOS 的学习也不能丢掉，尽量保持二者的平衡。或者说，目前的时间分配应该是四六，当然后者是六。既然想法已经明确了，剩下的就抓紧时间了。&lt;/p>
 &lt;p>其实，回顾这段时间的整体状态，我觉得还是有点低效了。我觉得我可以再高效一点，接下来我想试试看，尽最大努力，根据当前的自制力，看下自己到底一个礼拜可以学多少东西。&lt;/p>
